@@ -1,0 +1,6 @@
+platform:ios,'7.0'
+target "test-git" do
+pod 'SDWebImage'
+pod 'AFNetworking'
+end
+
