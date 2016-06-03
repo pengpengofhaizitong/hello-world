@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1BB2A5C00162ECA994D6475F /* libPods-PhotoKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F57BD2446BF6531254CDC03 /* libPods-PhotoKitDemo.a */; };
+		837C75141D01269F005B7DE6 /* TZCompressionResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 837C75131D01269F005B7DE6 /* TZCompressionResource.m */; };
+		837C751C1D01884B005B7DE6 /* TZActionSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 837C751B1D01884B005B7DE6 /* TZActionSheetView.m */; };
 		83BB52F41CFFDC27000E87D5 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB52E31CFFDC27000E87D5 /* TZAssetCell.m */; };
 		83BB52F51CFFDC27000E87D5 /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB52E51CFFDC27000E87D5 /* TZAssetModel.m */; };
 		83BB52F61CFFDC27000E87D5 /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB52E71CFFDC27000E87D5 /* TZImageManager.m */; };
@@ -67,6 +69,11 @@
 		12FC1482CD7A28CBF72955B8 /* Pods-PhotoKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoKitDemo/Pods-PhotoKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		1F57BD2446BF6531254CDC03 /* libPods-PhotoKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		410991C667C8D45B8CC38781 /* Pods-PhotoKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoKitDemo/Pods-PhotoKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		837C75121D01269F005B7DE6 /* TZCompressionResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZCompressionResource.h; sourceTree = "<group>"; };
+		837C75131D01269F005B7DE6 /* TZCompressionResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZCompressionResource.m; sourceTree = "<group>"; };
+		837C75181D012706005B7DE6 /* TZHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZHeader.h; sourceTree = "<group>"; };
+		837C751A1D01884B005B7DE6 /* TZActionSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZActionSheetView.h; sourceTree = "<group>"; };
+		837C751B1D01884B005B7DE6 /* TZActionSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZActionSheetView.m; sourceTree = "<group>"; };
 		83BB52E21CFFDC27000E87D5 /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
 		83BB52E31CFFDC27000E87D5 /* TZAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetCell.m; sourceTree = "<group>"; };
 		83BB52E41CFFDC27000E87D5 /* TZAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetModel.h; sourceTree = "<group>"; };
@@ -181,6 +188,11 @@
 				83BB52F11CFFDC27000E87D5 /* TZVideoPlayerController.m */,
 				83BB52F21CFFDC27000E87D5 /* UIView+Layout.h */,
 				83BB52F31CFFDC27000E87D5 /* UIView+Layout.m */,
+				837C75121D01269F005B7DE6 /* TZCompressionResource.h */,
+				837C75131D01269F005B7DE6 /* TZCompressionResource.m */,
+				837C75181D012706005B7DE6 /* TZHeader.h */,
+				837C751A1D01884B005B7DE6 /* TZActionSheetView.h */,
+				837C751B1D01884B005B7DE6 /* TZActionSheetView.m */,
 			);
 			name = TZImagePicker;
 			sourceTree = "<group>";
@@ -356,7 +368,7 @@
 				TargetAttributes = {
 					83EB9E131CFE77E000521B4D = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = DST72U373B;
+						DevelopmentTeam = U3WV77N956;
 					};
 					83EB9E2F1CFE77E000521B4D = {
 						CreatedOnToolsVersion = 7.3;
@@ -491,6 +503,7 @@
 				83EB9E1F1CFE77E000521B4D /* ViewController.m in Sources */,
 				83BB52F61CFFDC27000E87D5 /* TZImageManager.m in Sources */,
 				83EB9E1C1CFE77E000521B4D /* AppDelegate.m in Sources */,
+				837C751C1D01884B005B7DE6 /* TZActionSheetView.m in Sources */,
 				83EB9E191CFE77E000521B4D /* main.m in Sources */,
 				83BB52FC1CFFDC27000E87D5 /* UIView+Layout.m in Sources */,
 				83BB52FB1CFFDC27000E87D5 /* TZVideoPlayerController.m in Sources */,
@@ -498,6 +511,7 @@
 				83BB52F91CFFDC27000E87D5 /* TZPhotoPreviewCell.m in Sources */,
 				83E414901CFEB832009EB95F /* MyTestPHAssetViewController.m in Sources */,
 				83BB52FA1CFFDC27000E87D5 /* TZPhotoPreviewController.m in Sources */,
+				837C75141D01269F005B7DE6 /* TZCompressionResource.m in Sources */,
 				83BB52F71CFFDC27000E87D5 /* TZImagePickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,9 +664,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PhotoKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baosight.HomeAndTable;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PhotoKitDemo.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dc069432-a57a-4890-88d9-5b50bad7358c";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
@@ -666,9 +680,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PhotoKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baosight.HomeAndTable;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PhotoKitDemo.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dc069432-a57a-4890-88d9-5b50bad7358c";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;

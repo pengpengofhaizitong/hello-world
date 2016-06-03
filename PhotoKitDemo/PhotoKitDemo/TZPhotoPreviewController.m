@@ -12,6 +12,7 @@
 #import "UIView+Layout.h"
 #import "TZImagePickerController.h"
 #import "TZImageManager.h"
+#import "TZActionSheetView.h"
 
 @interface TZPhotoPreviewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate> {
     UICollectionView *_collectionView;
@@ -27,6 +28,8 @@
     UILabel *_numberLable;
     UIButton *_originalPhotoButton;
     UILabel *_originalPhotoLable;
+    
+    UILabel *_numOfSelectImgLabel;
 }
 
 @end
@@ -41,11 +44,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configCollectionView];
-    [self configCustomNaviBar];
-    [self configBottomToolBar];
+    
+    if(!self.isFrom_NOT_TZVC)
+    {
+        [self configCustomNaviBar];
+        [self configBottomToolBar];
+    }else
+    {
+        [self configCustomNaviBar_ForOnlySelectImg];
+        
+    }
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
     if (iOS7Later) [UIApplication sharedApplication].statusBarHidden = YES;
@@ -152,11 +165,53 @@
     _collectionView.pagingEnabled = YES;
     _collectionView.scrollsToTop = NO;
     _collectionView.showsHorizontalScrollIndicator = NO;
-    _collectionView.contentOffset = CGPointMake(0, 0);
+    _collectionView.contentOffset = CGPointMake(self.view.tz_width*_currentIndex, 0);
     _collectionView.contentSize = CGSizeMake(self.view.tz_width * _photoArr.count, self.view.tz_height);
     [self.view addSubview:_collectionView];
     [_collectionView registerClass:[TZPhotoPreviewCell class] forCellWithReuseIdentifier:@"TZPhotoPreviewCell"];
 }
+
+
+
+- (void)configCustomNaviBar_ForOnlySelectImg
+{
+    _naviBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.tz_width, 64)];
+    _naviBar.backgroundColor = [UIColor colorWithRed:(34/255.0) green:(34/255.0)  blue:(34/255.0) alpha:1.0];
+    _naviBar.alpha = 0.7;
+    
+    _backButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 20, 44, 44)];
+    [_backButton setImage:[UIImage imageNamed:@"navi_back"] forState:UIControlStateNormal];
+    [_backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    
+//    _selectButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.tz_width - 54, 20, 42, 42)];
+//    [_selectButton setImage:[UIImage imageNamed:@"photo_def_photoPickerVc"] forState:UIControlStateNormal];
+//    [_selectButton setImage:[UIImage imageNamed:@"photo_sel_photoPickerVc"] forState:UIControlStateSelected];
+//    [_selectButton addTarget:self action:@selector(deleteImg:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *deleteBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.tz_width - 54, 20, 42, 42)];
+    [deleteBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+    [deleteBtn setBackgroundColor:[UIColor orangeColor]];
+    [deleteBtn addTarget:self action:@selector(deleteImg:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    _numOfSelectImgLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 80, 44)];
+    _numOfSelectImgLabel.text = [NSString stringWithFormat:@"%ld/%ld",self.currentIndex+1,self.selectedPhotoArr.count];
+    _numOfSelectImgLabel.textAlignment = NSTextAlignmentCenter;
+    _numOfSelectImgLabel.textColor = [UIColor whiteColor];
+    
+    [_naviBar addSubview:_numOfSelectImgLabel];
+    [_naviBar addSubview:deleteBtn];
+    [_naviBar addSubview:_backButton];
+    
+    _numOfSelectImgLabel.center = CGPointMake(_naviBar.frame.size.width/2, 10+_naviBar.frame.size.height/2);
+    [self.view addSubview:_naviBar];
+    
+    
+}
+
+
+
 
 #pragma mark - Click Event
 
@@ -214,6 +269,25 @@
     }
 }
 
+- (void)deleteImg:(UIButton *)sender
+{
+    
+    [self.selectedPhotoArr removeObjectAtIndex:_currentIndex];
+    
+    
+    if(_currentIndex == _selectedPhotoArr.count)
+    {
+        _currentIndex--;
+    }
+    
+    [_collectionView reloadData];
+    
+    _numOfSelectImgLabel.text = [NSString stringWithFormat:@"%ld/%ld",_currentIndex+1,self.selectedPhotoArr.count];
+}
+
+
+
+
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -222,7 +296,9 @@
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+
     [self refreshNaviBarAndBottomBarState];
+    _numOfSelectImgLabel.text = [NSString stringWithFormat:@"%ld/%ld",_currentIndex+1,self.selectedPhotoArr.count];
 }
 
 #pragma mark - UICollectionViewDataSource && Delegate

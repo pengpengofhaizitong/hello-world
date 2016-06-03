@@ -322,6 +322,7 @@ static CGSize AssetGridThumbnailSize;
 - (void)pushPhotoPrevireViewController:(TZPhotoPreviewController *)photoPreviewVc {
     photoPreviewVc.isSelectOriginalPhoto = _isSelectOriginalPhoto;
     photoPreviewVc.selectedPhotoArr = self.selectedPhotoArr;
+    NSLog(@"self.selectedPhotoArr = %@",self.selectedPhotoArr);
     photoPreviewVc.returnNewSelectedPhotoArrBlock = ^(NSMutableArray *newSelectedPhotoArr,BOOL isSelectOriginalPhoto) {
         _selectedPhotoArr = newSelectedPhotoArr;
         _isSelectOriginalPhoto = isSelectOriginalPhoto;

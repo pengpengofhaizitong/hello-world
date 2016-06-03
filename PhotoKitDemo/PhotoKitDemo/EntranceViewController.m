@@ -7,18 +7,19 @@
 //
 
 #import "EntranceViewController.h"
-#import "TZImagePickerController.h"
-#import "TZImageManager.h"
-#import "TZAssetModel.h"
+#import "TZHeader.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
 
 @interface EntranceViewController ()<TZImagePickerControllerDelegate>
 {
     __weak IBOutlet UIImageView *image;
+    __weak IBOutlet UIView *ImageBackGView;
+    
     
     NSMutableArray *thumbnailImageArr;
     NSMutableArray *originalImageArr;
+    NSMutableArray *selectPhoto;
     
 }
 @end
@@ -31,13 +32,85 @@
     
     NSLog(@"this viewController is EntranceViewController");
     
+    thumbnailImageArr = [NSMutableArray arrayWithCapacity:0];
+    originalImageArr = [NSMutableArray arrayWithCapacity:0];
+    selectPhoto = [NSMutableArray arrayWithCapacity:0];
+    
+}
+
+- (void)addImageView
+{
+    for(UIView *view in ImageBackGView.subviews)
+    {
+        if([view isKindOfClass:[UIButton class]])
+        {
+            [view removeFromSuperview];
+        }
+    }
+    
+    CGFloat width = ImageBackGView.frame.size.width/3;
+    CGFloat heigh = ImageBackGView.frame.size.height/3;
+    
+//    ImageBackGView.backgroundColor = [UIColor orangeColor];
+    
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+            if(thumbnailImageArr.count > i*3+j)
+            {
+                UIButton *imgBtn = [[UIButton alloc] initWithFrame:CGRectMake(j*width, i*heigh, width, heigh)];
+                [imgBtn setImage:[thumbnailImageArr objectAtIndex:j+i*3] forState:UIControlStateNormal];
+                imgBtn.tag = 1000+i*3+j;
+                [imgBtn addTarget:self action:@selector(editorImage:) forControlEvents:UIControlEventTouchUpInside];
+                [ImageBackGView addSubview:imgBtn];
+            }
+        }
+    }
     
     
 }
 
+-(void)editorImage:(UIButton *)button
+{
+//    TZAssetModel *model = _selectedPhotoArr[i];
+    
+    TZPhotoPreviewController *photoPreviewVc = [[TZPhotoPreviewController alloc] init];
+    photoPreviewVc.photoArr = selectPhoto;
+    photoPreviewVc.currentIndex = button.tag-1000;
+    photoPreviewVc.isFrom_NOT_TZVC = YES;
+    [self pushPhotoPrevireViewController:photoPreviewVc];
+    
+}
+
+- (void)pushPhotoPrevireViewController:(TZPhotoPreviewController *)photoPreviewVc {
+//    photoPreviewVc.isSelectOriginalPhoto = _isSelectOriginalPhoto;
+    photoPreviewVc.selectedPhotoArr = selectPhoto;
+    
+    photoPreviewVc.returnNewSelectedPhotoArrBlock = ^(NSMutableArray *newSelectedPhotoArr,BOOL isSelectOriginalPhoto) {
+        
+        NSLog(@"newSelectedPhotoArr.count = %@",newSelectedPhotoArr);
+        
+//        selectPhoto = [NSMutableArray arrayWithCapacity:0];
+//        [selectPhoto addObjectsFromArray:newSelectedPhotoArr];
+        
+        NSArray *selectArr = newSelectedPhotoArr;
+        NSLog(@"selectArr === %@",selectArr);
+        [self refreshDataForImage:selectArr];
+        
+    };
+    photoPreviewVc.okButtonClickBlock = ^(NSMutableArray *newSelectedPhotoArr,BOOL isSelectOriginalPhoto){
+       
+        
+    };
+    [self.navigationController pushViewController:photoPreviewVc animated:YES];
+}
+
+
+
 #pragma mark --- 图片单选 ---
 - (IBAction)SelectSinglePicture:(UIButton *)sender {
-    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:1 delegate:self];
+    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:1 selectType:SelectResourcePhoto delegate:self];
     
     // You can get the photos by block, the same as by delegate.
     // 你可以通过block或者代理，来得到用户选择的照片.
@@ -56,8 +129,7 @@
 
 
     
-    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:9 delegate:self];
-    imagePickerVc.selectType = SelectResourcePhoto;
+    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:9 selectType:SelectResourcePhoto delegate:self];
     
     // You can get the photos by block, the same as by delegate.
     // 你可以通过block或者代理，来得到用户选择的照片.
@@ -76,9 +148,8 @@
 - (IBAction)SelectViedo:(UIButton *)sender {
     
     
-    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:9 delegate:self];
+    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:9  selectType:SelectResourceVideo delegate:self];
     imagePickerVc.allowPickingVideo = YES;
-    imagePickerVc.selectType = SelectResourceVideo;
     [imagePickerVc setDidFinishPickingVideoHandle:^(UIImage *image, id asset) {
 
         NSLog(@"asset = %@",asset);
@@ -103,31 +174,7 @@
     
     NSLog(@"SelectImageArr == %lu",(unsigned long)selectImgArr.count);
     
-    
-    for(int i=0;i<selectImgArr.count;i++)
-    {
-        @autoreleasepool {
-            TZAssetModel *model = selectImgArr[i];
-            [[TZImageManager manager] getPhotoWithAsset:model.asset completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
-                
-                if (isDegraded)
-                {
-                    return;
-//                    [thumbnailImageArr addObject:photo];
-                }else
-                {
-                    NSData *imageData = UIImageJPEGRepresentation(photo, 0.5);
-                    [self uploadImageToServer:imageData];
-                }
-                
-                NSLog(@"photo =\n %@",photo);
-            }];
-        }
-        
-    }
-    
-    
-
+    [self refreshDataForImage:selectImgArr];
     
 }
 
@@ -140,12 +187,51 @@
 {
     NSLog(@"asset = %@",asset);
     
-    [self getVideoFromPHAsset:asset Complete:^(NSData *data, NSString *string) {
+    [[TZCompressionResource compressionResource] getVideoFromPHAsset:asset Complete:^(NSData *data, NSString *string) {
         NSLog(@"pppppengpengpengpngepngpn = %@\n%ld",string,data.length);
     }];
     
     
     
+}
+
+
+
+- (void)refreshDataForImage:(NSArray *)selectImgArr
+{
+    NSLog(@"111selectPhoto = %@\n%@",selectPhoto,selectImgArr);
+    
+    [selectPhoto removeAllObjects];
+    [thumbnailImageArr removeAllObjects];
+    [originalImageArr removeAllObjects];
+    [selectPhoto addObjectsFromArray:selectImgArr];
+    
+    NSLog(@"selectPhoto = %@\n%@",selectPhoto,selectImgArr);
+    
+    for(int i=0;i<selectImgArr.count;i++)
+    {
+        @autoreleasepool {
+            TZAssetModel *model = selectImgArr[i];
+            [[TZImageManager manager] getPhotoWithAsset:model.asset completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
+                
+                if (isDegraded)
+                {
+                    //                    return;
+                    [thumbnailImageArr addObject:photo];
+                }else
+                {
+                    NSData *imageData = UIImageJPEGRepresentation(photo, 0.5);
+                    [self uploadImageToServer:imageData];
+                }
+                
+                NSLog(@"photo =\n %@",photo);
+            }];
+        }
+        
+    }
+    
+    [self addImageView];
+
 }
 
 
@@ -158,52 +244,7 @@
 }
 
 
-- (void)getVideoFromPHAsset:(PHAsset *)asset Complete:(void (^)(NSData * ,NSString *))result{
-    NSArray *assetResources = [PHAssetResource assetResourcesForAsset:asset];
-    PHAssetResource *resource;
-    
-    for (PHAssetResource *assetRes in assetResources) {
-        if (assetRes.type == PHAssetResourceTypePairedVideo ||
-            assetRes.type == PHAssetResourceTypeVideo) {
-            resource = assetRes;
-        }
-    }
-    NSString *fileName = @"tempAssetVideo.mov";
-    if (resource.originalFilename) {
-        fileName = resource.originalFilename;
-    }
-    
-    if (asset.mediaType == PHAssetMediaTypeVideo || asset.mediaSubtypes == PHAssetMediaSubtypePhotoLive) {
-        PHVideoRequestOptions *options = [[PHVideoRequestOptions alloc] init];
-        options.version = PHImageRequestOptionsVersionCurrent;
-        options.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
-        
-        NSString *PATH_MOVIE_FILE = [NSTemporaryDirectory() stringByAppendingPathComponent:fileName];
-        [[NSFileManager defaultManager] removeItemAtPath:PATH_MOVIE_FILE error:nil];
-        [[PHAssetResourceManager defaultManager] writeDataForAssetResource:resource
-                                                                    toFile:[NSURL fileURLWithPath:PATH_MOVIE_FILE]
-                                                                   options:nil
-                                                         completionHandler:^(NSError * _Nullable error) {
-                                                             if (error) {
-                                                                 result(nil, nil);
-                                                             } else {
-                                                                 
-                                                                 NSData *data = [NSData dataWithContentsOfURL:[NSURL fileURLWithPath:PATH_MOVIE_FILE]];
-                                                                 result(data, fileName);
-                                                             }
-                                                             [[NSFileManager defaultManager] removeItemAtPath:PATH_MOVIE_FILE  error:nil];
-                                                         }];
-    } else {
-        result(nil, nil);
-    }
-    
-    
-//    ALAssetRepresentation *rep = [asset defaultRepresentation];
-//    Byte *buffer = (Byte*)malloc(rep.size);
-//    NSUInteger buffered = [rep getBytes:buffer fromOffset:0.0 length:rep.size error:nil];
-//    NSData *data = [NSData dataWithBytesNoCopy:buffer length:buffered freeWhenDone:YES];//this is NSData may be what you want
-    
-}
+
 
 
 - (void)didReceiveMemoryWarning {

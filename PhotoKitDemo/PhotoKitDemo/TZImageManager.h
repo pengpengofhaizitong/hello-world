@@ -11,7 +11,10 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Photos/Photos.h>
 
-
+typedef enum : NSUInteger {
+    SelectResourcePhoto = 0,        //选择图片
+    SelectResourceVideo             //选择视频
+} SelectResourceType;
 
 
 @class TZAlbumModel,TZAssetModel;

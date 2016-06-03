@@ -59,7 +59,7 @@
     [barItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
 }
 
-- (instancetype)initWithMaxImagesCount:(NSInteger)maxImagesCount delegate:(id<TZImagePickerControllerDelegate>)delegate {
+- (instancetype)initWithMaxImagesCount:(NSInteger)maxImagesCount selectType:(SelectResourceType)selectTyp delegate:(id<TZImagePickerControllerDelegate>)delegate {
     TZAlbumPickerController *albumPickerVc = [[TZAlbumPickerController alloc] init];
     self = [super initWithRootViewController:albumPickerVc];
     if (self) {
@@ -85,6 +85,7 @@
             
             _timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(observeAuthrizationStatusChange) userInfo:nil repeats:YES];
         } else {
+            self.selectType = selectTyp;
             [self pushToPhotoPickerVc];
         }
     }
@@ -105,6 +106,7 @@
     if (_pushToPhotoPickerVc) {
         TZPhotoPickerController *photoPickerVc = [[TZPhotoPickerController alloc] init];
         [TZImageManager manager].selectType = self.selectType;
+        NSLog(@"self.selectType = %ld",self.selectType);
         [[TZImageManager manager] getCameraRollAlbum:self.allowPickingVideo completion:^(TZAlbumModel *model) {
             photoPickerVc.model = model;
             [self pushViewController:photoPickerVc animated:YES];
