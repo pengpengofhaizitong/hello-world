@@ -77,7 +77,7 @@ extern NSString *selectResource_Type;
 //            }
 
             NSLog(@"collection.localiazedTitle = %@",collection.localizedTitle);
-            if(self.selectType == 0)
+            if(self.selectType == SelectResourcePhoto)
             {
                 if ([collection.localizedTitle isEqualToString:@"Camera Roll"] || [collection.localizedTitle isEqualToString:@"相机胶卷"]) {
                     PHFetchResult *fetchResult = [PHAsset fetchAssetsInAssetCollection:collection options:option];
@@ -85,7 +85,7 @@ extern NSString *selectResource_Type;
                     if (completion) completion(model);
                     break;
                 }
-            }else if (self.selectType == 1)
+            }else if (self.selectType == SelectResourceVideo)
             {
                 if ([collection.localizedTitle isEqualToString:@"Videos"] || [collection.localizedTitle isEqualToString:@"视频"]) {
                     PHFetchResult *fetchResult = [PHAsset fetchAssetsInAssetCollection:collection options:option];
@@ -107,14 +107,14 @@ extern NSString *selectResource_Type;
             NSString *name = [group valueForProperty:ALAssetsGroupPropertyName];
           
             
-            if(self.selectType == 0)
+            if(self.selectType == SelectResourcePhoto)
             {
                 if ([name isEqualToString:@"Camera Roll"] || [name isEqualToString:@"相机胶卷"]) {
                     model = [self modelWithResult:group name:name];
                     if (completion) completion(model);
                     *stop = YES;
                 }
-            }else if (self.selectType == 1)
+            }else if (self.selectType == SelectResourceVideo)
             {
                 if ([name isEqualToString:@"Videos"] || [name isEqualToString:@"视频"]) {
                     model = [self modelWithResult:group name:name];

@@ -13,17 +13,14 @@
 #define iOS9Later ([UIDevice currentDevice].systemVersion.floatValue >= 9.0f)
 #define iOS9_1Later ([UIDevice currentDevice].systemVersion.floatValue >= 9.1f)
 
-typedef enum : NSUInteger {
-    SelectResourcePhoto = 0,        //选择图片
-    SelectResourceVideo             //选择视频
-} SelectResourceType;
+#import "TZImageManager.h"
 
 
 @protocol TZImagePickerControllerDelegate;
 @interface TZImagePickerController : UINavigationController
 
 /// Use this init method / 用这个初始化方法
-- (instancetype)initWithMaxImagesCount:(NSInteger)maxImagesCount delegate:(id<TZImagePickerControllerDelegate>)delegate;
+- (instancetype)initWithMaxImagesCount:(NSInteger)maxImagesCount  selectType:(SelectResourceType)selectTyp delegate:(id<TZImagePickerControllerDelegate>)delegate;
 
 /// Default is 9 / 默认最大可选9张图片
 @property (nonatomic, assign) NSInteger maxImagesCount;

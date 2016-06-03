@@ -15,6 +15,8 @@
 @property (nonatomic, assign) NSInteger currentIndex;           ///< Index of the photo user click / 用户点击的图片的索引
 @property (nonatomic, assign) BOOL isSelectOriginalPhoto;       ///< If YES,return original photo / 是否返回原图
 
+@property (nonatomic, assign) BOOL isFrom_NOT_TZVC;               //是否是从TZPhotoPickerController进入
+
 /// Return the new selected photos / 返回最新的选中图片数组
 @property (nonatomic, copy) void (^returnNewSelectedPhotoArrBlock)(NSMutableArray *newSeletedPhotoArr, BOOL isSelectOriginalPhoto);
 @property (nonatomic, copy) void (^okButtonClickBlock)(NSMutableArray *newSeletedPhotoArr, BOOL isSelectOriginalPhoto);
