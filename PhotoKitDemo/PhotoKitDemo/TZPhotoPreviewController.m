@@ -245,6 +245,7 @@
 - (void)back {
     [self.navigationController popViewControllerAnimated:YES];
     if (self.returnNewSelectedPhotoArrBlock) {
+        NSLog(@"TZPhotopreviewController = %@",self.selectedPhotoArr);
         self.returnNewSelectedPhotoArrBlock(self.selectedPhotoArr,_isSelectOriginalPhoto);
     }
 }
@@ -274,6 +275,15 @@
     
     [self.selectedPhotoArr removeObjectAtIndex:_currentIndex];
     
+    
+    if(self.selectedPhotoArr.count == 0)
+    {//没有图片
+        [self.navigationController popViewControllerAnimated:YES];
+        if (self.returnNewSelectedPhotoArrBlock) {
+            self.returnNewSelectedPhotoArrBlock(self.selectedPhotoArr,_isSelectOriginalPhoto);
+        }
+        return;
+    }
     
     if(_currentIndex == _selectedPhotoArr.count)
     {
