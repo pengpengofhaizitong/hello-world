@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1BB2A5C00162ECA994D6475F /* libPods-PhotoKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F57BD2446BF6531254CDC03 /* libPods-PhotoKitDemo.a */; };
 		837C75141D01269F005B7DE6 /* TZCompressionResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 837C75131D01269F005B7DE6 /* TZCompressionResource.m */; };
-		837C751C1D01884B005B7DE6 /* TZActionSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 837C751B1D01884B005B7DE6 /* TZActionSheetView.m */; };
 		83BB52F41CFFDC27000E87D5 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB52E31CFFDC27000E87D5 /* TZAssetCell.m */; };
 		83BB52F51CFFDC27000E87D5 /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB52E51CFFDC27000E87D5 /* TZAssetModel.m */; };
 		83BB52F61CFFDC27000E87D5 /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB52E71CFFDC27000E87D5 /* TZImageManager.m */; };
@@ -36,6 +35,7 @@
 		83BB531C1CFFDC6F000E87D5 /* TZAssetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83BB530C1CFFDC6F000E87D5 /* TZAssetCell.xib */; };
 		83BB531D1CFFDC6F000E87D5 /* VideoSendIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BB530D1CFFDC6F000E87D5 /* VideoSendIcon@2x.png */; };
 		83E414901CFEB832009EB95F /* MyTestPHAssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E4148F1CFEB832009EB95F /* MyTestPHAssetViewController.m */; };
+		83EA488D1D1BC8A800422278 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA488C1D1BC8A800422278 /* PlayerView.m */; };
 		83EB9E191CFE77E000521B4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EB9E181CFE77E000521B4D /* main.m */; };
 		83EB9E1C1CFE77E000521B4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EB9E1B1CFE77E000521B4D /* AppDelegate.m */; };
 		83EB9E1F1CFE77E000521B4D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EB9E1E1CFE77E000521B4D /* ViewController.m */; };
@@ -72,8 +72,6 @@
 		837C75121D01269F005B7DE6 /* TZCompressionResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZCompressionResource.h; sourceTree = "<group>"; };
 		837C75131D01269F005B7DE6 /* TZCompressionResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZCompressionResource.m; sourceTree = "<group>"; };
 		837C75181D012706005B7DE6 /* TZHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZHeader.h; sourceTree = "<group>"; };
-		837C751A1D01884B005B7DE6 /* TZActionSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZActionSheetView.h; sourceTree = "<group>"; };
-		837C751B1D01884B005B7DE6 /* TZActionSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZActionSheetView.m; sourceTree = "<group>"; };
 		83BB52E21CFFDC27000E87D5 /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
 		83BB52E31CFFDC27000E87D5 /* TZAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetCell.m; sourceTree = "<group>"; };
 		83BB52E41CFFDC27000E87D5 /* TZAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetModel.h; sourceTree = "<group>"; };
@@ -110,6 +108,8 @@
 		83BB530D1CFFDC6F000E87D5 /* VideoSendIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoSendIcon@2x.png"; sourceTree = "<group>"; };
 		83E4148E1CFEB832009EB95F /* MyTestPHAssetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTestPHAssetViewController.h; sourceTree = "<group>"; };
 		83E4148F1CFEB832009EB95F /* MyTestPHAssetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTestPHAssetViewController.m; sourceTree = "<group>"; };
+		83EA488B1D1BC8A800422278 /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
+		83EA488C1D1BC8A800422278 /* PlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerView.m; sourceTree = "<group>"; };
 		83EB9E141CFE77E000521B4D /* PhotoKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EB9E181CFE77E000521B4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83EB9E1A1CFE77E000521B4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -191,8 +191,6 @@
 				837C75121D01269F005B7DE6 /* TZCompressionResource.h */,
 				837C75131D01269F005B7DE6 /* TZCompressionResource.m */,
 				837C75181D012706005B7DE6 /* TZHeader.h */,
-				837C751A1D01884B005B7DE6 /* TZActionSheetView.h */,
-				837C751B1D01884B005B7DE6 /* TZActionSheetView.m */,
 			);
 			name = TZImagePicker;
 			sourceTree = "<group>";
@@ -248,6 +246,8 @@
 				83BB52E11CFFDC02000E87D5 /* TZImagePicker */,
 				83EB9E1A1CFE77E000521B4D /* AppDelegate.h */,
 				83EB9E1B1CFE77E000521B4D /* AppDelegate.m */,
+				83EA488B1D1BC8A800422278 /* PlayerView.h */,
+				83EA488C1D1BC8A800422278 /* PlayerView.m */,
 				83EB9E1D1CFE77E000521B4D /* ViewController.h */,
 				83EB9E1E1CFE77E000521B4D /* ViewController.m */,
 				83EB9E501CFE793000521B4D /* EntranceViewController.h */,
@@ -503,7 +503,7 @@
 				83EB9E1F1CFE77E000521B4D /* ViewController.m in Sources */,
 				83BB52F61CFFDC27000E87D5 /* TZImageManager.m in Sources */,
 				83EB9E1C1CFE77E000521B4D /* AppDelegate.m in Sources */,
-				837C751C1D01884B005B7DE6 /* TZActionSheetView.m in Sources */,
+				83EA488D1D1BC8A800422278 /* PlayerView.m in Sources */,
 				83EB9E191CFE77E000521B4D /* main.m in Sources */,
 				83BB52FC1CFFDC27000E87D5 /* UIView+Layout.m in Sources */,
 				83BB52FB1CFFDC27000E87D5 /* TZVideoPlayerController.m in Sources */,

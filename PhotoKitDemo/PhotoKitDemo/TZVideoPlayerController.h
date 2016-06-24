@@ -13,4 +13,8 @@
 
 @property (nonatomic, strong) TZAssetModel *model;
 
+@property (nonatomic, assign) BOOL isRepeatBrowse;
+
+@property (nonatomic, copy) void (^ returnIsRemoveSelectViedo)(BOOL isRemoveSelect);
+
 @end

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "InformManagementViewController.h"
+#import "NotificaionManageViewController.h"
 
 @interface ViewController ()
 
@@ -22,8 +23,40 @@
 }
 - (IBAction)intoNextVC:(UIButton *)sender {
     
-    InformManagementViewController *informVC = [[InformManagementViewController alloc] init];
-    [self.navigationController pushViewController:informVC animated:YES];
+//    InformManagementViewController *informVC = [[InformManagementViewController alloc] init];
+//    [self.navigationController pushViewController:informVC animated:YES];
+
+//    NotificaionManageViewController *notVC = [[NotificaionManageViewController alloc] init];
+//    [self.navigationController pushViewController:notVC animated:YES];
+    
+    UIAlertController *actionSheetController = [UIAlertController alertControllerWithTitle:@"action选项"
+                                                                                   message:nil
+                                                                            preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *action0 = [UIAlertAction actionWithTitle:@"选项一"
+                                                      style:UIAlertActionStyleDefault
+                                                    handler:^(UIAlertAction * action) {
+                                                        
+                                                    }];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"选项二"
+                                                     style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction * action) {
+                                                       
+                                                   }];
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"选项三"
+                                                      style:UIAlertActionStyleDefault
+                                                    handler:^(UIAlertAction * action) {
+                                                        
+                                                    }];
+    UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"取消"
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction * action) {}];
+    [actionSheetController addAction:action0];
+    [actionSheetController addAction:action];
+    [actionSheetController addAction:action1];
+    [actionSheetController addAction:actionCancel];
+    [actionSheetController.view setTintColor:[UIColor greenColor]];
+    [self presentViewController:actionSheetController animated:YES completion:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {

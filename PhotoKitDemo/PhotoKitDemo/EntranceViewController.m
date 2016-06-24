@@ -9,18 +9,19 @@
 #import "EntranceViewController.h"
 #import "TZHeader.h"
 #import <AssetsLibrary/AssetsLibrary.h>
-
+#import "PlayerView.h"
+#import "TZVideoPlayerController.h"
 
 @interface EntranceViewController ()<TZImagePickerControllerDelegate>
 {
     __weak IBOutlet UIImageView *image;
     __weak IBOutlet UIView *ImageBackGView;
-    
-    
-    NSMutableArray *thumbnailImageArr;
-    NSMutableArray *originalImageArr;
+  __block  NSMutableArray *thumbnailImageArr;
     NSMutableArray *selectPhoto;
+    AVPlayer *_player;
+    PlayerView *_playerV;
     
+    id _asset;
 }
 @end
 
@@ -29,222 +30,200 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    NSLog(@"this viewController is EntranceViewController");
-    
     thumbnailImageArr = [NSMutableArray arrayWithCapacity:0];
-    originalImageArr = [NSMutableArray arrayWithCapacity:0];
     selectPhoto = [NSMutableArray arrayWithCapacity:0];
     
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [_player play];
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [_player pause];
+}
+
 - (void)addImageView
 {
-    for(UIView *view in ImageBackGView.subviews)
-    {
-        if([view isKindOfClass:[UIButton class]])
-        {
+    for(UIView *view in ImageBackGView.subviews){
+        if([view isKindOfClass:[UIButton class]] || [view isKindOfClass:[UIImageView class]]){
             [view removeFromSuperview];
         }
     }
-    
-    CGFloat width = ImageBackGView.frame.size.width/3;
+    CGFloat width = ImageBackGView.frame.size.width/4;
     CGFloat heigh = ImageBackGView.frame.size.height/3;
-    
-//    ImageBackGView.backgroundColor = [UIColor orangeColor];
-    
-    for(int i=0;i<3;i++)
-    {
-        for(int j=0;j<3;j++)
-        {
-            if(thumbnailImageArr.count > i*3+j)
-            {
-                UIButton *imgBtn = [[UIButton alloc] initWithFrame:CGRectMake(j*width, i*heigh, width, heigh)];
-                [imgBtn setImage:[thumbnailImageArr objectAtIndex:j+i*3] forState:UIControlStateNormal];
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            if(thumbnailImageArr.count > i*3+j){
+                UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(j*width, i*heigh, width-1, heigh-1)];
+                [imageV setImage:[thumbnailImageArr objectAtIndex:j+i*3]];
+                imageV.userInteractionEnabled = YES;
+                [ImageBackGView addSubview:imageV];
+                
+                UIButton *imgBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, width-1, heigh-1)];
                 imgBtn.tag = 1000+i*3+j;
                 [imgBtn addTarget:self action:@selector(editorImage:) forControlEvents:UIControlEventTouchUpInside];
-                [ImageBackGView addSubview:imgBtn];
+                [imageV addSubview:imgBtn];
             }
         }
     }
-    
-    
 }
 
--(void)editorImage:(UIButton *)button
-{
-//    TZAssetModel *model = _selectedPhotoArr[i];
-    
+#pragma mark ---选择更多图片---
+- (IBAction)selectMore:(UIButton *)sender {
+    if(thumbnailImageArr.count < 9){
+        TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:9-thumbnailImageArr.count selectType:SelectResourcePhoto delegate:self];
+        [self presentViewController:imagePickerVc animated:YES completion:nil];
+    }
+}
+
+-(void)editorImage:(UIButton *)button {
     TZPhotoPreviewController *photoPreviewVc = [[TZPhotoPreviewController alloc] init];
     photoPreviewVc.photoArr = selectPhoto;
     photoPreviewVc.currentIndex = button.tag-1000;
     photoPreviewVc.isFrom_NOT_TZVC = YES;
     [self pushPhotoPrevireViewController:photoPreviewVc];
-    
 }
 
 - (void)pushPhotoPrevireViewController:(TZPhotoPreviewController *)photoPreviewVc {
-//    photoPreviewVc.isSelectOriginalPhoto = _isSelectOriginalPhoto;
     photoPreviewVc.selectedPhotoArr = selectPhoto;
-    
+    __weak typeof(self) weakSelf = self;
     photoPreviewVc.returnNewSelectedPhotoArrBlock = ^(NSMutableArray *newSelectedPhotoArr,BOOL isSelectOriginalPhoto) {
-        
-        NSLog(@"newSelectedPhotoArr.count = %@",newSelectedPhotoArr);
-        
-//        selectPhoto = [NSMutableArray arrayWithCapacity:0];
-//        [selectPhoto addObjectsFromArray:newSelectedPhotoArr];
-        
         NSArray *selectArr = newSelectedPhotoArr;
-        NSLog(@"selectArr === %@",selectArr);
-        [self refreshDataForImage:selectArr];
-        
+        thumbnailImageArr = [NSMutableArray arrayWithCapacity:0];
+        selectPhoto = [NSMutableArray arrayWithCapacity:0];
+        [weakSelf refreshDataForImage:selectArr];
     };
     photoPreviewVc.okButtonClickBlock = ^(NSMutableArray *newSelectedPhotoArr,BOOL isSelectOriginalPhoto){
        
-        
     };
     [self.navigationController pushViewController:photoPreviewVc animated:YES];
 }
 
 
-
-#pragma mark --- 图片单选 ---
-- (IBAction)SelectSinglePicture:(UIButton *)sender {
-    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:1 selectType:SelectResourcePhoto delegate:self];
-    
-    // You can get the photos by block, the same as by delegate.
-    // 你可以通过block或者代理，来得到用户选择的照片.
-//    [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray *photos, NSArray *assets) {
-//        
-//        NSLog(@"photos == %@",photos);
-//        
-//        
-//    }];
-    [self presentViewController:imagePickerVc animated:YES completion:nil];
-}
-
-
 #pragma mark --- 图片多选 ---
 - (IBAction)SelectMorePicture:(UIButton *)sender {
-
-
-    
     TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:9 selectType:SelectResourcePhoto delegate:self];
-    
-    // You can get the photos by block, the same as by delegate.
-    // 你可以通过block或者代理，来得到用户选择的照片.
-//    [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray *photos, NSArray *assets) {
-//        
-//        NSLog(@"photos == %@",photos);
-////        image.image = [photos objectAtIndex:0];
-//        
-//    }];
+    imagePickerVc.allowPickingVideo = NO;
     [self presentViewController:imagePickerVc animated:YES completion:nil];
-    
 }
-
 
 #pragma mark --- 视频 ---
 - (IBAction)SelectViedo:(UIButton *)sender {
-    
-    
     TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:9  selectType:SelectResourceVideo delegate:self];
     imagePickerVc.allowPickingVideo = YES;
     [imagePickerVc setDidFinishPickingVideoHandle:^(UIImage *image, id asset) {
-
         NSLog(@"asset = %@",asset);
-
     }];
-    
     [self presentViewController:imagePickerVc animated:YES completion:nil];
-    
 }
 
-
-- (void)imagePickerControllerDidCancel:(TZImagePickerController *)picker
-{
+- (void)imagePickerControllerDidCancel:(TZImagePickerController *)picker{
     NSLog(@"cancel");
 }
 
-- (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets SelectImageArr:(NSArray *)selectImgArr
-{
-//    NSLog(@"photo = %@",photos);
-    
-    
-    
-    NSLog(@"SelectImageArr == %lu",(unsigned long)selectImgArr.count);
-    
+- (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets SelectImageArr:(NSArray *)selectImgArr{
     [self refreshDataForImage:selectImgArr];
+}
+
+- (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets infos:(NSArray<NSDictionary *> *)infos SelectImageArr:(NSArray *)selectImgArr{
     
 }
 
-- (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets infos:(NSArray<NSDictionary *> *)infos SelectImageArr:(NSArray *)selectImgArr
-{
+- (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingVideo:(UIImage *)coverImage sourceAssets:(id)asset{
+//    [TZCompressionResource getVideoFromPHAsset:asset Complete:^(NSData *data, NSString *string) {
+//        NSLog(@"pppppengpengpengpngepngpn = %@\n%ld",string,data.length);
+//    }];
+    _playerV = [[PlayerView alloc] initWithFrame:ImageBackGView.bounds];
+    _playerV.backgroundColor = [UIColor redColor];
+    [ImageBackGView addSubview:_playerV];
     
-}
-
-- (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingVideo:(UIImage *)coverImage sourceAssets:(id)asset
-{
-    NSLog(@"asset = %@",asset);
+    _asset = asset;
     
-    [[TZCompressionResource compressionResource] getVideoFromPHAsset:asset Complete:^(NSData *data, NSString *string) {
-        NSLog(@"pppppengpengpengpngepngpn = %@\n%ld",string,data.length);
+    UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGR:)];
+    [ImageBackGView addGestureRecognizer:tapGR];
+    
+    
+    [[TZImageManager manager] getVideoWithAsset:asset completion:^(AVPlayerItem *playerItem, NSDictionary *info) {
+        _player = [[AVPlayer alloc] initWithPlayerItem:playerItem];
+        [_playerV setPlayer:_player];
+        [_player play];
     }];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerItemDidReachEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+}
+#pragma makr 点击手势
+-(void)tapGR:(UIPanGestureRecognizer *)panGR{
     
-    
+    TZAssetModel *model = [[TZAssetModel alloc] init];
+    model.asset = _asset;
+    TZVideoPlayerController *tzvideoPlayV = [[TZVideoPlayerController alloc] init];
+    tzvideoPlayV.model = model;
+    tzvideoPlayV.isRepeatBrowse = YES;
+    tzvideoPlayV.returnIsRemoveSelectViedo = ^(BOOL isRmoveSelect){
+        if(isRmoveSelect){
+            [self removeSelectViedo];
+        }
+    };
+    [self.navigationController pushViewController:tzvideoPlayV animated:YES];
+}
+
+- (void)removeSelectViedo{
+    [_player replaceCurrentItemWithPlayerItem:nil];
+    _player = nil;
+    _asset = nil;
+
+    [_playerV removeFromSuperview];
+    _playerV = nil;
     
 }
 
+- (void)playerItemDidReachEnd:(NSNotification *)notification{
+    CMTime currentTime = CMTimeMultiplyByFloat64(_player.currentTime, 0);
+    [_player seekToTime:currentTime];
+    [_player play];
+}
 
-
-- (void)refreshDataForImage:(NSArray *)selectImgArr
-{
-    NSLog(@"111selectPhoto = %@\n%@",selectPhoto,selectImgArr);
-    
-    [selectPhoto removeAllObjects];
-    [thumbnailImageArr removeAllObjects];
-    [originalImageArr removeAllObjects];
+- (void)refreshDataForImage:(NSArray *)selectImgArr{
     [selectPhoto addObjectsFromArray:selectImgArr];
-    
-    NSLog(@"selectPhoto = %@\n%@",selectPhoto,selectImgArr);
-    
-    for(int i=0;i<selectImgArr.count;i++)
-    {
+    for(int i=0;i<selectImgArr.count;i++){
         @autoreleasepool {
             TZAssetModel *model = selectImgArr[i];
+            //获取照片本身
             [[TZImageManager manager] getPhotoWithAsset:model.asset completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
-                
-                if (isDegraded)
-                {
-                    //                    return;
+                if (isDegraded){
                     [thumbnailImageArr addObject:photo];
-                }else
-                {
+                }else{
                     NSData *imageData = UIImageJPEGRepresentation(photo, 0.5);
                     [self uploadImageToServer:imageData];
                 }
-                
-                NSLog(@"photo =\n %@",photo);
             }];
         }
-        
     }
-    
     [self addImageView];
-
 }
+
 
 
 #pragma mark 上传压缩图片
-- (void)uploadImageToServer:(NSData *)imageData
-{
-    
+- (void)uploadImageToServer:(NSData *)imageData{
     
     
 }
 
 
+- (IBAction)upLoadFile:(id)sender{
+    
+    
 
+    
+}
+
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+}
 
 
 - (void)didReceiveMemoryWarning {

@@ -12,9 +12,8 @@
 
 @interface TZCompressionResource : NSObject
 
-+(TZCompressionResource *)compressionResource;
 
-- (void)getVideoFromPHAsset:(PHAsset *)asset Complete:(void (^)(NSData * ,NSString *))result;
++ (void)getVideoFromPHAsset:(id)asset Complete:(void (^)(NSData * ,NSString *))result;
 
 
 @end

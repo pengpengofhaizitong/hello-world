@@ -95,11 +95,6 @@ extern NSString *selectResource_Type;
                 }
             }
             
-            
-            
-            
-            
-            
         }
     } else {
         [self.assetLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
@@ -131,7 +126,9 @@ extern NSString *selectResource_Type;
     NSMutableArray *albumArr = [NSMutableArray array];
     if (iOS8Later) {
         PHFetchOptions *option = [[PHFetchOptions alloc] init];
-        if (!allowPickingVideo) option.predicate = [NSPredicate predicateWithFormat:@"mediaType == %ld", PHAssetMediaTypeImage];
+        if (!allowPickingVideo){ option.predicate = [NSPredicate predicateWithFormat:@"mediaType == %ld", PHAssetMediaTypeImage];}else{
+            option.predicate = [NSPredicate predicateWithFormat:@"mediaType == %ld", PHAssetMediaTypeVideo];
+        }
         option.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES]];
         
         PHAssetCollectionSubtype smartAlbumSubtype = PHAssetCollectionSubtypeSmartAlbumUserLibrary | PHAssetCollectionSubtypeSmartAlbumRecentlyAdded | PHAssetCollectionSubtypeSmartAlbumVideos;
@@ -342,7 +339,8 @@ extern NSString *selectResource_Type;
         CGFloat aspectRatio = phAsset.pixelWidth / (CGFloat)phAsset.pixelHeight;
         CGFloat multiple = [UIScreen mainScreen].scale;
         CGFloat pixelWidth = photoWidth * multiple;
-        CGFloat pixelHeight = pixelWidth / aspectRatio;
+//        CGFloat pixelHeight = pixelWidth / aspectRatio;
+        CGFloat pixelHeight = pixelWidth;
         
         [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(pixelWidth, pixelHeight) contentMode:PHImageContentModeAspectFit options:nil resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
             BOOL downloadFinined = (![[info objectForKey:PHImageCancelledKey] boolValue] && ![info objectForKey:PHImageErrorKey]);

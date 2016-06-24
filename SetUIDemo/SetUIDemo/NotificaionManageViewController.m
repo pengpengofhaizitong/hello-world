@@ -1,13 +1,12 @@
 //
-//  InformManagementViewController.m
+//  NotificaionManageViewController.m
 //  SetUIDemo
 //
-//  Created by haizitong6 on 16/6/6.
+//  Created by haizitong6 on 16/6/12.
 //  Copyright © 2016年 haizitong6. All rights reserved.
 //
 
-#import "InformManagementViewController.h"
-
+#import "NotificaionManageViewController.h"
 
 #define isYuanSuoDuan (1)
 
@@ -25,15 +24,16 @@
 #define GrayBackGroundColor [UIColor colorWithRed:240/255.0f green:240/255.0f blue:240/255.0f alpha:1]
 #define GrayLabelTextColor [UIColor colorWithRed:179/255.0f green:179/255.0f blue:179/255.0f alpha:1]
 
+
 #define cellHigh  (50)
 
-@interface InformManagementViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface NotificaionManageViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation InformManagementViewController
+@implementation NotificaionManageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,8 +41,6 @@
     
     _tableView.tableFooterView = [[UIView alloc] init];
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    
 }
 
 - (BOOL)getSystemVersion{
@@ -75,7 +73,7 @@
 #else
     [self clickForRow:row Section:section];
 #endif
-
+    
 }
 
 -(void)clickForRow:(NSInteger)row Section:(NSInteger)section{
@@ -110,15 +108,13 @@
 }
 
 
-
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InformmanagementCellIdentifier"];
     if(cell == nil){
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"InformmanagementCellIdentifier"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-
+    
     cell.textLabel.font = [UIFont systemFontOfSize:16];
     
     NSMutableString *mutStr = [[NSMutableString alloc] init];
@@ -155,7 +151,7 @@
         dividerView.backgroundColor = GrayBackGroundColor;
         [cell.contentView addSubview:dividerView];
     }
-
+    
     return cell;
 }
 
@@ -173,26 +169,14 @@
     return 1;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return cellHigh;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 50;
 }
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
