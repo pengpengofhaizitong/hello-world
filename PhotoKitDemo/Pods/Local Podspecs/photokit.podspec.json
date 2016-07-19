@@ -1,0 +1,24 @@
+{
+  "name": "photokit",
+  "version": "0.0.5",
+  "summary": "The easiest way to use pull-to-refresh",
+  "homepage": "http://192.168.0.150:8800/peng/PhotoKit-test.git",
+  "license": "MIT",
+  "authors": {
+    "hanjiangkai": "hanjiangkai@haizitong.com"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source": {
+    "git": "http://192.168.0.150:8800/peng/PhotoKit-test.git",
+    "tag": "0.0.5"
+  },
+  "source_files": "photokit/**/*.{h,m}",
+  "resources": "photokit/**/resource/PhotoKitBundle.bundle",
+  "requires_arc": true,
+  "frameworks": [
+    "Photos",
+    "AVFoundation"
+  ]
+}

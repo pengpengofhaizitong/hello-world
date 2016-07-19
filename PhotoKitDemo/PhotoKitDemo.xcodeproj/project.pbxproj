@@ -8,33 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1BB2A5C00162ECA994D6475F /* libPods-PhotoKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F57BD2446BF6531254CDC03 /* libPods-PhotoKitDemo.a */; };
-		837C75141D01269F005B7DE6 /* TZCompressionResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 837C75131D01269F005B7DE6 /* TZCompressionResource.m */; };
-		837C751C1D01884B005B7DE6 /* TZActionSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 837C751B1D01884B005B7DE6 /* TZActionSheetView.m */; };
-		83BB52F41CFFDC27000E87D5 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB52E31CFFDC27000E87D5 /* TZAssetCell.m */; };
-		83BB52F51CFFDC27000E87D5 /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB52E51CFFDC27000E87D5 /* TZAssetModel.m */; };
-		83BB52F61CFFDC27000E87D5 /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB52E71CFFDC27000E87D5 /* TZImageManager.m */; };
-		83BB52F71CFFDC27000E87D5 /* TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB52E91CFFDC27000E87D5 /* TZImagePickerController.m */; };
-		83BB52F81CFFDC27000E87D5 /* TZPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB52EB1CFFDC27000E87D5 /* TZPhotoPickerController.m */; };
-		83BB52F91CFFDC27000E87D5 /* TZPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB52ED1CFFDC27000E87D5 /* TZPhotoPreviewCell.m */; };
-		83BB52FA1CFFDC27000E87D5 /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB52EF1CFFDC27000E87D5 /* TZPhotoPreviewController.m */; };
-		83BB52FB1CFFDC27000E87D5 /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB52F11CFFDC27000E87D5 /* TZVideoPlayerController.m */; };
-		83BB52FC1CFFDC27000E87D5 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB52F31CFFDC27000E87D5 /* UIView+Layout.m */; };
-		83BB530E1CFFDC6F000E87D5 /* MMVideoPreviewPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BB52FE1CFFDC6F000E87D5 /* MMVideoPreviewPlay@2x.png */; };
-		83BB530F1CFFDC6F000E87D5 /* MMVideoPreviewPlayHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BB52FF1CFFDC6F000E87D5 /* MMVideoPreviewPlayHL@2x.png */; };
-		83BB53101CFFDC6F000E87D5 /* navi_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BB53001CFFDC6F000E87D5 /* navi_back@2x.png */; };
-		83BB53111CFFDC6F000E87D5 /* photo_def_photoPickerVc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BB53011CFFDC6F000E87D5 /* photo_def_photoPickerVc@2x.png */; };
-		83BB53121CFFDC6F000E87D5 /* photo_def_previewVc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BB53021CFFDC6F000E87D5 /* photo_def_previewVc@2x.png */; };
-		83BB53131CFFDC6F000E87D5 /* photo_number_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BB53031CFFDC6F000E87D5 /* photo_number_icon@2x.png */; };
-		83BB53141CFFDC6F000E87D5 /* photo_original_def@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BB53041CFFDC6F000E87D5 /* photo_original_def@2x.png */; };
-		83BB53151CFFDC6F000E87D5 /* photo_original_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BB53051CFFDC6F000E87D5 /* photo_original_sel@2x.png */; };
-		83BB53161CFFDC6F000E87D5 /* photo_sel_photoPickerVc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BB53061CFFDC6F000E87D5 /* photo_sel_photoPickerVc@2x.png */; };
-		83BB53171CFFDC6F000E87D5 /* photo_sel_previewVc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BB53071CFFDC6F000E87D5 /* photo_sel_previewVc@2x.png */; };
-		83BB53181CFFDC6F000E87D5 /* preview_number_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BB53081CFFDC6F000E87D5 /* preview_number_icon@2x.png */; };
-		83BB53191CFFDC6F000E87D5 /* preview_original_def@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BB53091CFFDC6F000E87D5 /* preview_original_def@2x.png */; };
-		83BB531A1CFFDC6F000E87D5 /* TableViewArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BB530A1CFFDC6F000E87D5 /* TableViewArrow@2x.png */; };
-		83BB531B1CFFDC6F000E87D5 /* TZAlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83BB530B1CFFDC6F000E87D5 /* TZAlbumCell.xib */; };
-		83BB531C1CFFDC6F000E87D5 /* TZAssetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83BB530C1CFFDC6F000E87D5 /* TZAssetCell.xib */; };
-		83BB531D1CFFDC6F000E87D5 /* VideoSendIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BB530D1CFFDC6F000E87D5 /* VideoSendIcon@2x.png */; };
 		83E414901CFEB832009EB95F /* MyTestPHAssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E4148F1CFEB832009EB95F /* MyTestPHAssetViewController.m */; };
 		83EB9E191CFE77E000521B4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EB9E181CFE77E000521B4D /* main.m */; };
 		83EB9E1C1CFE77E000521B4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EB9E1B1CFE77E000521B4D /* AppDelegate.m */; };
@@ -69,45 +42,6 @@
 		12FC1482CD7A28CBF72955B8 /* Pods-PhotoKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoKitDemo/Pods-PhotoKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		1F57BD2446BF6531254CDC03 /* libPods-PhotoKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		410991C667C8D45B8CC38781 /* Pods-PhotoKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoKitDemo/Pods-PhotoKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		837C75121D01269F005B7DE6 /* TZCompressionResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZCompressionResource.h; sourceTree = "<group>"; };
-		837C75131D01269F005B7DE6 /* TZCompressionResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZCompressionResource.m; sourceTree = "<group>"; };
-		837C75181D012706005B7DE6 /* TZHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZHeader.h; sourceTree = "<group>"; };
-		837C751A1D01884B005B7DE6 /* TZActionSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZActionSheetView.h; sourceTree = "<group>"; };
-		837C751B1D01884B005B7DE6 /* TZActionSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZActionSheetView.m; sourceTree = "<group>"; };
-		83BB52E21CFFDC27000E87D5 /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
-		83BB52E31CFFDC27000E87D5 /* TZAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetCell.m; sourceTree = "<group>"; };
-		83BB52E41CFFDC27000E87D5 /* TZAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetModel.h; sourceTree = "<group>"; };
-		83BB52E51CFFDC27000E87D5 /* TZAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetModel.m; sourceTree = "<group>"; };
-		83BB52E61CFFDC27000E87D5 /* TZImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageManager.h; sourceTree = "<group>"; };
-		83BB52E71CFFDC27000E87D5 /* TZImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageManager.m; sourceTree = "<group>"; };
-		83BB52E81CFFDC27000E87D5 /* TZImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImagePickerController.h; sourceTree = "<group>"; };
-		83BB52E91CFFDC27000E87D5 /* TZImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImagePickerController.m; sourceTree = "<group>"; };
-		83BB52EA1CFFDC27000E87D5 /* TZPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPickerController.h; sourceTree = "<group>"; };
-		83BB52EB1CFFDC27000E87D5 /* TZPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPickerController.m; sourceTree = "<group>"; };
-		83BB52EC1CFFDC27000E87D5 /* TZPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewCell.h; sourceTree = "<group>"; };
-		83BB52ED1CFFDC27000E87D5 /* TZPhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewCell.m; sourceTree = "<group>"; };
-		83BB52EE1CFFDC27000E87D5 /* TZPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewController.h; sourceTree = "<group>"; };
-		83BB52EF1CFFDC27000E87D5 /* TZPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewController.m; sourceTree = "<group>"; };
-		83BB52F01CFFDC27000E87D5 /* TZVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZVideoPlayerController.h; sourceTree = "<group>"; };
-		83BB52F11CFFDC27000E87D5 /* TZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZVideoPlayerController.m; sourceTree = "<group>"; };
-		83BB52F21CFFDC27000E87D5 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
-		83BB52F31CFFDC27000E87D5 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
-		83BB52FE1CFFDC6F000E87D5 /* MMVideoPreviewPlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MMVideoPreviewPlay@2x.png"; sourceTree = "<group>"; };
-		83BB52FF1CFFDC6F000E87D5 /* MMVideoPreviewPlayHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MMVideoPreviewPlayHL@2x.png"; sourceTree = "<group>"; };
-		83BB53001CFFDC6F000E87D5 /* navi_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navi_back@2x.png"; sourceTree = "<group>"; };
-		83BB53011CFFDC6F000E87D5 /* photo_def_photoPickerVc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_def_photoPickerVc@2x.png"; sourceTree = "<group>"; };
-		83BB53021CFFDC6F000E87D5 /* photo_def_previewVc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_def_previewVc@2x.png"; sourceTree = "<group>"; };
-		83BB53031CFFDC6F000E87D5 /* photo_number_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_number_icon@2x.png"; sourceTree = "<group>"; };
-		83BB53041CFFDC6F000E87D5 /* photo_original_def@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_original_def@2x.png"; sourceTree = "<group>"; };
-		83BB53051CFFDC6F000E87D5 /* photo_original_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_original_sel@2x.png"; sourceTree = "<group>"; };
-		83BB53061CFFDC6F000E87D5 /* photo_sel_photoPickerVc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_sel_photoPickerVc@2x.png"; sourceTree = "<group>"; };
-		83BB53071CFFDC6F000E87D5 /* photo_sel_previewVc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_sel_previewVc@2x.png"; sourceTree = "<group>"; };
-		83BB53081CFFDC6F000E87D5 /* preview_number_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preview_number_icon@2x.png"; sourceTree = "<group>"; };
-		83BB53091CFFDC6F000E87D5 /* preview_original_def@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preview_original_def@2x.png"; sourceTree = "<group>"; };
-		83BB530A1CFFDC6F000E87D5 /* TableViewArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewArrow@2x.png"; sourceTree = "<group>"; };
-		83BB530B1CFFDC6F000E87D5 /* TZAlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TZAlbumCell.xib; sourceTree = "<group>"; };
-		83BB530C1CFFDC6F000E87D5 /* TZAssetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TZAssetCell.xib; sourceTree = "<group>"; };
-		83BB530D1CFFDC6F000E87D5 /* VideoSendIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoSendIcon@2x.png"; sourceTree = "<group>"; };
 		83E4148E1CFEB832009EB95F /* MyTestPHAssetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTestPHAssetViewController.h; sourceTree = "<group>"; };
 		83E4148F1CFEB832009EB95F /* MyTestPHAssetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTestPHAssetViewController.m; sourceTree = "<group>"; };
 		83EB9E141CFE77E000521B4D /* PhotoKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,60 +100,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		83BB52E11CFFDC02000E87D5 /* TZImagePicker */ = {
-			isa = PBXGroup;
-			children = (
-				83BB52FD1CFFDC60000E87D5 /* Resource */,
-				83BB52E21CFFDC27000E87D5 /* TZAssetCell.h */,
-				83BB52E31CFFDC27000E87D5 /* TZAssetCell.m */,
-				83BB52E41CFFDC27000E87D5 /* TZAssetModel.h */,
-				83BB52E51CFFDC27000E87D5 /* TZAssetModel.m */,
-				83BB52E61CFFDC27000E87D5 /* TZImageManager.h */,
-				83BB52E71CFFDC27000E87D5 /* TZImageManager.m */,
-				83BB52E81CFFDC27000E87D5 /* TZImagePickerController.h */,
-				83BB52E91CFFDC27000E87D5 /* TZImagePickerController.m */,
-				83BB52EA1CFFDC27000E87D5 /* TZPhotoPickerController.h */,
-				83BB52EB1CFFDC27000E87D5 /* TZPhotoPickerController.m */,
-				83BB52EC1CFFDC27000E87D5 /* TZPhotoPreviewCell.h */,
-				83BB52ED1CFFDC27000E87D5 /* TZPhotoPreviewCell.m */,
-				83BB52EE1CFFDC27000E87D5 /* TZPhotoPreviewController.h */,
-				83BB52EF1CFFDC27000E87D5 /* TZPhotoPreviewController.m */,
-				83BB52F01CFFDC27000E87D5 /* TZVideoPlayerController.h */,
-				83BB52F11CFFDC27000E87D5 /* TZVideoPlayerController.m */,
-				83BB52F21CFFDC27000E87D5 /* UIView+Layout.h */,
-				83BB52F31CFFDC27000E87D5 /* UIView+Layout.m */,
-				837C75121D01269F005B7DE6 /* TZCompressionResource.h */,
-				837C75131D01269F005B7DE6 /* TZCompressionResource.m */,
-				837C75181D012706005B7DE6 /* TZHeader.h */,
-				837C751A1D01884B005B7DE6 /* TZActionSheetView.h */,
-				837C751B1D01884B005B7DE6 /* TZActionSheetView.m */,
-			);
-			name = TZImagePicker;
-			sourceTree = "<group>";
-		};
-		83BB52FD1CFFDC60000E87D5 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				83BB52FE1CFFDC6F000E87D5 /* MMVideoPreviewPlay@2x.png */,
-				83BB52FF1CFFDC6F000E87D5 /* MMVideoPreviewPlayHL@2x.png */,
-				83BB53001CFFDC6F000E87D5 /* navi_back@2x.png */,
-				83BB53011CFFDC6F000E87D5 /* photo_def_photoPickerVc@2x.png */,
-				83BB53021CFFDC6F000E87D5 /* photo_def_previewVc@2x.png */,
-				83BB53031CFFDC6F000E87D5 /* photo_number_icon@2x.png */,
-				83BB53041CFFDC6F000E87D5 /* photo_original_def@2x.png */,
-				83BB53051CFFDC6F000E87D5 /* photo_original_sel@2x.png */,
-				83BB53061CFFDC6F000E87D5 /* photo_sel_photoPickerVc@2x.png */,
-				83BB53071CFFDC6F000E87D5 /* photo_sel_previewVc@2x.png */,
-				83BB53081CFFDC6F000E87D5 /* preview_number_icon@2x.png */,
-				83BB53091CFFDC6F000E87D5 /* preview_original_def@2x.png */,
-				83BB530A1CFFDC6F000E87D5 /* TableViewArrow@2x.png */,
-				83BB530B1CFFDC6F000E87D5 /* TZAlbumCell.xib */,
-				83BB530C1CFFDC6F000E87D5 /* TZAssetCell.xib */,
-				83BB530D1CFFDC6F000E87D5 /* VideoSendIcon@2x.png */,
-			);
-			name = Resource;
-			sourceTree = "<group>";
-		};
 		83EB9E0B1CFE77E000521B4D = {
 			isa = PBXGroup;
 			children = (
@@ -245,7 +125,6 @@
 		83EB9E161CFE77E000521B4D /* PhotoKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				83BB52E11CFFDC02000E87D5 /* TZImagePicker */,
 				83EB9E1A1CFE77E000521B4D /* AppDelegate.h */,
 				83EB9E1B1CFE77E000521B4D /* AppDelegate.m */,
 				83EB9E1D1CFE77E000521B4D /* ViewController.h */,
@@ -405,25 +284,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83BB531A1CFFDC6F000E87D5 /* TableViewArrow@2x.png in Resources */,
-				83BB53141CFFDC6F000E87D5 /* photo_original_def@2x.png in Resources */,
-				83BB53151CFFDC6F000E87D5 /* photo_original_sel@2x.png in Resources */,
-				83BB530F1CFFDC6F000E87D5 /* MMVideoPreviewPlayHL@2x.png in Resources */,
-				83BB53131CFFDC6F000E87D5 /* photo_number_icon@2x.png in Resources */,
-				83BB53121CFFDC6F000E87D5 /* photo_def_previewVc@2x.png in Resources */,
-				83BB53111CFFDC6F000E87D5 /* photo_def_photoPickerVc@2x.png in Resources */,
 				83EB9E2A1CFE77E000521B4D /* LaunchScreen.storyboard in Resources */,
 				83EB9E271CFE77E000521B4D /* Assets.xcassets in Resources */,
-				83BB531B1CFFDC6F000E87D5 /* TZAlbumCell.xib in Resources */,
-				83BB53161CFFDC6F000E87D5 /* photo_sel_photoPickerVc@2x.png in Resources */,
-				83BB53101CFFDC6F000E87D5 /* navi_back@2x.png in Resources */,
 				83EB9E221CFE77E000521B4D /* Main.storyboard in Resources */,
-				83BB530E1CFFDC6F000E87D5 /* MMVideoPreviewPlay@2x.png in Resources */,
-				83BB531C1CFFDC6F000E87D5 /* TZAssetCell.xib in Resources */,
-				83BB53171CFFDC6F000E87D5 /* photo_sel_previewVc@2x.png in Resources */,
-				83BB53191CFFDC6F000E87D5 /* preview_original_def@2x.png in Resources */,
-				83BB53181CFFDC6F000E87D5 /* preview_number_icon@2x.png in Resources */,
-				83BB531D1CFFDC6F000E87D5 /* VideoSendIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,23 +359,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83BB52F51CFFDC27000E87D5 /* TZAssetModel.m in Sources */,
 				83EB9E251CFE77E000521B4D /* PhotoKitDemo.xcdatamodeld in Sources */,
-				83BB52F41CFFDC27000E87D5 /* TZAssetCell.m in Sources */,
-				83BB52F81CFFDC27000E87D5 /* TZPhotoPickerController.m in Sources */,
 				83EB9E1F1CFE77E000521B4D /* ViewController.m in Sources */,
-				83BB52F61CFFDC27000E87D5 /* TZImageManager.m in Sources */,
 				83EB9E1C1CFE77E000521B4D /* AppDelegate.m in Sources */,
-				837C751C1D01884B005B7DE6 /* TZActionSheetView.m in Sources */,
 				83EB9E191CFE77E000521B4D /* main.m in Sources */,
-				83BB52FC1CFFDC27000E87D5 /* UIView+Layout.m in Sources */,
-				83BB52FB1CFFDC27000E87D5 /* TZVideoPlayerController.m in Sources */,
 				83EB9E521CFE793000521B4D /* EntranceViewController.m in Sources */,
-				83BB52F91CFFDC27000E87D5 /* TZPhotoPreviewCell.m in Sources */,
 				83E414901CFEB832009EB95F /* MyTestPHAssetViewController.m in Sources */,
-				83BB52FA1CFFDC27000E87D5 /* TZPhotoPreviewController.m in Sources */,
-				837C75141D01269F005B7DE6 /* TZCompressionResource.m in Sources */,
-				83BB52F71CFFDC27000E87D5 /* TZImagePickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,10 +515,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PhotoKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PhotoKitDemo.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
@@ -679,10 +533,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PhotoKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PhotoKitDemo.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;

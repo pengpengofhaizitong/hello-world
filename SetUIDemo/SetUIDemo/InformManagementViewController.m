@@ -9,19 +9,21 @@
 #import "InformManagementViewController.h"
 
 
-#define isYuan (1)
+#define isYuanSuoDuan (1)
 
-#ifdef isYuan
-
-#define itemArray @[@"通知声音",@"请在iPhone的\"设置\",\"通知\"中进行修改",@"新消息推送通知",@"通知",@"聊天",@"添加好友请求",@"考勤信息"]
+#if isYuanSuoDuan
+//Please in the iPhone \ "Settings \", \ "Notifictions \"
+#define itemArray @[@"通知声音",@"请在iPhone的\"设置\",\"通知\"中进行修改",@"新消息推送通知",@"通知",@"聊天",@"幼儿入园提醒"]
 
 #else
 
+#define itemArray @[@"通知声音",@"请在iPhone的\"设置\",\"通知\"中进行修改",@"新消息推送通知",@"通知",@"聊天",@"添加好友请求",@"考勤信息"]
 
 #endif
 
 
 #define GrayBackGroundColor [UIColor colorWithRed:240/255.0f green:240/255.0f blue:240/255.0f alpha:1]
+#define GrayLabelTextColor [UIColor colorWithRed:179/255.0f green:179/255.0f blue:179/255.0f alpha:1]
 
 #define cellHigh  (50)
 
@@ -68,10 +70,10 @@
     NSInteger section = path.section;
     NSInteger row = path.row;
     
-#ifdef isYuan
+#if isYuanSuoDuan
     [self clickForRow:row Section:section];
 #else
-    
+    [self clickForRow:row Section:section];
 #endif
 
 }
@@ -79,7 +81,35 @@
 -(void)clickForRow:(NSInteger)row Section:(NSInteger)section{
     NSLog(@"tableView.frame=%@",_tableView);
     NSLog(@"section = %ld\nrow = %ld",section,row);
+    
+#if isYuanSuoDuan
+    
+    NSLog(@"isYuan=no");
+    if(row == 3){//通知
+        
+    }else if (row == 4){//聊天
+        
+    }else if (row == 5){//添加好友请求
+        
+    }else if (row == 6){//考勤信息
+        
+    }
+    
+#else
+    
+    NSLog(@"isYuan=yes");
+    if(row == 3){//通知
+        
+    }else if(row == 4){//聊天
+        
+    }else if(row == 5){//入园提醒
+        
+    }
+    
+#endif
 }
+
+
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -89,15 +119,19 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
 
+    cell.textLabel.font = [UIFont systemFontOfSize:16];
+    
     NSMutableString *mutStr = [[NSMutableString alloc] init];
     [mutStr appendString:@"  "];
     [mutStr appendString:[itemArray objectAtIndex:indexPath.row]];
     cell.textLabel.text = mutStr;
     if(indexPath.row == 0){
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, cellHigh)];
+        label.font = [UIFont systemFontOfSize:14];
+        label.textColor = GrayLabelTextColor;
         BOOL onOrOff = [self getSystemVersion];
         if(onOrOff){
-            label.text = @"打开";
+            label.text = @"已开启";
         }else{
             label.text = @"关闭";
         }
@@ -106,11 +140,13 @@
     }else if (indexPath.row == 1){
         cell.contentView.backgroundColor = GrayBackGroundColor;
         cell.textLabel.font = [UIFont systemFontOfSize:13];
+        cell.textLabel.textColor = GrayLabelTextColor;
     }else if (indexPath.row == 2){
         cell.contentView.backgroundColor = GrayBackGroundColor;
     }else if(indexPath.row > 2){
         UISwitch *switchV = [[UISwitch alloc] initWithFrame:CGRectMake(0, 0, 80, 30)];
         [switchV addTarget:self action:@selector(switchClick:) forControlEvents:UIControlEventValueChanged];
+        switchV.on = YES;
         cell.accessoryView = switchV;
         
         cell.textLabel.font = [UIFont systemFontOfSize:15];
@@ -124,8 +160,13 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-
-    return itemArray.count;
+    NSInteger count = itemArray.count;
+    if(0){//老师账号与院长、管理员账号的区分
+        count--;
+    }else{
+        
+    }
+    return count;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

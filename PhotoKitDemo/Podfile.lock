@@ -2,13 +2,26 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - photokit (0.0.5)
 
 DEPENDENCIES:
   - FMDB (~> 2.6.2)
+  - photokit (from `http://192.168.0.150:8800/peng/PhotoKit-test.git`, tag `0.0.5`)
+
+EXTERNAL SOURCES:
+  photokit:
+    :git: http://192.168.0.150:8800/peng/PhotoKit-test.git
+    :tag: 0.0.5
+
+CHECKOUT OPTIONS:
+  photokit:
+    :git: http://192.168.0.150:8800/peng/PhotoKit-test.git
+    :tag: 0.0.5
 
 SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  photokit: f3de6fd8ef46293f9266759bc782fdf3a8f94b55
 
-PODFILE CHECKSUM: 8947b08377fa30dad574337bdbdde77dfc756db0
+PODFILE CHECKSUM: 5823bdcbf2bc6948a394bdd533fc4e66bd32ad06
 
 COCOAPODS: 1.0.0

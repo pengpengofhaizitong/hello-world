@@ -31,6 +31,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
     self.navigationItem.title = @"视频预览";
+    
     [self configMoviePlayer];
 }
 
@@ -46,7 +47,11 @@
             [self.view.layer addSublayer:playerLayer];
             [self addProgressObserver];
             [self configPlayButton];
-            [self configBottomToolBar];
+            if(!_isRepeatBrowse){
+                [self configBottomToolBar];
+            }else{
+                [self configBottomToolBarForCancel];
+            }
             [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pausePlayerAndShowNaviBar) name:AVPlayerItemDidPlayToEndTimeNotification object:_player.currentItem];
         });
     }];
@@ -54,6 +59,7 @@
 
 /// Show progress，do it next time / 给播放器添加进度更新,下次加上
 -(void)addProgressObserver{
+        
     AVPlayerItem *playerItem = _player.currentItem;
     UIProgressView *progress = _progress;
     [_player addPeriodicTimeObserverForInterval:CMTimeMake(1.0, 1.0) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
@@ -68,8 +74,8 @@
 - (void)configPlayButton {
     _playButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _playButton.frame = CGRectMake(0, 64, self.view.tz_width, self.view.tz_height - 64 - 44);
-    [_playButton setImage:[UIImage imageNamed:@"MMVideoPreviewPlay"] forState:UIControlStateNormal];
-    [_playButton setImage:[UIImage imageNamed:@"MMVideoPreviewPlayHL"] forState:UIControlStateHighlighted];
+    [_playButton setImage:[UIImage imageNamed:@"PhotoKitBundle.bundle/MMVideoPreviewPlay"] forState:UIControlStateNormal];
+    [_playButton setImage:[UIImage imageNamed:@"PhotoKitBundle.bundle/MMVideoPreviewPlayHL"] forState:UIControlStateHighlighted];
     [_playButton addTarget:self action:@selector(playButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_playButton];
 }
@@ -90,6 +96,24 @@
     
     [_toolBar addSubview:_okButton];
     [self.view addSubview:_toolBar];
+}
+
+- (void)configBottomToolBarForCancel{
+    
+    _toolBar = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.tz_height - 44, self.view.tz_width, 44)];
+    CGFloat rgb = 34 / 255.0;
+    _toolBar.backgroundColor = [UIColor colorWithRed:rgb green:rgb blue:rgb alpha:1.0];
+    _toolBar.alpha = 0.7;
+    
+    UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    cancelButton.frame = CGRectMake(self.view.tz_width - 44 - 12, 0, 44, 44);
+    cancelButton.titleLabel.font = [UIFont systemFontOfSize:16];
+    [cancelButton addTarget:self action:@selector(cancelButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [cancelButton setTitle:@"取消" forState:UIControlStateNormal];
+    
+    [_toolBar addSubview:cancelButton];
+    [self.view addSubview:_toolBar];
+    
 }
 
 #pragma mark - Click Event
@@ -120,13 +144,18 @@
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)cancelButtonClick{
+    self.returnIsRemoveSelectViedo(YES);
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 #pragma mark - Notification Method
 
 - (void)pausePlayerAndShowNaviBar {
     [_player pause];
     _toolBar.hidden = NO;
     [self.navigationController setNavigationBarHidden:NO];
-    [_playButton setImage:[UIImage imageNamed:@"MMVideoPreviewPlay"] forState:UIControlStateNormal];
+    [_playButton setImage:[UIImage imageNamed:@"PhotoKitBundle.bundle/MMVideoPreviewPlay"] forState:UIControlStateNormal];
     if (iOS7Later) [UIApplication sharedApplication].statusBarHidden = NO;
 }
 

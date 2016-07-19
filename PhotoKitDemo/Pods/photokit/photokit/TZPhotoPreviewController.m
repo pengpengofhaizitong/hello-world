@@ -12,9 +12,8 @@
 #import "UIView+Layout.h"
 #import "TZImagePickerController.h"
 #import "TZImageManager.h"
-#import "TZActionSheetView.h"
 
-@interface TZPhotoPreviewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate> {
+@interface TZPhotoPreviewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate,UIActionSheetDelegate> {
     UICollectionView *_collectionView;
     BOOL _isHideNaviBar;
     
@@ -64,12 +63,15 @@
     if (iOS7Later) [UIApplication sharedApplication].statusBarHidden = YES;
     if (_currentIndex) [_collectionView setContentOffset:CGPointMake((self.view.tz_width) * _currentIndex, 0) animated:NO];
     [self refreshNaviBarAndBottomBarState];
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO];
     if (iOS7Later) [UIApplication sharedApplication].statusBarHidden = NO;
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
 }
 
 - (void)configCustomNaviBar {
@@ -78,13 +80,13 @@
     _naviBar.alpha = 0.7;
     
     _backButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 44, 44)];
-    [_backButton setImage:[UIImage imageNamed:@"navi_back"] forState:UIControlStateNormal];
+    [_backButton setImage:[UIImage imageNamed:@"PhotoKitBundle.bundle/navi_back"] forState:UIControlStateNormal];
     [_backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     
     _selectButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.tz_width - 54, 10, 42, 42)];
-    [_selectButton setImage:[UIImage imageNamed:@"photo_def_photoPickerVc"] forState:UIControlStateNormal];
-    [_selectButton setImage:[UIImage imageNamed:@"photo_sel_photoPickerVc"] forState:UIControlStateSelected];
+    [_selectButton setImage:[UIImage imageNamed:@"PhotoKitBundle.bundle/photo_def_photoPickerVc"] forState:UIControlStateNormal];
+    [_selectButton setImage:[UIImage imageNamed:@"PhotoKitBundle.bundle/photo_sel_photoPickerVc"] forState:UIControlStateSelected];
     [_selectButton addTarget:self action:@selector(select:) forControlEvents:UIControlEventTouchUpInside];
     
     [_naviBar addSubview:_selectButton];
@@ -111,8 +113,8 @@
         [_originalPhotoButton setTitle:@"原图" forState:UIControlStateSelected];
         [_originalPhotoButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         [_originalPhotoButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
-        [_originalPhotoButton setImage:[UIImage imageNamed:@"preview_original_def"] forState:UIControlStateNormal];
-        [_originalPhotoButton setImage:[UIImage imageNamed:@"photo_original_sel"] forState:UIControlStateSelected];
+        [_originalPhotoButton setImage:[UIImage imageNamed:@"PhotoKitBundle.bundle/preview_original_def"] forState:UIControlStateNormal];
+        [_originalPhotoButton setImage:[UIImage imageNamed:@"PhotoKitBundle.bundle/photo_original_sel"] forState:UIControlStateSelected];
         
         _originalPhotoLable = [[UILabel alloc] init];
         _originalPhotoLable.frame = CGRectMake(60, 0, 70, 44);
@@ -130,7 +132,7 @@
     [_okButton setTitle:@"确定" forState:UIControlStateNormal];
     [_okButton setTitleColor:imagePickerVc.oKButtonTitleColorNormal forState:UIControlStateNormal];
     
-    _numberImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"photo_number_icon"]];
+    _numberImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PhotoKitBundle.bundle/photo_number_icon"]];
     _numberImageView.backgroundColor = [UIColor clearColor];
     _numberImageView.frame = CGRectMake(self.view.tz_width - 56 - 24, 9, 26, 26);
     _numberImageView.hidden = _selectedPhotoArr.count <= 0;
@@ -180,7 +182,7 @@
     _naviBar.alpha = 0.7;
     
     _backButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 20, 44, 44)];
-    [_backButton setImage:[UIImage imageNamed:@"navi_back"] forState:UIControlStateNormal];
+    [_backButton setImage:[UIImage imageNamed:@"PhotoKitBundle.bundle/navi_back"] forState:UIControlStateNormal];
     [_backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     
@@ -189,9 +191,10 @@
 //    [_selectButton setImage:[UIImage imageNamed:@"photo_sel_photoPickerVc"] forState:UIControlStateSelected];
 //    [_selectButton addTarget:self action:@selector(deleteImg:) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton *deleteBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.tz_width - 54, 20, 42, 42)];
+    UIButton *deleteBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.tz_width - 74, 20, 62, 42)];
     [deleteBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-    [deleteBtn setBackgroundColor:[UIColor orangeColor]];
+    [deleteBtn setTitle:@"删除" forState:UIControlStateNormal];
+    deleteBtn.tag = 765593443;
     [deleteBtn addTarget:self action:@selector(deleteImg:) forControlEvents:UIControlEventTouchUpInside];
     
     
@@ -273,8 +276,65 @@
 - (void)deleteImg:(UIButton *)sender
 {
     
-    [self.selectedPhotoArr removeObjectAtIndex:_currentIndex];
+    if(iOS8Later){
     
+        UIAlertController *actionSheetController = [UIAlertController alertControllerWithTitle:@"要删除这张照片吗？"
+                                                                                       message:nil
+                                                                                preferredStyle:UIAlertControllerStyleActionSheet];
+        __weak typeof(self)weakSelf = self;
+        UIAlertAction *action0 = [UIAlertAction actionWithTitle:@"删除"
+                                                          style:UIAlertActionStyleDefault
+                                                        handler:^(UIAlertAction * action) {
+                                                            [weakSelf deleteOnePic];
+                                                        }];
+        UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"取消"
+                                                               style:UIAlertActionStyleCancel
+                                                             handler:^(UIAlertAction * action) {}];
+        [actionSheetController addAction:action0];
+        [actionSheetController addAction:actionCancel];
+        [actionSheetController.view setTintColor:[UIColor greenColor]];
+    
+    
+    NSString *model = [[UIDevice currentDevice] model];
+    
+    if([model containsString:@"iPad"]){
+        
+        UIButton *button = (UIButton *)[self.view viewWithTag:765593443];
+        
+        UIPopoverPresentationController *popPresenter = [actionSheetController popoverPresentationController];
+        popPresenter.sourceView = button;
+        popPresenter.sourceRect = button.bounds;
+        
+    }else{
+        
+    }
+    
+    [self presentViewController:actionSheetController animated:YES completion:nil];
+    
+    }else{
+        UIActionSheet *sheetV = [[UIActionSheet alloc] initWithTitle:@"要删除这张照片吗？" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"删除"
+                                                   otherButtonTitles: nil];
+        [sheetV showInView:self.view];
+    }
+
+    
+    return;
+
+    
+}
+
+#pragma mark --UIActionSheetDelegate--
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 0){
+        
+        [self deleteOnePic];
+    }
+}
+
+-(void)deleteOnePic{
+    
+    [self.selectedPhotoArr removeObjectAtIndex:_currentIndex];
     
     if(self.selectedPhotoArr.count == 0)
     {//没有图片
@@ -293,9 +353,8 @@
     [_collectionView reloadData];
     
     _numOfSelectImgLabel.text = [NSString stringWithFormat:@"%ld/%ld",_currentIndex+1,self.selectedPhotoArr.count];
+    
 }
-
-
 
 
 #pragma mark - UIScrollViewDelegate
