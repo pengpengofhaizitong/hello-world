@@ -24,7 +24,6 @@
     id _asset;
 }
 @end
-
 @implementation EntranceViewController
 
 - (void)viewDidLoad {
@@ -125,10 +124,13 @@
 }
 
 - (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets SelectImageArr:(NSArray *)selectImgArr{
-    [self refreshDataForImage:selectImgArr];
+    
 }
 
 - (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets infos:(NSArray<NSDictionary *> *)infos SelectImageArr:(NSArray *)selectImgArr{
+    [self refreshDataForImage:selectImgArr];
+    
+    NSLog(@"infos = %@\n\n%@\n\n",infos,assets);
     
 }
 
@@ -190,10 +192,15 @@
     for(int i=0;i<selectImgArr.count;i++){
         @autoreleasepool {
             TZAssetModel *model = selectImgArr[i];
+            NSLog(@"model = %@",model.asset);
+            
+            NSLog(@"photoName = %@",[model.asset
+                                      valueForKey:@"filename"]);
             //获取照片本身
             [[TZImageManager manager] getPhotoWithAsset:model.asset completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
                 if (isDegraded){
                     [thumbnailImageArr addObject:photo];
+                    NSLog(@"photo = %@  \n\n%@",photo,info);
                 }else{
                     NSData *imageData = UIImageJPEGRepresentation(photo, 0.5);
                     [self uploadImageToServer:imageData];

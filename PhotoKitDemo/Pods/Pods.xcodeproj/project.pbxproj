@@ -7,25 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EF8E9AA652DBE2745A7D5C8CD2E3BDE /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 400AFB42920EB39709666D3F1A73D6C2 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0F8A8E0D6FAEBF758E0B4D620335F094 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AF3AEDDA16DD8E28B59FF0788FDDC03 /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		282081E035E7A843068E8BCC2E07C217 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C11A8F38580C7A7FF38ACB6A3B412884 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		313531CEDA0294311D87B4F4C3F073F4 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 91893D40185E0EFA40FC217BE44A7C0D /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D0F69C4CA35EB6A1F686BA88B19B4F6 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D76813CB39ACC402A9EE3DC12B4E682 /* FMDB-dummy.m */; };
-		A350C5704A1F233DAD830E081E00F8C1 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC0EED53ED8D7C1931178E0E4269B4 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A561A67BF274ABC8C70A4FFA23D56C59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		B418C9BDCF8C6BAC2E3942F157BB6D4C /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D2DD52CB174E1DC79111C38E770F6FC8 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B5DEFB36532EE96F3286420470D6082B /* Pods-PhotoKitDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C07B74B21D169DBFFF0651A00D50E07F /* Pods-PhotoKitDemo-dummy.m */; };
-		CA027706DD6805766F1F4EC548E72440 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7C30F9E55829B027C4913D1F19D68C /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D0C5FF5485EAA2CDA03E9796B407697A /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 33F15B71183AD666DFC49D907F769ACF /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0D5FFE53407F16C9CD3D0ECF43ACE93 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 638E465E4B27490B0FB423614C3ADD11 /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEFA3504695E9DFDE1177DAB22884470 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B69D4A7150AC2F65A57B7D04F092D4 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E11A42BE719921B2E938500F043DAB68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		F977B243321331B58666E9284634101A /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 69CC8B63F837EA7B053AB8BA07253A25 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EF8E9AA652DBE2745A7D5C8CD2E3BDE /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = EF70084E23B2528F172A14EE1288615C /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0F8A8E0D6FAEBF758E0B4D620335F094 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = F539836ACC8384456BC081EF172A8160 /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12A6034BBFFF3F5D4CAB882201C326AC /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B11E32598DF283F0C25A99D93273D9FD /* TZVideoPlayerController.m */; };
+		1DBE842BDDF0814F8C0255C20DC1B810 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED61DADF3AE1690583D33F8026980E9B /* PlayerView.m */; };
+		1FB2BE0C7748E1B6139D1CA81A762B06 /* TZImagePickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = C37704B18A4DE5DF395804F1B5C02155 /* TZImagePickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21F21A622102D34467D7DEA1333EC3B4 /* TZHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 80DF9C82B744595EC3577279D1A6046D /* TZHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		282081E035E7A843068E8BCC2E07C217 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A02FC5A3682F9ED54E3C80C79FF83C /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		313531CEDA0294311D87B4F4C3F073F4 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 1878EE176310BD74B7273D7D20CAE2F4 /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31EF8DF228746DD5F10254142C2A3D39 /* TZPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC5ABED914BA3B8A19FECDAB370BF0E /* TZPhotoPickerController.m */; };
+		33046301C7366BAAE790D9A060E4B17F /* TZCompressionResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A72899AA0B90E9A313FF0EF5046DB0 /* TZCompressionResource.m */; };
+		3A2BF2EEDCB88964D3CE053333910EB0 /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD624E78C5C5A273725DF7E54DA968C /* TZImageManager.m */; };
+		3CD6BF403F6C1077591EF4976F817864 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72ABF3C6FE19DEFF00984F33C19616E /* Photos.framework */; };
+		3D0F69C4CA35EB6A1F686BA88B19B4F6 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70814D227F41F417C09762A584951706 /* FMDB-dummy.m */; };
+		42A2FCD3D29469C9D901BD10B689F89F /* TZPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0565BE6DB2700C79FB0176012FB63C03 /* TZPhotoPreviewCell.m */; };
+		4875370E8FAC425402BD402B096BFF36 /* Pods-PhotoKitDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C07B74B21D169DBFFF0651A00D50E07F /* Pods-PhotoKitDemo-dummy.m */; };
+		59599DDD41992DC9E7CCF6DCAF190865 /* UIView+Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = 801455DA738DD4C58948CD76FE4E9F6C /* UIView+Layout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6658CA1C8C00A2ABBF34069A7A38C69A /* TZAssetCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BFB0AB6D3D2E6C0962833E5FE4578D8C /* TZAssetCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67DF41B76BDEA08ED7FA23180B8A118C /* TZPhotoPreviewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 37D6B8B2F67402B3369FFE341F8348CF /* TZPhotoPreviewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B8C9BDCA015CD8FA6AD956FCB7BA843 /* photokit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1456DFA57FD4D4AE8152916ED83D889 /* photokit-dummy.m */; };
+		731D25FCB5F6719D414340FF7CF4CA89 /* PlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DEECB451EBF5C24531C8F3AC68950E9 /* PlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8349F0A86EC851E817C4390E6BF2979C /* TZCompressionResource.h in Headers */ = {isa = PBXBuildFile; fileRef = B293EC7D393D82690B42EC0DEB20E387 /* TZCompressionResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C99D77C50D0E472B0D4B3F1D74E05E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06DFA4821A8666CF906E49ECC9050AD /* Foundation.framework */; };
+		94434CB3186B8E98E0F852A41028D690 /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2417383F4C8E536621008BDC1422924 /* TZPhotoPreviewController.m */; };
+		95103DBB9B95203CFD8407BC0EA6A4EA /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C3A8B326B1AE647E2FB43386BD8200 /* TZAssetCell.m */; };
+		9780C7FD466CFA3953BA78C0D5E4EB0C /* TZAssetModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9886C5391ED3FA103F2CE7F02D16CE21 /* TZAssetModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A350C5704A1F233DAD830E081E00F8C1 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A7E93F58B913A8CF2303962807548F /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A561A67BF274ABC8C70A4FFA23D56C59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06DFA4821A8666CF906E49ECC9050AD /* Foundation.framework */; };
+		A64A5A041C2E36A1C4297974CD66098D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06DFA4821A8666CF906E49ECC9050AD /* Foundation.framework */; };
+		B3A5A032061ADF7EB27B257FFFD48B49 /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D5FD5D18F662C3E6F6482E9EA3D0C /* TZAssetModel.m */; };
+		B418C9BDCF8C6BAC2E3942F157BB6D4C /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = FEDD37A68E7CB061551E549ECCCF50BC /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1188E1805692D83987ADD6480ABE1BF /* TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865E7A2D5040DE57771AAA12687587B1 /* TZImagePickerController.m */; };
+		C3866A9489A75FF9F88D8786BF400829 /* TZPhotoPickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = B3766F81B45B2EE66174A6865F1C7B80 /* TZPhotoPickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C634CD8880714714B203A3330EF7CC99 /* TZVideoPlayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = CE2032E26B4F5257CE7CC9C62D4D0D53 /* TZVideoPlayerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA027706DD6805766F1F4EC548E72440 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CAD9488565E5010CBB5FA0D5CF170D /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CD384631406BD8E5B7EB0BD535B34DFD /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 85481C857F99C9D900699D7B97DAB5F9 /* UIView+Layout.m */; };
+		CF09E9B640E0C1882F4AADAA94A9466A /* TZPhotoPreviewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 89DFA88852C28983B6253BFE2B2F7B15 /* TZPhotoPreviewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0C5FF5485EAA2CDA03E9796B407697A /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 6107156B7EE7F17A0268E58817F85EB3 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0D5FFE53407F16C9CD3D0ECF43ACE93 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2529514D403AE07A776303EB4D62D8 /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D13284AD1AB0EB5AB399EA605592E151 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58CC43BA3E4D3C9BD3629978E21F563 /* AVFoundation.framework */; };
+		D42C5C9C262478909A948462C652DCD6 /* TZImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5244A6C89F6D4ACD78EA1C88490A324A /* TZImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEFA3504695E9DFDE1177DAB22884470 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2EE0CCE4154439FBA9166C808622E6 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F977B243321331B58666E9284634101A /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 15CA973A494941E7F8828FF4E8C79D33 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		80C1F7EB4E90FAC9408FC7A3A181B2CF /* PBXContainerItemProxy */ = {
+		9F4832C307A04DB96DE5AEFF383BDE92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 966D5B230A8D28BC9E2C5875BAB80920;
+			remoteInfo = photokit;
+		};
+		AF255178CFA9018CB0746D13401EA704 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -35,31 +69,61 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1986F556C9B754CCA0A2D941BE50FB58 /* libPods-PhotoKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1AF3AEDDA16DD8E28B59FF0788FDDC03 /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
-		33F15B71183AD666DFC49D907F769ACF /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
-		3BCC0EED53ED8D7C1931178E0E4269B4 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		400AFB42920EB39709666D3F1A73D6C2 /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
-		4E65D690B53B4E1563E190092CCA33E6 /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		04747628E5C9054D240890AA9A938E21 /* photokit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = photokit.xcconfig; sourceTree = "<group>"; };
+		0565BE6DB2700C79FB0176012FB63C03 /* TZPhotoPreviewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZPhotoPreviewCell.m; path = photokit/TZPhotoPreviewCell.m; sourceTree = "<group>"; };
+		15CA973A494941E7F8828FF4E8C79D33 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		1878EE176310BD74B7273D7D20CAE2F4 /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
+		224D5FD5D18F662C3E6F6482E9EA3D0C /* TZAssetModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZAssetModel.m; path = photokit/TZAssetModel.m; sourceTree = "<group>"; };
+		27CAD9488565E5010CBB5FA0D5CF170D /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		2859259BF8D3A9D97BD8AD413F742BBB /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D6B8B2F67402B3369FFE341F8348CF /* TZPhotoPreviewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZPhotoPreviewCell.h; path = photokit/TZPhotoPreviewCell.h; sourceTree = "<group>"; };
+		4AC5ABED914BA3B8A19FECDAB370BF0E /* TZPhotoPickerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZPhotoPickerController.m; path = photokit/TZPhotoPickerController.m; sourceTree = "<group>"; };
 		5164BE570173229078FE24D3309D82B2 /* Pods-PhotoKitDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhotoKitDemo-resources.sh"; sourceTree = "<group>"; };
+		5244A6C89F6D4ACD78EA1C88490A324A /* TZImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZImageManager.h; path = photokit/TZImageManager.h; sourceTree = "<group>"; };
 		56E9B9D9FD7218B5759BCAD3794ECA7B /* Pods-PhotoKitDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhotoKitDemo-frameworks.sh"; sourceTree = "<group>"; };
 		58BEA6BD33B6196A3F6052B17903E9DB /* Pods-PhotoKitDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PhotoKitDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		638E465E4B27490B0FB423614C3ADD11 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
-		69CC8B63F837EA7B053AB8BA07253A25 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		6107156B7EE7F17A0268E58817F85EB3 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		64A7E93F58B913A8CF2303962807548F /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		69EBFFB74235C3852FC1624066CB07F4 /* Pods-PhotoKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		6D76813CB39ACC402A9EE3DC12B4E682 /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
-		71B69D4A7150AC2F65A57B7D04F092D4 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
-		91893D40185E0EFA40FC217BE44A7C0D /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
+		6A740C90E053F6454B9BE1C0EE577168 /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
+		70814D227F41F417C09762A584951706 /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
+		801455DA738DD4C58948CD76FE4E9F6C /* UIView+Layout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Layout.h"; path = "photokit/UIView+Layout.h"; sourceTree = "<group>"; };
+		80DF9C82B744595EC3577279D1A6046D /* TZHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZHeader.h; path = photokit/TZHeader.h; sourceTree = "<group>"; };
+		85481C857F99C9D900699D7B97DAB5F9 /* UIView+Layout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Layout.m"; path = "photokit/UIView+Layout.m"; sourceTree = "<group>"; };
+		865E7A2D5040DE57771AAA12687587B1 /* TZImagePickerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZImagePickerController.m; path = photokit/TZImagePickerController.m; sourceTree = "<group>"; };
+		87AE7A455C61738AE39E11B8AEB8CFD2 /* libPods-PhotoKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		89DFA88852C28983B6253BFE2B2F7B15 /* TZPhotoPreviewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZPhotoPreviewController.h; path = photokit/TZPhotoPreviewController.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		969ED5B62E34BE8C949767C93415C51F /* Pods-PhotoKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoKitDemo.release.xcconfig"; sourceTree = "<group>"; };
-		A1448204AE8E2DC37C8C36438BED7AD8 /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
-		B2AC8D08AB9E95E701EC049C53414AEB /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
+		9886C5391ED3FA103F2CE7F02D16CE21 /* TZAssetModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZAssetModel.h; path = photokit/TZAssetModel.h; sourceTree = "<group>"; };
+		98A72899AA0B90E9A313FF0EF5046DB0 /* TZCompressionResource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZCompressionResource.m; path = photokit/TZCompressionResource.m; sourceTree = "<group>"; };
+		9BD624E78C5C5A273725DF7E54DA968C /* TZImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZImageManager.m; path = photokit/TZImageManager.m; sourceTree = "<group>"; };
+		9C2529514D403AE07A776303EB4D62D8 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		9DEECB451EBF5C24531C8F3AC68950E9 /* PlayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PlayerView.h; path = photokit/PlayerView.h; sourceTree = "<group>"; };
+		A306F0B54EE48FDAA74EE94162E71772 /* PhotoKitBundle.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = PhotoKitBundle.bundle; path = photokit/resource/PhotoKitBundle.bundle; sourceTree = "<group>"; };
+		A72ABF3C6FE19DEFF00984F33C19616E /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Photos.framework; sourceTree = DEVELOPER_DIR; };
+		B11E32598DF283F0C25A99D93273D9FD /* TZVideoPlayerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZVideoPlayerController.m; path = photokit/TZVideoPlayerController.m; sourceTree = "<group>"; };
+		B293EC7D393D82690B42EC0DEB20E387 /* TZCompressionResource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZCompressionResource.h; path = photokit/TZCompressionResource.h; sourceTree = "<group>"; };
+		B3766F81B45B2EE66174A6865F1C7B80 /* TZPhotoPickerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZPhotoPickerController.h; path = photokit/TZPhotoPickerController.h; sourceTree = "<group>"; };
+		B58CC43BA3E4D3C9BD3629978E21F563 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		B6A02FC5A3682F9ED54E3C80C79FF83C /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		BCC6C22F158BDA4B81691FDE5559BEFF /* libphotokit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libphotokit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFB0AB6D3D2E6C0962833E5FE4578D8C /* TZAssetCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZAssetCell.h; path = photokit/TZAssetCell.h; sourceTree = "<group>"; };
+		C06DFA4821A8666CF906E49ECC9050AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		C07B74B21D169DBFFF0651A00D50E07F /* Pods-PhotoKitDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PhotoKitDemo-dummy.m"; sourceTree = "<group>"; };
-		C11A8F38580C7A7FF38ACB6A3B412884 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D2DD52CB174E1DC79111C38E770F6FC8 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		DC7C30F9E55829B027C4913D1F19D68C /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		C37704B18A4DE5DF395804F1B5C02155 /* TZImagePickerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZImagePickerController.h; path = photokit/TZImagePickerController.h; sourceTree = "<group>"; };
+		C38135CE27E35C48EE13AC49B8B8E7F5 /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
+		C6C3A8B326B1AE647E2FB43386BD8200 /* TZAssetCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZAssetCell.m; path = photokit/TZAssetCell.m; sourceTree = "<group>"; };
+		CC3C1263FC990822C6CB0D7F3845EE27 /* photokit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "photokit-prefix.pch"; sourceTree = "<group>"; };
+		CE2032E26B4F5257CE7CC9C62D4D0D53 /* TZVideoPlayerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZVideoPlayerController.h; path = photokit/TZVideoPlayerController.h; sourceTree = "<group>"; };
+		D1456DFA57FD4D4AE8152916ED83D889 /* photokit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "photokit-dummy.m"; sourceTree = "<group>"; };
+		E2417383F4C8E536621008BDC1422924 /* TZPhotoPreviewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZPhotoPreviewController.m; path = photokit/TZPhotoPreviewController.m; sourceTree = "<group>"; };
+		ED61DADF3AE1690583D33F8026980E9B /* PlayerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PlayerView.m; path = photokit/PlayerView.m; sourceTree = "<group>"; };
+		EF70084E23B2528F172A14EE1288615C /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
 		F5207EE6762060D83EC87848AB8D9782 /* Pods-PhotoKitDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhotoKitDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		F539836ACC8384456BC081EF172A8160 /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		FC2EE0CCE4154439FBA9166C808622E6 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		FEDD37A68E7CB061551E549ECCCF50BC /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,17 +135,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B018A1226678178336F2A1310DA87571 /* Frameworks */ = {
+		96799E4B99786FF797746158517B17E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E11A42BE719921B2E938500F043DAB68 /* Foundation.framework in Frameworks */,
+				D13284AD1AB0EB5AB399EA605592E151 /* AVFoundation.framework in Frameworks */,
+				A64A5A041C2E36A1C4297974CD66098D /* Foundation.framework in Frameworks */,
+				3CD6BF403F6C1077591EF4976F817864 /* Photos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1A9BAAA9B843F09D1F21FBE02DC78B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C99D77C50D0E472B0D4B3F1D74E05E5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8267570BA7FFC87248FB393DA1339BA9 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		383EB6D58677FB10D3191101DF814466 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D5A849525F1C33B2B8B1596D1E8CD68 /* FMDB */,
+				86A6ED3CF7A3E2F7B25E9555063705C8 /* photokit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3C27ADC9B0D5B339115413949987D0D5 /* Pods-PhotoKitDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,20 +188,39 @@
 			path = "Target Support Files/Pods-PhotoKitDemo";
 			sourceTree = "<group>";
 		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+		4D5A849525F1C33B2B8B1596D1E8CD68 /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+				774A947983DF0D2E1B97CBCE3C605783 /* standard */,
+				7B9009ADDEA781E69BC25476F9B17779 /* Support Files */,
 			);
-			name = iOS;
+			path = FMDB;
 			sourceTree = "<group>";
 		};
-		6A65CEB166911CC900621A37BC272B1F /* Support Files */ = {
+		774A947983DF0D2E1B97CBCE3C605783 /* standard */ = {
 			isa = PBXGroup;
 			children = (
-				B2AC8D08AB9E95E701EC049C53414AEB /* FMDB.xcconfig */,
-				6D76813CB39ACC402A9EE3DC12B4E682 /* FMDB-dummy.m */,
-				A1448204AE8E2DC37C8C36438BED7AD8 /* FMDB-prefix.pch */,
+				9C2529514D403AE07A776303EB4D62D8 /* FMDatabase.h */,
+				27CAD9488565E5010CBB5FA0D5CF170D /* FMDatabase.m */,
+				FEDD37A68E7CB061551E549ECCCF50BC /* FMDatabaseAdditions.h */,
+				64A7E93F58B913A8CF2303962807548F /* FMDatabaseAdditions.m */,
+				F539836ACC8384456BC081EF172A8160 /* FMDatabasePool.h */,
+				EF70084E23B2528F172A14EE1288615C /* FMDatabasePool.m */,
+				6107156B7EE7F17A0268E58817F85EB3 /* FMDatabaseQueue.h */,
+				B6A02FC5A3682F9ED54E3C80C79FF83C /* FMDatabaseQueue.m */,
+				1878EE176310BD74B7273D7D20CAE2F4 /* FMDB.h */,
+				15CA973A494941E7F8828FF4E8C79D33 /* FMResultSet.h */,
+				FC2EE0CCE4154439FBA9166C808622E6 /* FMResultSet.m */,
+			);
+			name = standard;
+			sourceTree = "<group>";
+		};
+		7B9009ADDEA781E69BC25476F9B17779 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A740C90E053F6454B9BE1C0EE577168 /* FMDB.xcconfig */,
+				70814D227F41F417C09762A584951706 /* FMDB-dummy.m */,
+				C38135CE27E35C48EE13AC49B8B8E7F5 /* FMDB-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FMDB";
@@ -120,63 +230,82 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				BFB8C92E749ED180124155E2270474D2 /* Pods */,
-				CBC480C46FA0B46335B8D8B7EA28B838 /* Products */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				383EB6D58677FB10D3191101DF814466 /* Pods */,
+				D57E2E61B82B74B7D417CCF49EBB0BA6 /* Products */,
 				F3D2869F5F3BF606D50D2FB5DB1445B1 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		8267570BA7FFC87248FB393DA1339BA9 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+				B58CC43BA3E4D3C9BD3629978E21F563 /* AVFoundation.framework */,
+				C06DFA4821A8666CF906E49ECC9050AD /* Foundation.framework */,
+				A72ABF3C6FE19DEFF00984F33C19616E /* Photos.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		BFB8C92E749ED180124155E2270474D2 /* Pods */ = {
+		86A6ED3CF7A3E2F7B25E9555063705C8 /* photokit */ = {
 			isa = PBXGroup;
 			children = (
-				DEA37EDFE575D4B41E183255F5C2B8C8 /* FMDB */,
+				9DEECB451EBF5C24531C8F3AC68950E9 /* PlayerView.h */,
+				ED61DADF3AE1690583D33F8026980E9B /* PlayerView.m */,
+				BFB0AB6D3D2E6C0962833E5FE4578D8C /* TZAssetCell.h */,
+				C6C3A8B326B1AE647E2FB43386BD8200 /* TZAssetCell.m */,
+				9886C5391ED3FA103F2CE7F02D16CE21 /* TZAssetModel.h */,
+				224D5FD5D18F662C3E6F6482E9EA3D0C /* TZAssetModel.m */,
+				B293EC7D393D82690B42EC0DEB20E387 /* TZCompressionResource.h */,
+				98A72899AA0B90E9A313FF0EF5046DB0 /* TZCompressionResource.m */,
+				80DF9C82B744595EC3577279D1A6046D /* TZHeader.h */,
+				5244A6C89F6D4ACD78EA1C88490A324A /* TZImageManager.h */,
+				9BD624E78C5C5A273725DF7E54DA968C /* TZImageManager.m */,
+				C37704B18A4DE5DF395804F1B5C02155 /* TZImagePickerController.h */,
+				865E7A2D5040DE57771AAA12687587B1 /* TZImagePickerController.m */,
+				B3766F81B45B2EE66174A6865F1C7B80 /* TZPhotoPickerController.h */,
+				4AC5ABED914BA3B8A19FECDAB370BF0E /* TZPhotoPickerController.m */,
+				37D6B8B2F67402B3369FFE341F8348CF /* TZPhotoPreviewCell.h */,
+				0565BE6DB2700C79FB0176012FB63C03 /* TZPhotoPreviewCell.m */,
+				89DFA88852C28983B6253BFE2B2F7B15 /* TZPhotoPreviewController.h */,
+				E2417383F4C8E536621008BDC1422924 /* TZPhotoPreviewController.m */,
+				CE2032E26B4F5257CE7CC9C62D4D0D53 /* TZVideoPlayerController.h */,
+				B11E32598DF283F0C25A99D93273D9FD /* TZVideoPlayerController.m */,
+				801455DA738DD4C58948CD76FE4E9F6C /* UIView+Layout.h */,
+				85481C857F99C9D900699D7B97DAB5F9 /* UIView+Layout.m */,
+				C3302839E1B21F2F979F9FB56B0F33FB /* Resources */,
+				B043E55B841C086FAA2B743915E1D25B /* Support Files */,
 			);
-			name = Pods;
+			path = photokit;
 			sourceTree = "<group>";
 		};
-		C89A6930D6DE6039F840782BFE7A2DFB /* standard */ = {
+		B043E55B841C086FAA2B743915E1D25B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				638E465E4B27490B0FB423614C3ADD11 /* FMDatabase.h */,
-				DC7C30F9E55829B027C4913D1F19D68C /* FMDatabase.m */,
-				D2DD52CB174E1DC79111C38E770F6FC8 /* FMDatabaseAdditions.h */,
-				3BCC0EED53ED8D7C1931178E0E4269B4 /* FMDatabaseAdditions.m */,
-				1AF3AEDDA16DD8E28B59FF0788FDDC03 /* FMDatabasePool.h */,
-				400AFB42920EB39709666D3F1A73D6C2 /* FMDatabasePool.m */,
-				33F15B71183AD666DFC49D907F769ACF /* FMDatabaseQueue.h */,
-				C11A8F38580C7A7FF38ACB6A3B412884 /* FMDatabaseQueue.m */,
-				91893D40185E0EFA40FC217BE44A7C0D /* FMDB.h */,
-				69CC8B63F837EA7B053AB8BA07253A25 /* FMResultSet.h */,
-				71B69D4A7150AC2F65A57B7D04F092D4 /* FMResultSet.m */,
+				04747628E5C9054D240890AA9A938E21 /* photokit.xcconfig */,
+				D1456DFA57FD4D4AE8152916ED83D889 /* photokit-dummy.m */,
+				CC3C1263FC990822C6CB0D7F3845EE27 /* photokit-prefix.pch */,
 			);
-			name = standard;
+			name = "Support Files";
+			path = "../Target Support Files/photokit";
 			sourceTree = "<group>";
 		};
-		CBC480C46FA0B46335B8D8B7EA28B838 /* Products */ = {
+		C3302839E1B21F2F979F9FB56B0F33FB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4E65D690B53B4E1563E190092CCA33E6 /* libFMDB.a */,
-				1986F556C9B754CCA0A2D941BE50FB58 /* libPods-PhotoKitDemo.a */,
+				A306F0B54EE48FDAA74EE94162E71772 /* PhotoKitBundle.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D57E2E61B82B74B7D417CCF49EBB0BA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2859259BF8D3A9D97BD8AD413F742BBB /* libFMDB.a */,
+				BCC6C22F158BDA4B81691FDE5559BEFF /* libphotokit.a */,
+				87AE7A455C61738AE39E11B8AEB8CFD2 /* libPods-PhotoKitDemo.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		DEA37EDFE575D4B41E183255F5C2B8C8 /* FMDB */ = {
-			isa = PBXGroup;
-			children = (
-				C89A6930D6DE6039F840782BFE7A2DFB /* standard */,
-				6A65CEB166911CC900621A37BC272B1F /* Support Files */,
-			);
-			path = FMDB;
 			sourceTree = "<group>";
 		};
 		F3D2869F5F3BF606D50D2FB5DB1445B1 /* Targets Support Files */ = {
@@ -203,24 +332,61 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C9B566DA4EB988B2915B93E9DF87759 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				731D25FCB5F6719D414340FF7CF4CA89 /* PlayerView.h in Headers */,
+				6658CA1C8C00A2ABBF34069A7A38C69A /* TZAssetCell.h in Headers */,
+				9780C7FD466CFA3953BA78C0D5E4EB0C /* TZAssetModel.h in Headers */,
+				8349F0A86EC851E817C4390E6BF2979C /* TZCompressionResource.h in Headers */,
+				21F21A622102D34467D7DEA1333EC3B4 /* TZHeader.h in Headers */,
+				D42C5C9C262478909A948462C652DCD6 /* TZImageManager.h in Headers */,
+				1FB2BE0C7748E1B6139D1CA81A762B06 /* TZImagePickerController.h in Headers */,
+				C3866A9489A75FF9F88D8786BF400829 /* TZPhotoPickerController.h in Headers */,
+				67DF41B76BDEA08ED7FA23180B8A118C /* TZPhotoPreviewCell.h in Headers */,
+				CF09E9B640E0C1882F4AADAA94A9466A /* TZPhotoPreviewController.h in Headers */,
+				C634CD8880714714B203A3330EF7CC99 /* TZVideoPlayerController.h in Headers */,
+				59599DDD41992DC9E7CCF6DCAF190865 /* UIView+Layout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4E8C74C38260996070EFE546E27840D8 /* Pods-PhotoKitDemo */ = {
+		6996070CAFA694689BC0605C306EF000 /* Pods-PhotoKitDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1632AFB2C6885295CBBD5047C767AFA0 /* Build configuration list for PBXNativeTarget "Pods-PhotoKitDemo" */;
+			buildConfigurationList = 50D8999C8F188D45A63010378AC00D9E /* Build configuration list for PBXNativeTarget "Pods-PhotoKitDemo" */;
 			buildPhases = (
-				482B49524412EB7B76F634D94545B9BB /* Sources */,
-				B018A1226678178336F2A1310DA87571 /* Frameworks */,
+				491D59D9F982C8F9EB68D88D821DAD00 /* Sources */,
+				F1A9BAAA9B843F09D1F21FBE02DC78B5 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9EC8AC58D5763A834A6CFF7ADC7853D4 /* PBXTargetDependency */,
+				8FE27FBB9287EEC9FBC078A5D862E1B2 /* PBXTargetDependency */,
+				ACDD7EF157BD5F3351A917ACD9230DE0 /* PBXTargetDependency */,
 			);
 			name = "Pods-PhotoKitDemo";
 			productName = "Pods-PhotoKitDemo";
-			productReference = 1986F556C9B754CCA0A2D941BE50FB58 /* libPods-PhotoKitDemo.a */;
+			productReference = 87AE7A455C61738AE39E11B8AEB8CFD2 /* libPods-PhotoKitDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		966D5B230A8D28BC9E2C5875BAB80920 /* photokit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54C5A8B50218942469829F062799793F /* Build configuration list for PBXNativeTarget "photokit" */;
+			buildPhases = (
+				BEE05E0AC21F2D23743CF21B1ADFDABD /* Sources */,
+				96799E4B99786FF797746158517B17E4 /* Frameworks */,
+				9C9B566DA4EB988B2915B93E9DF87759 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = photokit;
+			productName = photokit;
+			productReference = BCC6C22F158BDA4B81691FDE5559BEFF /* libphotokit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9F12FB4A63E20F601CFB2E64A65B57C1 /* FMDB */ = {
@@ -237,7 +403,7 @@
 			);
 			name = FMDB;
 			productName = FMDB;
-			productReference = 4E65D690B53B4E1563E190092CCA33E6 /* libFMDB.a */;
+			productReference = 2859259BF8D3A9D97BD8AD413F742BBB /* libFMDB.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -257,12 +423,13 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CBC480C46FA0B46335B8D8B7EA28B838 /* Products */;
+			productRefGroup = D57E2E61B82B74B7D417CCF49EBB0BA6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				9F12FB4A63E20F601CFB2E64A65B57C1 /* FMDB */,
-				4E8C74C38260996070EFE546E27840D8 /* Pods-PhotoKitDemo */,
+				966D5B230A8D28BC9E2C5875BAB80920 /* photokit */,
+				6996070CAFA694689BC0605C306EF000 /* Pods-PhotoKitDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -281,29 +448,54 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		482B49524412EB7B76F634D94545B9BB /* Sources */ = {
+		491D59D9F982C8F9EB68D88D821DAD00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5DEFB36532EE96F3286420470D6082B /* Pods-PhotoKitDemo-dummy.m in Sources */,
+				4875370E8FAC425402BD402B096BFF36 /* Pods-PhotoKitDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEE05E0AC21F2D23743CF21B1ADFDABD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B8C9BDCA015CD8FA6AD956FCB7BA843 /* photokit-dummy.m in Sources */,
+				1DBE842BDDF0814F8C0255C20DC1B810 /* PlayerView.m in Sources */,
+				95103DBB9B95203CFD8407BC0EA6A4EA /* TZAssetCell.m in Sources */,
+				B3A5A032061ADF7EB27B257FFFD48B49 /* TZAssetModel.m in Sources */,
+				33046301C7366BAAE790D9A060E4B17F /* TZCompressionResource.m in Sources */,
+				3A2BF2EEDCB88964D3CE053333910EB0 /* TZImageManager.m in Sources */,
+				C1188E1805692D83987ADD6480ABE1BF /* TZImagePickerController.m in Sources */,
+				31EF8DF228746DD5F10254142C2A3D39 /* TZPhotoPickerController.m in Sources */,
+				42A2FCD3D29469C9D901BD10B689F89F /* TZPhotoPreviewCell.m in Sources */,
+				94434CB3186B8E98E0F852A41028D690 /* TZPhotoPreviewController.m in Sources */,
+				12A6034BBFFF3F5D4CAB882201C326AC /* TZVideoPlayerController.m in Sources */,
+				CD384631406BD8E5B7EB0BD535B34DFD /* UIView+Layout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9EC8AC58D5763A834A6CFF7ADC7853D4 /* PBXTargetDependency */ = {
+		8FE27FBB9287EEC9FBC078A5D862E1B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FMDB;
 			target = 9F12FB4A63E20F601CFB2E64A65B57C1 /* FMDB */;
-			targetProxy = 80C1F7EB4E90FAC9408FC7A3A181B2CF /* PBXContainerItemProxy */;
+			targetProxy = AF255178CFA9018CB0746D13401EA704 /* PBXContainerItemProxy */;
+		};
+		ACDD7EF157BD5F3351A917ACD9230DE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = photokit;
+			target = 966D5B230A8D28BC9E2C5875BAB80920 /* photokit */;
+			targetProxy = 9F4832C307A04DB96DE5AEFF383BDE92 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0BC8ACAA1BBCD83153EF57E2B89FB594 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2AC8D08AB9E95E701EC049C53414AEB /* FMDB.xcconfig */;
+			baseConfigurationReference = 6A740C90E053F6454B9BE1C0EE577168 /* FMDB.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -311,6 +503,48 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1AD3E718984791CBFF3F9B9FB3B30947 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69EBFFB74235C3852FC1624066CB07F4 /* Pods-PhotoKitDemo.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3A684FEC01B66606FDB0E9512C192FF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04747628E5C9054D240890AA9A938E21 /* photokit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/photokit/photokit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -364,7 +598,28 @@
 			};
 			name = Debug;
 		};
-		A9740A73B68F23E6FFB52D191E8C8973 /* Release */ = {
+		5252890E24B0BB8C8AFD89F3E0867554 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04747628E5C9054D240890AA9A938E21 /* photokit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/photokit/photokit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9DD9EB7237E609E9F33E5626D9423FDD /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 969ED5B62E34BE8C949767C93415C51F /* Pods-PhotoKitDemo.release.xcconfig */;
 			buildSettings = {
@@ -387,7 +642,7 @@
 		};
 		C7BA904A87CCDF175A63DBF60D6810A9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2AC8D08AB9E95E701EC049C53414AEB /* FMDB.xcconfig */;
+			baseConfigurationReference = 6A740C90E053F6454B9BE1C0EE577168 /* FMDB.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -405,27 +660,6 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
-		};
-		E085E3491E3AAD0A0D41470B753DA4B9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 69EBFFB74235C3852FC1624066CB07F4 /* Pods-PhotoKitDemo.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
 		};
 		F325026B55060D3B22BEC0BAB5FA7344 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -468,15 +702,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1632AFB2C6885295CBBD5047C767AFA0 /* Build configuration list for PBXNativeTarget "Pods-PhotoKitDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E085E3491E3AAD0A0D41470B753DA4B9 /* Debug */,
-				A9740A73B68F23E6FFB52D191E8C8973 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -491,6 +716,24 @@
 			buildConfigurations = (
 				0BC8ACAA1BBCD83153EF57E2B89FB594 /* Debug */,
 				C7BA904A87CCDF175A63DBF60D6810A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50D8999C8F188D45A63010378AC00D9E /* Build configuration list for PBXNativeTarget "Pods-PhotoKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AD3E718984791CBFF3F9B9FB3B30947 /* Debug */,
+				9DD9EB7237E609E9F33E5626D9423FDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54C5A8B50218942469829F062799793F /* Build configuration list for PBXNativeTarget "photokit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A684FEC01B66606FDB0E9512C192FF9 /* Debug */,
+				5252890E24B0BB8C8AFD89F3E0867554 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

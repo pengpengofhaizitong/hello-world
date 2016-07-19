@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6996070CAFA694689BC0605C306EF000'
-               BlueprintName = 'Pods-PhotoKitDemo'
+               BlueprintIdentifier = '966D5B230A8D28BC9E2C5875BAB80920'
+               BlueprintName = 'photokit'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-PhotoKitDemo.a'>
+               BuildableName = 'libphotokit.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

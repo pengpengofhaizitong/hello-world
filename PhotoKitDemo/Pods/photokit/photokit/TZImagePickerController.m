@@ -106,7 +106,7 @@
     if (_pushToPhotoPickerVc) {
         TZPhotoPickerController *photoPickerVc = [[TZPhotoPickerController alloc] init];
         [TZImageManager manager].selectType = self.selectType;
-        NSLog(@"self.selectType = %ld",self.selectType);
+//        NSLog(@"self.selectType = %ld",self.selectType);
         [[TZImageManager manager] getCameraRollAlbum:self.allowPickingVideo completion:^(TZAlbumModel *model) {
             photoPickerVc.model = model;
             [self pushViewController:photoPickerVc animated:YES];
@@ -169,7 +169,7 @@
     
     if (self.childViewControllers.count > 0) {
         UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(3, 0, 44, 44)];
-        [backButton setImage:[UIImage imageNamed:@"navi_back"] forState:UIControlStateNormal];
+        [backButton setImage:[UIImage imageNamed:@"PhotoKitBundle.bundle/navi_back"] forState:UIControlStateNormal];
         backButton.imageEdgeInsets = UIEdgeInsetsMake(0, -5, 0, 0);
         [backButton setTitle:@"返回" forState:UIControlStateNormal];
         backButton.titleLabel.font = [UIFont systemFontOfSize:15];
@@ -217,7 +217,9 @@
         _tableView.tableFooterView = [[UIView alloc] init];
         _tableView.dataSource = self;
         _tableView.delegate = self;
-        [_tableView registerNib:[UINib nibWithNibName:@"TZAlbumCell" bundle:nil] forCellReuseIdentifier:@"TZAlbumCell"];
+        NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"PhotoKitBundle" ofType:@"bundle"];
+        NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+        [_tableView registerNib:[UINib nibWithNibName:@"TZAlbumCell" bundle:bundle] forCellReuseIdentifier:@"TZAlbumCell"];
         [self.view addSubview:_tableView];
     }];
 }

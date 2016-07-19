@@ -14,10 +14,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>photokit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4E8C74C38260996070EFE546E27840D8</key>
+		<key>6996070CAFA694689BC0605C306EF000</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>966D5B230A8D28BC9E2C5875BAB80920</key>
 		<dict>
 			<key>primary</key>
 			<true/>

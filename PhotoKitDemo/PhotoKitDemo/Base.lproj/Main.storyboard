@@ -46,6 +46,9 @@
                                     <segue destination="KAW-jN-h7w" kind="push" id="cnP-gt-nhR"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EXg-TB-qNC">
+                                <rect key="frame" x="175" y="410" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -54,6 +57,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="首页" id="Pw7-u3-9Vg"/>
+                    <connections>
+                        <outlet property="iamge" destination="EXg-TB-qNC" id="GrM-fb-pU7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
