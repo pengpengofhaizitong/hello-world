@@ -10,7 +10,7 @@
 #import "InformManagementViewController.h"
 #import "NotificaionManageViewController.h"
 
-@interface ViewController ()<UIAlertViewDelegate>
+@interface ViewController ()<UIAlertViewDelegate,UITextViewDelegate>
 
 @end
 
@@ -60,11 +60,18 @@
 }
 
 -(void)keyboardWillShow:(NSNotification *)notification {
-    [self createAlertView];
+//    [self createAlertView];
 }
 -(void)keyboardWillHide:(NSNotification *)notification {
 
 }
+
+- (void)textViewDidBeginEditing:(UITextView *)textView{
+    
+    
+    
+}
+
 
 - (void)createAlertView {
     UIAlertView *_alertView = [[UIAlertView alloc] initWithTitle:nil message:@"确定发表评论吗?" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
