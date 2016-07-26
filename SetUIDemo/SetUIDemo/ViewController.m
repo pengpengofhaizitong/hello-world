@@ -18,6 +18,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
+    UIView *vvv = [[UIView alloc] initWithFrame:CGRectMake(30, 490, 200, 30)];
+    vvv.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:vvv];
+    
+
+    CAGradientLayer *layer = [CAGradientLayer new];
+    layer.colors = @[(__bridge id)[UIColor redColor].CGColor, (__bridge id)[UIColor redColor].CGColor];
+    layer.frame = CGRectMake(0, 0, 50, 30);
+    [vvv.layer addSublayer:layer];
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
     
     NSMutableAttributedString *string =[[NSMutableAttributedString alloc]initWithString:@"nihao8888"];
