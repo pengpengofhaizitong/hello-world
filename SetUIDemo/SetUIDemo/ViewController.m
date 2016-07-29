@@ -18,9 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
+
     UIView *vvv = [[UIView alloc] initWithFrame:CGRectMake(30, 490, 200, 30)];
     vvv.backgroundColor = [UIColor blackColor];
     [self.view addSubview:vvv];
