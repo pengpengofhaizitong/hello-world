@@ -1,0 +1,714 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		219831867BEAA00F3691C6FF /* libPods-KidsCareUI_Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D552D2B453E1DE69D6EA1DBB /* libPods-KidsCareUI_Demo.a */; };
+		83721B731D751C37005ED5B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83721B721D751C37005ED5B0 /* main.m */; };
+		83721B761D751C37005ED5B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83721B751D751C37005ED5B0 /* AppDelegate.m */; };
+		83721B791D751C37005ED5B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83721B781D751C37005ED5B0 /* ViewController.m */; };
+		83721B7C1D751C37005ED5B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83721B7A1D751C37005ED5B0 /* Main.storyboard */; };
+		83721B7F1D751C37005ED5B0 /* KidsCareUI_Demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83721B7D1D751C37005ED5B0 /* KidsCareUI_Demo.xcdatamodeld */; };
+		83721B811D751C37005ED5B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83721B801D751C37005ED5B0 /* Assets.xcassets */; };
+		83721B841D751C37005ED5B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83721B821D751C37005ED5B0 /* LaunchScreen.storyboard */; };
+		83721B8F1D751C37005ED5B0 /* KidsCareUI_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83721B8E1D751C37005ED5B0 /* KidsCareUI_DemoTests.m */; };
+		83721B9A1D751C37005ED5B0 /* KidsCareUI_DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83721B991D751C37005ED5B0 /* KidsCareUI_DemoUITests.m */; };
+		83F34E2A1D7810E70038A373 /* ClassMemberTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F34E101D7810E70038A373 /* ClassMemberTableViewCell.m */; };
+		83F34E2B1D7810E70038A373 /* ClassMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F34E111D7810E70038A373 /* ClassMemberTableViewCell.xib */; };
+		83F34E2C1D7810E70038A373 /* ClassMemberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F34E131D7810E70038A373 /* ClassMemberView.m */; };
+		83F34E2D1D7810E70038A373 /* MornCheckClassListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F34E151D7810E70038A373 /* MornCheckClassListTableViewCell.m */; };
+		83F34E2E1D7810E70038A373 /* MornCheckClassListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F34E161D7810E70038A373 /* MornCheckClassListTableViewCell.xib */; };
+		83F34E2F1D7810E70038A373 /* MornCheckClassListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F34E181D7810E70038A373 /* MornCheckClassListView.m */; };
+		83F34E301D7810E70038A373 /* MornCheckObserveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F34E1A1D7810E70038A373 /* MornCheckObserveViewController.m */; };
+		83F34E311D7810E70038A373 /* MornCheckObserveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F34E1B1D7810E70038A373 /* MornCheckObserveViewController.xib */; };
+		83F34E321D7810E70038A373 /* MornCheckSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F34E1D1D7810E70038A373 /* MornCheckSearchTableViewCell.m */; };
+		83F34E331D7810E70038A373 /* MornCheckSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F34E1E1D7810E70038A373 /* MornCheckSearchTableViewCell.xib */; };
+		83F34E341D7810E70038A373 /* MornCheckSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F34E201D7810E70038A373 /* MornCheckSearchView.m */; };
+		83F34E351D7810E70038A373 /* MorningCheckHandleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F34E221D7810E70038A373 /* MorningCheckHandleView.m */; };
+		83F34E361D7810E70038A373 /* MorningCheckHandleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F34E231D7810E70038A373 /* MorningCheckHandleView.xib */; };
+		83F34E371D7810E70038A373 /* MorningCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F34E251D7810E70038A373 /* MorningCheckViewController.m */; };
+		83F34E381D7810E70038A373 /* MorningCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F34E261D7810E70038A373 /* MorningCheckViewController.xib */; };
+		83F34E391D7810E70038A373 /* QuickMornCheckView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F34E281D7810E70038A373 /* QuickMornCheckView.m */; };
+		83F34E3A1D7810E70038A373 /* QuickMornCheckView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F34E291D7810E70038A373 /* QuickMornCheckView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83721B8B1D751C37005ED5B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83721B661D751C37005ED5B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83721B6D1D751C37005ED5B0;
+			remoteInfo = KidsCareUI_Demo;
+		};
+		83721B961D751C37005ED5B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83721B661D751C37005ED5B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83721B6D1D751C37005ED5B0;
+			remoteInfo = KidsCareUI_Demo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		772304C6E9BADE9876C95316 /* Pods-KidsCareUI_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidsCareUI_Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KidsCareUI_Demo/Pods-KidsCareUI_Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		83721B6E1D751C37005ED5B0 /* KidsCareUI_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidsCareUI_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83721B721D751C37005ED5B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		83721B741D751C37005ED5B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		83721B751D751C37005ED5B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		83721B771D751C37005ED5B0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		83721B781D751C37005ED5B0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		83721B7B1D751C37005ED5B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		83721B7E1D751C37005ED5B0 /* KidsCareUI_Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KidsCareUI_Demo.xcdatamodel; sourceTree = "<group>"; };
+		83721B801D751C37005ED5B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83721B831D751C37005ED5B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83721B851D751C37005ED5B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83721B8A1D751C37005ED5B0 /* KidsCareUI_DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KidsCareUI_DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83721B8E1D751C37005ED5B0 /* KidsCareUI_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KidsCareUI_DemoTests.m; sourceTree = "<group>"; };
+		83721B901D751C37005ED5B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83721B951D751C37005ED5B0 /* KidsCareUI_DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KidsCareUI_DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83721B991D751C37005ED5B0 /* KidsCareUI_DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KidsCareUI_DemoUITests.m; sourceTree = "<group>"; };
+		83721B9B1D751C37005ED5B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83F34E0F1D7810E70038A373 /* ClassMemberTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassMemberTableViewCell.h; sourceTree = "<group>"; };
+		83F34E101D7810E70038A373 /* ClassMemberTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassMemberTableViewCell.m; sourceTree = "<group>"; };
+		83F34E111D7810E70038A373 /* ClassMemberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassMemberTableViewCell.xib; sourceTree = "<group>"; };
+		83F34E121D7810E70038A373 /* ClassMemberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassMemberView.h; sourceTree = "<group>"; };
+		83F34E131D7810E70038A373 /* ClassMemberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassMemberView.m; sourceTree = "<group>"; };
+		83F34E141D7810E70038A373 /* MornCheckClassListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MornCheckClassListTableViewCell.h; sourceTree = "<group>"; };
+		83F34E151D7810E70038A373 /* MornCheckClassListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MornCheckClassListTableViewCell.m; sourceTree = "<group>"; };
+		83F34E161D7810E70038A373 /* MornCheckClassListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MornCheckClassListTableViewCell.xib; sourceTree = "<group>"; };
+		83F34E171D7810E70038A373 /* MornCheckClassListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MornCheckClassListView.h; sourceTree = "<group>"; };
+		83F34E181D7810E70038A373 /* MornCheckClassListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MornCheckClassListView.m; sourceTree = "<group>"; };
+		83F34E191D7810E70038A373 /* MornCheckObserveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MornCheckObserveViewController.h; sourceTree = "<group>"; };
+		83F34E1A1D7810E70038A373 /* MornCheckObserveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MornCheckObserveViewController.m; sourceTree = "<group>"; };
+		83F34E1B1D7810E70038A373 /* MornCheckObserveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MornCheckObserveViewController.xib; sourceTree = "<group>"; };
+		83F34E1C1D7810E70038A373 /* MornCheckSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MornCheckSearchTableViewCell.h; sourceTree = "<group>"; };
+		83F34E1D1D7810E70038A373 /* MornCheckSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MornCheckSearchTableViewCell.m; sourceTree = "<group>"; };
+		83F34E1E1D7810E70038A373 /* MornCheckSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MornCheckSearchTableViewCell.xib; sourceTree = "<group>"; };
+		83F34E1F1D7810E70038A373 /* MornCheckSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MornCheckSearchView.h; sourceTree = "<group>"; };
+		83F34E201D7810E70038A373 /* MornCheckSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MornCheckSearchView.m; sourceTree = "<group>"; };
+		83F34E211D7810E70038A373 /* MorningCheckHandleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MorningCheckHandleView.h; sourceTree = "<group>"; };
+		83F34E221D7810E70038A373 /* MorningCheckHandleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MorningCheckHandleView.m; sourceTree = "<group>"; };
+		83F34E231D7810E70038A373 /* MorningCheckHandleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MorningCheckHandleView.xib; sourceTree = "<group>"; };
+		83F34E241D7810E70038A373 /* MorningCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MorningCheckViewController.h; sourceTree = "<group>"; };
+		83F34E251D7810E70038A373 /* MorningCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MorningCheckViewController.m; sourceTree = "<group>"; };
+		83F34E261D7810E70038A373 /* MorningCheckViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MorningCheckViewController.xib; sourceTree = "<group>"; };
+		83F34E271D7810E70038A373 /* QuickMornCheckView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickMornCheckView.h; sourceTree = "<group>"; };
+		83F34E281D7810E70038A373 /* QuickMornCheckView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickMornCheckView.m; sourceTree = "<group>"; };
+		83F34E291D7810E70038A373 /* QuickMornCheckView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuickMornCheckView.xib; sourceTree = "<group>"; };
+		BBED8D925D6CCC8AAFDD979C /* Pods-KidsCareUI_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidsCareUI_Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-KidsCareUI_Demo/Pods-KidsCareUI_Demo.release.xcconfig"; sourceTree = "<group>"; };
+		D552D2B453E1DE69D6EA1DBB /* libPods-KidsCareUI_Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KidsCareUI_Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83721B6B1D751C37005ED5B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				219831867BEAA00F3691C6FF /* libPods-KidsCareUI_Demo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83721B871D751C37005ED5B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83721B921D751C37005ED5B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45A905E1237A21C61003617E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D552D2B453E1DE69D6EA1DBB /* libPods-KidsCareUI_Demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83721B651D751C37005ED5B0 = {
+			isa = PBXGroup;
+			children = (
+				83721B701D751C37005ED5B0 /* KidsCareUI_Demo */,
+				83721B8D1D751C37005ED5B0 /* KidsCareUI_DemoTests */,
+				83721B981D751C37005ED5B0 /* KidsCareUI_DemoUITests */,
+				83721B6F1D751C37005ED5B0 /* Products */,
+				FFC3631D2256310621BB8A49 /* Pods */,
+				45A905E1237A21C61003617E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		83721B6F1D751C37005ED5B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83721B6E1D751C37005ED5B0 /* KidsCareUI_Demo.app */,
+				83721B8A1D751C37005ED5B0 /* KidsCareUI_DemoTests.xctest */,
+				83721B951D751C37005ED5B0 /* KidsCareUI_DemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83721B701D751C37005ED5B0 /* KidsCareUI_Demo */ = {
+			isa = PBXGroup;
+			children = (
+				83F34E0E1D7810E70038A373 /* MornCheck */,
+				83721B741D751C37005ED5B0 /* AppDelegate.h */,
+				83721B751D751C37005ED5B0 /* AppDelegate.m */,
+				83721B771D751C37005ED5B0 /* ViewController.h */,
+				83721B781D751C37005ED5B0 /* ViewController.m */,
+				83721B7A1D751C37005ED5B0 /* Main.storyboard */,
+				83721B801D751C37005ED5B0 /* Assets.xcassets */,
+				83721B821D751C37005ED5B0 /* LaunchScreen.storyboard */,
+				83721B851D751C37005ED5B0 /* Info.plist */,
+				83721B7D1D751C37005ED5B0 /* KidsCareUI_Demo.xcdatamodeld */,
+				83721B711D751C37005ED5B0 /* Supporting Files */,
+			);
+			path = KidsCareUI_Demo;
+			sourceTree = "<group>";
+		};
+		83721B711D751C37005ED5B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83721B721D751C37005ED5B0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83721B8D1D751C37005ED5B0 /* KidsCareUI_DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				83721B8E1D751C37005ED5B0 /* KidsCareUI_DemoTests.m */,
+				83721B901D751C37005ED5B0 /* Info.plist */,
+			);
+			path = KidsCareUI_DemoTests;
+			sourceTree = "<group>";
+		};
+		83721B981D751C37005ED5B0 /* KidsCareUI_DemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				83721B991D751C37005ED5B0 /* KidsCareUI_DemoUITests.m */,
+				83721B9B1D751C37005ED5B0 /* Info.plist */,
+			);
+			path = KidsCareUI_DemoUITests;
+			sourceTree = "<group>";
+		};
+		83F34E0E1D7810E70038A373 /* MornCheck */ = {
+			isa = PBXGroup;
+			children = (
+				83F34E0F1D7810E70038A373 /* ClassMemberTableViewCell.h */,
+				83F34E101D7810E70038A373 /* ClassMemberTableViewCell.m */,
+				83F34E111D7810E70038A373 /* ClassMemberTableViewCell.xib */,
+				83F34E121D7810E70038A373 /* ClassMemberView.h */,
+				83F34E131D7810E70038A373 /* ClassMemberView.m */,
+				83F34E141D7810E70038A373 /* MornCheckClassListTableViewCell.h */,
+				83F34E151D7810E70038A373 /* MornCheckClassListTableViewCell.m */,
+				83F34E161D7810E70038A373 /* MornCheckClassListTableViewCell.xib */,
+				83F34E171D7810E70038A373 /* MornCheckClassListView.h */,
+				83F34E181D7810E70038A373 /* MornCheckClassListView.m */,
+				83F34E191D7810E70038A373 /* MornCheckObserveViewController.h */,
+				83F34E1A1D7810E70038A373 /* MornCheckObserveViewController.m */,
+				83F34E1B1D7810E70038A373 /* MornCheckObserveViewController.xib */,
+				83F34E1C1D7810E70038A373 /* MornCheckSearchTableViewCell.h */,
+				83F34E1D1D7810E70038A373 /* MornCheckSearchTableViewCell.m */,
+				83F34E1E1D7810E70038A373 /* MornCheckSearchTableViewCell.xib */,
+				83F34E1F1D7810E70038A373 /* MornCheckSearchView.h */,
+				83F34E201D7810E70038A373 /* MornCheckSearchView.m */,
+				83F34E211D7810E70038A373 /* MorningCheckHandleView.h */,
+				83F34E221D7810E70038A373 /* MorningCheckHandleView.m */,
+				83F34E231D7810E70038A373 /* MorningCheckHandleView.xib */,
+				83F34E241D7810E70038A373 /* MorningCheckViewController.h */,
+				83F34E251D7810E70038A373 /* MorningCheckViewController.m */,
+				83F34E261D7810E70038A373 /* MorningCheckViewController.xib */,
+				83F34E271D7810E70038A373 /* QuickMornCheckView.h */,
+				83F34E281D7810E70038A373 /* QuickMornCheckView.m */,
+				83F34E291D7810E70038A373 /* QuickMornCheckView.xib */,
+			);
+			path = MornCheck;
+			sourceTree = "<group>";
+		};
+		FFC3631D2256310621BB8A49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				772304C6E9BADE9876C95316 /* Pods-KidsCareUI_Demo.debug.xcconfig */,
+				BBED8D925D6CCC8AAFDD979C /* Pods-KidsCareUI_Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83721B6D1D751C37005ED5B0 /* KidsCareUI_Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83721B9E1D751C37005ED5B0 /* Build configuration list for PBXNativeTarget "KidsCareUI_Demo" */;
+			buildPhases = (
+				E494CFEB3362A44BAA43DCD7 /* 📦 Check Pods Manifest.lock */,
+				83721B6A1D751C37005ED5B0 /* Sources */,
+				83721B6B1D751C37005ED5B0 /* Frameworks */,
+				83721B6C1D751C37005ED5B0 /* Resources */,
+				45AD82A3C34ABC4DF1B9AC16 /* 📦 Embed Pods Frameworks */,
+				EF80B25192407D38A8B0AA8B /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KidsCareUI_Demo;
+			productName = KidsCareUI_Demo;
+			productReference = 83721B6E1D751C37005ED5B0 /* KidsCareUI_Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83721B891D751C37005ED5B0 /* KidsCareUI_DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83721BA11D751C37005ED5B0 /* Build configuration list for PBXNativeTarget "KidsCareUI_DemoTests" */;
+			buildPhases = (
+				83721B861D751C37005ED5B0 /* Sources */,
+				83721B871D751C37005ED5B0 /* Frameworks */,
+				83721B881D751C37005ED5B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83721B8C1D751C37005ED5B0 /* PBXTargetDependency */,
+			);
+			name = KidsCareUI_DemoTests;
+			productName = KidsCareUI_DemoTests;
+			productReference = 83721B8A1D751C37005ED5B0 /* KidsCareUI_DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		83721B941D751C37005ED5B0 /* KidsCareUI_DemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83721BA41D751C37005ED5B0 /* Build configuration list for PBXNativeTarget "KidsCareUI_DemoUITests" */;
+			buildPhases = (
+				83721B911D751C37005ED5B0 /* Sources */,
+				83721B921D751C37005ED5B0 /* Frameworks */,
+				83721B931D751C37005ED5B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83721B971D751C37005ED5B0 /* PBXTargetDependency */,
+			);
+			name = KidsCareUI_DemoUITests;
+			productName = KidsCareUI_DemoUITests;
+			productReference = 83721B951D751C37005ED5B0 /* KidsCareUI_DemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83721B661D751C37005ED5B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = haizitong6;
+				TargetAttributes = {
+					83721B6D1D751C37005ED5B0 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					83721B891D751C37005ED5B0 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 83721B6D1D751C37005ED5B0;
+					};
+					83721B941D751C37005ED5B0 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 83721B6D1D751C37005ED5B0;
+					};
+				};
+			};
+			buildConfigurationList = 83721B691D751C37005ED5B0 /* Build configuration list for PBXProject "KidsCareUI_Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83721B651D751C37005ED5B0;
+			productRefGroup = 83721B6F1D751C37005ED5B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83721B6D1D751C37005ED5B0 /* KidsCareUI_Demo */,
+				83721B891D751C37005ED5B0 /* KidsCareUI_DemoTests */,
+				83721B941D751C37005ED5B0 /* KidsCareUI_DemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83721B6C1D751C37005ED5B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83F34E331D7810E70038A373 /* MornCheckSearchTableViewCell.xib in Resources */,
+				83F34E2E1D7810E70038A373 /* MornCheckClassListTableViewCell.xib in Resources */,
+				83F34E361D7810E70038A373 /* MorningCheckHandleView.xib in Resources */,
+				83721B841D751C37005ED5B0 /* LaunchScreen.storyboard in Resources */,
+				83721B811D751C37005ED5B0 /* Assets.xcassets in Resources */,
+				83F34E3A1D7810E70038A373 /* QuickMornCheckView.xib in Resources */,
+				83F34E2B1D7810E70038A373 /* ClassMemberTableViewCell.xib in Resources */,
+				83F34E311D7810E70038A373 /* MornCheckObserveViewController.xib in Resources */,
+				83721B7C1D751C37005ED5B0 /* Main.storyboard in Resources */,
+				83F34E381D7810E70038A373 /* MorningCheckViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83721B881D751C37005ED5B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83721B931D751C37005ED5B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45AD82A3C34ABC4DF1B9AC16 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KidsCareUI_Demo/Pods-KidsCareUI_Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E494CFEB3362A44BAA43DCD7 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EF80B25192407D38A8B0AA8B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KidsCareUI_Demo/Pods-KidsCareUI_Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83721B6A1D751C37005ED5B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83F34E341D7810E70038A373 /* MornCheckSearchView.m in Sources */,
+				83721B7F1D751C37005ED5B0 /* KidsCareUI_Demo.xcdatamodeld in Sources */,
+				83F34E351D7810E70038A373 /* MorningCheckHandleView.m in Sources */,
+				83F34E2A1D7810E70038A373 /* ClassMemberTableViewCell.m in Sources */,
+				83F34E301D7810E70038A373 /* MornCheckObserveViewController.m in Sources */,
+				83F34E2F1D7810E70038A373 /* MornCheckClassListView.m in Sources */,
+				83F34E321D7810E70038A373 /* MornCheckSearchTableViewCell.m in Sources */,
+				83F34E391D7810E70038A373 /* QuickMornCheckView.m in Sources */,
+				83721B791D751C37005ED5B0 /* ViewController.m in Sources */,
+				83721B761D751C37005ED5B0 /* AppDelegate.m in Sources */,
+				83F34E371D7810E70038A373 /* MorningCheckViewController.m in Sources */,
+				83721B731D751C37005ED5B0 /* main.m in Sources */,
+				83F34E2D1D7810E70038A373 /* MornCheckClassListTableViewCell.m in Sources */,
+				83F34E2C1D7810E70038A373 /* ClassMemberView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83721B861D751C37005ED5B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83721B8F1D751C37005ED5B0 /* KidsCareUI_DemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83721B911D751C37005ED5B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83721B9A1D751C37005ED5B0 /* KidsCareUI_DemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83721B8C1D751C37005ED5B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83721B6D1D751C37005ED5B0 /* KidsCareUI_Demo */;
+			targetProxy = 83721B8B1D751C37005ED5B0 /* PBXContainerItemProxy */;
+		};
+		83721B971D751C37005ED5B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83721B6D1D751C37005ED5B0 /* KidsCareUI_Demo */;
+			targetProxy = 83721B961D751C37005ED5B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		83721B7A1D751C37005ED5B0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83721B7B1D751C37005ED5B0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		83721B821D751C37005ED5B0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83721B831D751C37005ED5B0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83721B9C1D751C37005ED5B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		83721B9D1D751C37005ED5B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83721B9F1D751C37005ED5B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 772304C6E9BADE9876C95316 /* Pods-KidsCareUI_Demo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KidsCareUI_Demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.haizitong.KidsCareUI-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		83721BA01D751C37005ED5B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBED8D925D6CCC8AAFDD979C /* Pods-KidsCareUI_Demo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KidsCareUI_Demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.haizitong.KidsCareUI-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		83721BA21D751C37005ED5B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KidsCareUI_DemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.haizitong.KidsCareUI-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KidsCareUI_Demo.app/KidsCareUI_Demo";
+			};
+			name = Debug;
+		};
+		83721BA31D751C37005ED5B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KidsCareUI_DemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.haizitong.KidsCareUI-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KidsCareUI_Demo.app/KidsCareUI_Demo";
+			};
+			name = Release;
+		};
+		83721BA51D751C37005ED5B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KidsCareUI_DemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.haizitong.KidsCareUI-DemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KidsCareUI_Demo;
+			};
+			name = Debug;
+		};
+		83721BA61D751C37005ED5B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KidsCareUI_DemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.haizitong.KidsCareUI-DemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KidsCareUI_Demo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83721B691D751C37005ED5B0 /* Build configuration list for PBXProject "KidsCareUI_Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83721B9C1D751C37005ED5B0 /* Debug */,
+				83721B9D1D751C37005ED5B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83721B9E1D751C37005ED5B0 /* Build configuration list for PBXNativeTarget "KidsCareUI_Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83721B9F1D751C37005ED5B0 /* Debug */,
+				83721BA01D751C37005ED5B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83721BA11D751C37005ED5B0 /* Build configuration list for PBXNativeTarget "KidsCareUI_DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83721BA21D751C37005ED5B0 /* Debug */,
+				83721BA31D751C37005ED5B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83721BA41D751C37005ED5B0 /* Build configuration list for PBXNativeTarget "KidsCareUI_DemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83721BA51D751C37005ED5B0 /* Debug */,
+				83721BA61D751C37005ED5B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		83721B7D1D751C37005ED5B0 /* KidsCareUI_Demo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				83721B7E1D751C37005ED5B0 /* KidsCareUI_Demo.xcdatamodel */,
+			);
+			currentVersion = 83721B7E1D751C37005ED5B0 /* KidsCareUI_Demo.xcdatamodel */;
+			path = KidsCareUI_Demo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 83721B661D751C37005ED5B0 /* Project object */;
+}

@@ -101,7 +101,7 @@
         NSArray *temp_MediaTypes = [UIImagePickerController availableMediaTypesForSourceType:picker.sourceType];
         picker.mediaTypes = temp_MediaTypes;
         picker.delegate = self;
-//        picker.allowsImageEditing = YES;
+        picker.allowsImageEditing = YES;
         // 设置录制视频的质量
         [picker setVideoQuality:UIImagePickerControllerQualityTypeHigh];
         //设置最长摄像时间
@@ -127,12 +127,16 @@
     }else if([mediaType isEqualToString:@"public.movie"]){// 视频
         NSString *pathUrl = [NSString stringWithFormat:@"%@",[info objectForKey:@"UIImagePickerControllerMediaURL"]];
         NSString *path = [pathUrl substringFromIndex:7];
-        UISaveVideoAtPathToSavedPhotosAlbum(path, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+        UISaveVideoAtPathToSavedPhotosAlbum(path, self, @selector(viedo:didFinishSavingWithError:contextInfo:), nil);
     }
 }
 
 //此方法就在UIImageWriteToSavedPhotosAlbum的上方
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    NSLog(@"已保存");
+}
+
+- (void)viedo:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
     NSLog(@"已保存");
 }
 
