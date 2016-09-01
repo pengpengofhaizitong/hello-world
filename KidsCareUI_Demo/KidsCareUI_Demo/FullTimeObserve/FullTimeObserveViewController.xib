@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FullTimeObserveViewController">
+            <connections>
+                <outlet property="tableView" destination="16L-Uq-OKo" id="Zem-1g-i8H"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgp-iG-Joa">
+                    <rect key="frame" x="0.0" y="64" width="600" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9g-sH-NSE">
+                            <rect key="frame" x="8" y="10" width="174" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMO-6x-1G9">
+                            <rect key="frame" x="197" y="6" width="30" height="30"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwd-pf-T6G">
+                            <rect key="frame" x="554" y="6" width="30" height="30"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.93722629020000003" blue="0.037690205550000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="GMG-5R-57a"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="16L-Uq-OKo">
+                    <rect key="frame" x="0.0" y="104" width="600" height="496"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="IZf-Ux-mGv"/>
+                        <outlet property="delegate" destination="-1" id="Mzx-vB-lem"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fgp-iG-Joa" secondAttribute="trailing" id="1Nw-wd-0Av"/>
+                <constraint firstAttribute="trailing" secondItem="16L-Uq-OKo" secondAttribute="trailing" id="EU8-7s-zpT"/>
+                <constraint firstItem="fgp-iG-Joa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Jsg-xs-veg"/>
+                <constraint firstItem="16L-Uq-OKo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="P80-0a-CNy"/>
+                <constraint firstItem="fgp-iG-Joa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="RP7-PN-NzV"/>
+                <constraint firstAttribute="bottom" secondItem="16L-Uq-OKo" secondAttribute="bottom" id="Uko-1C-wgp"/>
+                <constraint firstItem="16L-Uq-OKo" firstAttribute="top" secondItem="fgp-iG-Joa" secondAttribute="bottom" id="bZq-oY-9hk"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
