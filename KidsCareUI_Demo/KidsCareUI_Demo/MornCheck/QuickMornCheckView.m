@@ -148,8 +148,8 @@
         [self changeViewFrameForward:YES];
         
     }else if (panGesture.state == UIGestureRecognizerStateChanged) {
-        [self setRotation:angle view:view duration:ANIMATIONTIME];
-        [self setScale:scale view:view CompletionBlock:nil duration:ANIMATIONTIME];
+        [view setRotation:angle view:view duration:ANIMATIONTIME];
+        [view setScale:scale view:view CompletionBlock:nil duration:ANIMATIONTIME];
     }else if (panGesture.state == UIGestureRecognizerStateEnded) {
         if (fabs(view.center.x - self.handleView.center.x)>self.handleView.center.x/2) {
             float positionX;
@@ -162,18 +162,19 @@
                 angle = -M_PI*1/3;
                 [self leftSliding];
             }
-            [self setPosition:CGPointMake(positionX, view.center.y) view:view duration:REMOVETIME];
-            [self setScale:0.4 view:view CompletionBlock:^{
-                [view removeFromSuperview];
+            [view setPosition:CGPointMake(positionX, view.center.y) view:view duration:REMOVETIME];
+            __weak MorningCheckHandleView *weakView = view;
+            [view setScale:0.4 view:view CompletionBlock:^{
+                [weakView removeFromSuperview];
                 [bself.viewArray removeLastObject];
             } duration:REMOVETIME];
-            [self setRotation:angle view:view duration:REMOVETIME];
+            [view setRotation:angle view:view duration:REMOVETIME];
         }else{
             [self changeViewFrameForward:NO];
             [self.viewArray removeObjectAtIndex:0];
-            [self setRotation:0 view:view duration:ANIMATIONTIME];
-            [self setScale:1 view:view CompletionBlock:nil duration:ANIMATIONTIME];
-            [self setPosition:CGPointMake(self.handleView.center.x, self.handleView.center.y-(self.viewArray.count - 1)*10) view:view duration:ANIMATIONTIME];
+            [view setRotation:0 view:view duration:ANIMATIONTIME];
+            [view setScale:1 view:view CompletionBlock:nil duration:ANIMATIONTIME];
+            [view setPosition:CGPointMake(self.handleView.center.x, self.handleView.center.y-(self.viewArray.count - 1)*10) view:view duration:ANIMATIONTIME];
         }
     }
 }
@@ -187,8 +188,8 @@
             MorningCheckHandleView *view = self.viewArray[i];
             CGRect frame = CGRectMake(0, 0, VIEWWIDTH + i*15, VIEWHEIGHT);
             CGPoint center = CGPointMake(self.handleView.center.x, self.handleView.center.y - i*10);
-            [self setPosition:center view:view duration:FRAMETIME];
-            [self setFrame:frame view:view duration:FRAMETIME];
+            [view setPosition:center view:view duration:FRAMETIME];
+            [view setFrame:frame view:view duration:FRAMETIME];
             view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y, frame.size.width, frame.size.height);
             NSLog(@"gogogo");
         }
@@ -197,60 +198,14 @@
             MorningCheckHandleView *view = self.viewArray[i+1];
             CGRect frame = CGRectMake(0, 0, VIEWWIDTH + i*15, VIEWHEIGHT);
             CGPoint center = CGPointMake(self.handleView.center.x, self.handleView.center.y - i*10);
-            [self setFrame:frame view:view duration:FRAMETIME];
-            [self setPosition:center view:view duration:FRAMETIME];
+            [view setFrame:frame view:view duration:FRAMETIME];
+            [view setPosition:center view:view duration:FRAMETIME];
             view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y, frame.size.width, frame.size.height);
         }
     }
 }
 
-/**
- *  动画改变大小
- */
-- (void)setFrame:(CGRect)frame view:(UIView*)view duration:(float)time{
-    POPBasicAnimation *animation = [POPBasicAnimation animationWithPropertyNamed:kPOPViewBounds];
-    animation.toValue = [NSValue valueWithCGRect:frame];
-    animation.duration = time;
-    [view.layer pop_addAnimation:animation forKey:@"bounds"];
-}
 
-/**
- *  动画改变中心
- */
-- (void)setPosition:(CGPoint)position view:(UIView*)view duration:(float)time{
-    POPBasicAnimation *animation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPosition];
-    animation.toValue = [NSValue valueWithCGPoint:position];
-    animation.duration = time;
-    [view.layer pop_addAnimation:animation forKey:@"position"];
-    NSLog(@"changge center");
-}
-
-/**
- *  旋转动画
- */
-- (void)setRotation:(float)xOffset view:(UIView*)view duration:(float)time{
-    POPBasicAnimation *animation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerRotation];
-    animation.toValue = @(xOffset);
-    animation.duration = time;
-    [view.layer pop_addAnimation:animation forKey:@"rotation"];
-}
-
-/**
- *  缩放动画
- */
-- (void)setScale:(float)scale view:(UIView*)view CompletionBlock:(void(^)())block duration:(float)time{
-    POPBasicAnimation *animation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
-    animation.toValue = [NSValue valueWithCGSize:CGSizeMake(scale, scale)];
-    animation.duration = time;
-    if (block) {
-        [animation setCompletionBlock:^(POPAnimation *animation, BOOL isFinish) {
-            if (isFinish) {
-                block();
-            }
-        }];
-    }
-    [view.layer pop_addAnimation:animation forKey:@"scale"];
-}
 
 /**
  *  左滑
@@ -289,9 +244,9 @@
     }
     MorningCheckHandleView *view = [self.viewArray lastObject];
     float scale = 1 - fabsf(angle)/2;
-    [self setRotation:angle view:view duration:0.5];
-    [self setScale:scale view:view CompletionBlock:nil duration:0.5];
-    [self setPosition:CGPointMake(origignX, view.center.y) view:view duration:0.5];
+    [view setRotation:angle view:view duration:0.5];
+    [view setScale:scale view:view CompletionBlock:nil duration:0.5];
+    [view setPosition:CGPointMake(origignX, view.center.y) view:view duration:0.5];
     [self initSingeViewFromBack:YES];
     [self changeViewFrameForward:YES];
     [self performSelector:@selector(destroyView) withObject:self afterDelay:0.5];

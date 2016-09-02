@@ -10,6 +10,7 @@
 #import "YYImage.h"
 #import "MornCheckObserveViewController.h"
 #import "AppDelegate.h"
+#import <POP/POP.h>
 
 @interface MorningCheckHandleView()
 
@@ -70,6 +71,54 @@
     }
 }
 
+
+/**
+ *  动画改变大小
+ */
+- (void)setFrame:(CGRect)frame view:(UIView*)view duration:(float)time{
+    POPBasicAnimation *animation = [POPBasicAnimation animationWithPropertyNamed:kPOPViewBounds];
+    animation.toValue = [NSValue valueWithCGRect:frame];
+    animation.duration = time;
+    [view.layer pop_addAnimation:animation forKey:@"bounds"];
+}
+
+/**
+ *  动画改变中心
+ */
+- (void)setPosition:(CGPoint)position view:(UIView*)view duration:(float)time{
+    POPBasicAnimation *animation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPosition];
+    animation.toValue = [NSValue valueWithCGPoint:position];
+    animation.duration = time;
+    [view.layer pop_addAnimation:animation forKey:@"position"];
+    NSLog(@"changge center");
+}
+
+/**
+ *  旋转动画
+ */
+- (void)setRotation:(float)xOffset view:(UIView*)view duration:(float)time{
+    POPBasicAnimation *animation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerRotation];
+    animation.toValue = @(xOffset);
+    animation.duration = time;
+    [view.layer pop_addAnimation:animation forKey:@"rotation"];
+}
+
+/**
+ *  缩放动画
+ */
+- (void)setScale:(float)scale view:(UIView*)view CompletionBlock:(void(^)())block duration:(float)time{
+    POPBasicAnimation *animation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
+    animation.toValue = [NSValue valueWithCGSize:CGSizeMake(scale, scale)];
+    animation.duration = time;
+    if (block) {
+        [animation setCompletionBlock:^(POPAnimation *animation, BOOL isFinish) {
+            if (isFinish) {
+                block();
+            }
+        }];
+    }
+    [view.layer pop_addAnimation:animation forKey:@"scale"];
+}
 
 
 @end

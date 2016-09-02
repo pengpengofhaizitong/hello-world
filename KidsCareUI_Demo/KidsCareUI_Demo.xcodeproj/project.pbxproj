@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		219831867BEAA00F3691C6FF /* libPods-KidsCareUI_Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D552D2B453E1DE69D6EA1DBB /* libPods-KidsCareUI_Demo.a */; };
+		834173021D79148200AE93AE /* HelpTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 834173011D79148200AE93AE /* HelpTipView.m */; };
+		834173051D791F3700AE93AE /* DateSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 834173041D791F3700AE93AE /* DateSelectorView.m */; };
+		834173081D797D3F00AE93AE /* FullTimeObsRecordHandleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 834173071D797D3F00AE93AE /* FullTimeObsRecordHandleViewController.m */; };
+		8341730C1D797EC200AE93AE /* FullTimeHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341730A1D797EC200AE93AE /* FullTimeHomeViewController.m */; };
+		8341730D1D797EC200AE93AE /* FullTimeHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8341730B1D797EC200AE93AE /* FullTimeHomeViewController.xib */; };
 		83721B731D751C37005ED5B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83721B721D751C37005ED5B0 /* main.m */; };
 		83721B761D751C37005ED5B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83721B751D751C37005ED5B0 /* AppDelegate.m */; };
 		83721B791D751C37005ED5B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83721B781D751C37005ED5B0 /* ViewController.m */; };
@@ -38,7 +43,6 @@
 		83F34E401D781B600038A373 /* FullTimeObserveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F34E3E1D781B600038A373 /* FullTimeObserveViewController.xib */; };
 		83F34E441D7820500038A373 /* FullTimeObserveStudentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F34E421D7820500038A373 /* FullTimeObserveStudentTableViewCell.m */; };
 		83F34E451D7820500038A373 /* FullTimeObserveStudentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F34E431D7820500038A373 /* FullTimeObserveStudentTableViewCell.xib */; };
-		83F34E491D782D640038A373 /* helpInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F34E481D782D640038A373 /* helpInfoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,15 @@
 
 /* Begin PBXFileReference section */
 		772304C6E9BADE9876C95316 /* Pods-KidsCareUI_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidsCareUI_Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KidsCareUI_Demo/Pods-KidsCareUI_Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		834173001D79148200AE93AE /* HelpTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpTipView.h; sourceTree = "<group>"; };
+		834173011D79148200AE93AE /* HelpTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpTipView.m; sourceTree = "<group>"; };
+		834173031D791F3700AE93AE /* DateSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSelectorView.h; sourceTree = "<group>"; };
+		834173041D791F3700AE93AE /* DateSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateSelectorView.m; sourceTree = "<group>"; };
+		834173061D797D3F00AE93AE /* FullTimeObsRecordHandleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullTimeObsRecordHandleViewController.h; sourceTree = "<group>"; };
+		834173071D797D3F00AE93AE /* FullTimeObsRecordHandleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullTimeObsRecordHandleViewController.m; sourceTree = "<group>"; };
+		834173091D797EC200AE93AE /* FullTimeHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullTimeHomeViewController.h; sourceTree = "<group>"; };
+		8341730A1D797EC200AE93AE /* FullTimeHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullTimeHomeViewController.m; sourceTree = "<group>"; };
+		8341730B1D797EC200AE93AE /* FullTimeHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullTimeHomeViewController.xib; sourceTree = "<group>"; };
 		83721B6E1D751C37005ED5B0 /* KidsCareUI_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidsCareUI_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83721B721D751C37005ED5B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83721B741D751C37005ED5B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,8 +123,6 @@
 		83F34E411D7820500038A373 /* FullTimeObserveStudentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullTimeObserveStudentTableViewCell.h; sourceTree = "<group>"; };
 		83F34E421D7820500038A373 /* FullTimeObserveStudentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullTimeObserveStudentTableViewCell.m; sourceTree = "<group>"; };
 		83F34E431D7820500038A373 /* FullTimeObserveStudentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullTimeObserveStudentTableViewCell.xib; sourceTree = "<group>"; };
-		83F34E471D782D640038A373 /* helpInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpInfoView.h; sourceTree = "<group>"; };
-		83F34E481D782D640038A373 /* helpInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = helpInfoView.m; sourceTree = "<group>"; };
 		BBED8D925D6CCC8AAFDD979C /* Pods-KidsCareUI_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidsCareUI_Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-KidsCareUI_Demo/Pods-KidsCareUI_Demo.release.xcconfig"; sourceTree = "<group>"; };
 		D552D2B453E1DE69D6EA1DBB /* libPods-KidsCareUI_Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KidsCareUI_Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -181,6 +192,9 @@
 				83721B751D751C37005ED5B0 /* AppDelegate.m */,
 				83721B771D751C37005ED5B0 /* ViewController.h */,
 				83721B781D751C37005ED5B0 /* ViewController.m */,
+				834173091D797EC200AE93AE /* FullTimeHomeViewController.h */,
+				8341730A1D797EC200AE93AE /* FullTimeHomeViewController.m */,
+				8341730B1D797EC200AE93AE /* FullTimeHomeViewController.xib */,
 				83721B7A1D751C37005ED5B0 /* Main.storyboard */,
 				83721B801D751C37005ED5B0 /* Assets.xcassets */,
 				83721B821D751C37005ED5B0 /* LaunchScreen.storyboard */,
@@ -260,8 +274,12 @@
 				83F34E411D7820500038A373 /* FullTimeObserveStudentTableViewCell.h */,
 				83F34E421D7820500038A373 /* FullTimeObserveStudentTableViewCell.m */,
 				83F34E431D7820500038A373 /* FullTimeObserveStudentTableViewCell.xib */,
-				83F34E471D782D640038A373 /* helpInfoView.h */,
-				83F34E481D782D640038A373 /* helpInfoView.m */,
+				834173001D79148200AE93AE /* HelpTipView.h */,
+				834173011D79148200AE93AE /* HelpTipView.m */,
+				834173031D791F3700AE93AE /* DateSelectorView.h */,
+				834173041D791F3700AE93AE /* DateSelectorView.m */,
+				834173061D797D3F00AE93AE /* FullTimeObsRecordHandleViewController.h */,
+				834173071D797D3F00AE93AE /* FullTimeObsRecordHandleViewController.m */,
 			);
 			path = FullTimeObserve;
 			sourceTree = "<group>";
@@ -381,6 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8341730D1D797EC200AE93AE /* FullTimeHomeViewController.xib in Resources */,
 				83F34E331D7810E70038A373 /* MornCheckSearchTableViewCell.xib in Resources */,
 				83F34E2E1D7810E70038A373 /* MornCheckClassListTableViewCell.xib in Resources */,
 				83F34E401D781B600038A373 /* FullTimeObserveViewController.xib in Resources */,
@@ -466,20 +485,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				83F34E341D7810E70038A373 /* MornCheckSearchView.m in Sources */,
+				834173081D797D3F00AE93AE /* FullTimeObsRecordHandleViewController.m in Sources */,
 				83721B7F1D751C37005ED5B0 /* KidsCareUI_Demo.xcdatamodeld in Sources */,
 				83F34E441D7820500038A373 /* FullTimeObserveStudentTableViewCell.m in Sources */,
 				83F34E351D7810E70038A373 /* MorningCheckHandleView.m in Sources */,
 				83F34E2A1D7810E70038A373 /* ClassMemberTableViewCell.m in Sources */,
 				83F34E3F1D781B600038A373 /* FullTimeObserveViewController.m in Sources */,
 				83F34E301D7810E70038A373 /* MornCheckObserveViewController.m in Sources */,
-				83F34E491D782D640038A373 /* helpInfoView.m in Sources */,
 				83F34E2F1D7810E70038A373 /* MornCheckClassListView.m in Sources */,
+				834173021D79148200AE93AE /* HelpTipView.m in Sources */,
+				834173051D791F3700AE93AE /* DateSelectorView.m in Sources */,
 				83F34E321D7810E70038A373 /* MornCheckSearchTableViewCell.m in Sources */,
 				83F34E391D7810E70038A373 /* QuickMornCheckView.m in Sources */,
 				83721B791D751C37005ED5B0 /* ViewController.m in Sources */,
 				83721B761D751C37005ED5B0 /* AppDelegate.m in Sources */,
 				83F34E371D7810E70038A373 /* MorningCheckViewController.m in Sources */,
 				83721B731D751C37005ED5B0 /* main.m in Sources */,
+				8341730C1D797EC200AE93AE /* FullTimeHomeViewController.m in Sources */,
 				83F34E2D1D7810E70038A373 /* MornCheckClassListTableViewCell.m in Sources */,
 				83F34E2C1D7810E70038A373 /* ClassMemberView.m in Sources */,
 			);

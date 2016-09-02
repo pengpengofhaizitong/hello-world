@@ -44,8 +44,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yq-po-Iga">
-                                <rect key="frame" x="214" y="232" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="204" y="232" width="66" height="30"/>
+                                <state key="normal" title="全日观察"/>
+                                <connections>
+                                    <action selector="allTimeObserve:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uy8-cq-RBP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -54,6 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="398" y="364"/>
         </scene>
     </scenes>
 </document>
