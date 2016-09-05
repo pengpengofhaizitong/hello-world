@@ -10,11 +10,14 @@
 #import "FullTimeObserveStudentTableViewCell.h"
 #import "HelpTipView.h"
 #import "DateSelectorView.h"
+#import "SelectDateView.h"
 
 @interface FullTimeObserveViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *HelpTipBtn;
+
+@property (nonatomic, strong)SelectDateView *selectDateView;
 
 @property (nonatomic, strong)HelpTipView *tipView;
 
@@ -41,6 +44,20 @@
     return _tipView;
 }
 
+- (IBAction)dateSwitchClick:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    if(sender.selected){
+        if(!_selectDateView){
+            _selectDateView = [[SelectDateView alloc] initWithFrame:CGRectMake(0, 64+60, 320, 0)];
+            _selectDateView.backgroundColor = [UIColor orangeColor];
+            [self.view addSubview:_selectDateView];
+        }
+        [_selectDateView setViewFrame:CGRectMake(0, 64+60, 320, 40*7)];
+    }else{
+        [_selectDateView setViewFrame:CGRectMake(0, 64+60, 320, 0)];
+    }
+}
+
 - (IBAction)tipClick:(UIButton *)sender {
     if(self.tipView.hidden){
         [self.tipView viewReduction];
@@ -56,6 +73,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

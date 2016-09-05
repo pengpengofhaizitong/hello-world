@@ -8,9 +8,15 @@
 
 #import "FullTimeObsRecordHandleViewController.h"
 
-@interface FullTimeObsRecordHandleViewController ()
+#define ScreenWidth  [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight  [UIScreen mainScreen].bounds.size.height
+#define CountTextLabelHeight  40
 
-@property(nonatomic, strong)UILabel *label;
+@interface FullTimeObsRecordHandleViewController ()<UITextViewDelegate>
+
+@property(nonatomic, strong)UITextView *textV;
+
+@property(nonatomic, strong)UILabel *remainTextCountLabel;
 
 @end
 
@@ -20,7 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self createDetailView];
-//    [self addOberveKeyboardStatus];
+    [self addOberveKeyboardStatus];
 }
 
 - (void)addOberveKeyboardStatus{
@@ -28,18 +34,41 @@
                                              selector:@selector(keyboardWillShow:)
                                                  name:UIKeyboardWillShowNotification
                                                object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+
+- (UILabel *)remainTextCountLabel{
+    if(!_remainTextCountLabel){
+        _remainTextCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, (ScreenHeight -CountTextLabelHeight), ScreenWidth, CountTextLabelHeight)];
+        _remainTextCountLabel.backgroundColor = [UIColor redColor];
+        [self.view addSubview:_remainTextCountLabel];
+        _remainTextCountLabel.text = @"300";
+        _remainTextCountLabel.textAlignment = NSTextAlignmentRight;
+    }
+    return _remainTextCountLabel;
 }
 
 - (void)createDetailView{
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
 
-    UITextView *tf = [[UITextView alloc] initWithFrame:CGRectMake(0, 80, 200, 100)];
-    tf.backgroundColor = [UIColor orangeColor];
-    tf.text = @"北京大学";
-    [self.view addSubview:tf];
-    [tf setContentOffset:CGPointZero];
-//    [tf becomeFirstResponder];
+    _textV = [[UITextView alloc] initWithFrame:CGRectMake(0, 80, 200, 100)];
+    _textV.backgroundColor = [UIColor orangeColor];
+    _textV.delegate = self;
+    _textV.text = @"北京大学";
+    [self.view addSubview:_textV];
+    [_textV becomeFirstResponder];
+}
+
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
+    return YES;
+}
+
+- (void)textViewDidChange:(UITextView *)textView{
+    NSLog(@"已经有%d个字",(int)textView.text.length);
 }
 
 - (void)keyboardWillShow:(NSNotification *)aNotification{
@@ -47,6 +76,17 @@
     NSValue *aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
     CGRect keyboardRect = [aValue CGRectValue];
     int height = keyboardRect.size.height;
+    [self.remainTextCountLabel setFrame:CGRectMake(0,  (ScreenHeight - height -CountTextLabelHeight), ScreenWidth, CountTextLabelHeight)];
+    [self.textV setFrame:CGRectMake(0,  64, ScreenWidth, ScreenHeight-64-height-CountTextLabelHeight)];
+}
+
+- (void)keyboardWillHide:(NSNotification *)aNotification{
+    [self.remainTextCountLabel setFrame:CGRectMake(0,  (ScreenHeight -CountTextLabelHeight), ScreenWidth, CountTextLabelHeight)];
+    [self.textV setFrame:CGRectMake(0,  64, ScreenWidth, ScreenHeight-64-CountTextLabelHeight)];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
 }
 
 - (void)dealloc{

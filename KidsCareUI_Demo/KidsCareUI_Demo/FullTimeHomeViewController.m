@@ -9,6 +9,7 @@
 #import "FullTimeHomeViewController.h"
 #import "FullTimeObserveViewController.h"
 #import "FullTimeObsRecordHandleViewController.h"
+#import "FullTimeCreateEventViewController.h"
 
 @interface FullTimeHomeViewController ()
 
@@ -31,6 +32,11 @@
 }
 - (IBAction)recordHandle:(id)sender {
     FullTimeObsRecordHandleViewController *vc = [[FullTimeObsRecordHandleViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)createrEventClick:(UIButton *)sender {
+    FullTimeCreateEventViewController *vc = [[FullTimeCreateEventViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
