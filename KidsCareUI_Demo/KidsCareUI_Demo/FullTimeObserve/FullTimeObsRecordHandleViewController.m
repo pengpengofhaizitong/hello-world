@@ -12,6 +12,8 @@
 #define ScreenHeight  [UIScreen mainScreen].bounds.size.height
 #define CountTextLabelHeight  40
 
+#define MAX_Text_Count  10
+
 @interface FullTimeObsRecordHandleViewController ()<UITextViewDelegate>
 
 @property(nonatomic, strong)UITextView *textV;
@@ -45,7 +47,7 @@
         _remainTextCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, (ScreenHeight -CountTextLabelHeight), ScreenWidth, CountTextLabelHeight)];
         _remainTextCountLabel.backgroundColor = [UIColor redColor];
         [self.view addSubview:_remainTextCountLabel];
-        _remainTextCountLabel.text = @"300";
+        _remainTextCountLabel.text = [NSString stringWithFormat:@"%d",MAX_Text_Count];
         _remainTextCountLabel.textAlignment = NSTextAlignmentRight;
     }
     return _remainTextCountLabel;
@@ -68,8 +70,14 @@
 }
 
 - (void)textViewDidChange:(UITextView *)textView{
-    NSLog(@"已经有%d个字",(int)textView.text.length);
+    if(textView.text.length > 10){
+        _remainTextCountLabel.text = @"还可以输入0个字";
+        textView.text = [textView.text substringToIndex:10];
+    }else{
+        _remainTextCountLabel.text = [NSString stringWithFormat:@"还可以输入%d个字",MAX_Text_Count - (int)textView.text.length];
+    }
 }
+
 
 - (void)keyboardWillShow:(NSNotification *)aNotification{
     NSDictionary *userInfo = [aNotification userInfo];

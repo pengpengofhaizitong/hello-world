@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		219831867BEAA00F3691C6FF /* libPods-KidsCareUI_Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D552D2B453E1DE69D6EA1DBB /* libPods-KidsCareUI_Demo.a */; };
+		8306479B1D7EC32D00BC27E2 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830647991D7EC32D00BC27E2 /* EventDetailViewController.m */; };
+		8306479C1D7EC32D00BC27E2 /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8306479A1D7EC32D00BC27E2 /* EventDetailViewController.xib */; };
 		830813D61D7D117600C025B8 /* SelectDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 830813D51D7D117600C025B8 /* SelectDateView.m */; };
 		830813D91D7D594900C025B8 /* FullTimeCreateEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830813D81D7D594900C025B8 /* FullTimeCreateEventViewController.m */; };
 		830813DE1D7D6BF000C025B8 /* CreateEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 830813DC1D7D6BF000C025B8 /* CreateEventTableViewCell.m */; };
@@ -29,9 +31,10 @@
 		83721B841D751C37005ED5B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83721B821D751C37005ED5B0 /* LaunchScreen.storyboard */; };
 		83721B8F1D751C37005ED5B0 /* KidsCareUI_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83721B8E1D751C37005ED5B0 /* KidsCareUI_DemoTests.m */; };
 		83721B9A1D751C37005ED5B0 /* KidsCareUI_DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83721B991D751C37005ED5B0 /* KidsCareUI_DemoUITests.m */; };
-		83F34E2A1D7810E70038A373 /* ClassMemberTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F34E101D7810E70038A373 /* ClassMemberTableViewCell.m */; };
-		83F34E2B1D7810E70038A373 /* ClassMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F34E111D7810E70038A373 /* ClassMemberTableViewCell.xib */; };
-		83F34E2C1D7810E70038A373 /* ClassMemberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F34E131D7810E70038A373 /* ClassMemberView.m */; };
+		83D6165B1D7E54AA009E004F /* ClassMemeberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D616591D7E54AA009E004F /* ClassMemeberViewController.m */; };
+		83D6165C1D7E54AA009E004F /* ClassMemeberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D6165A1D7E54AA009E004F /* ClassMemeberViewController.xib */; };
+		83D616601D7E5DD3009E004F /* ClassMemberCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D6165E1D7E5DD3009E004F /* ClassMemberCollectionViewCell.m */; };
+		83D616611D7E5DD3009E004F /* ClassMemberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D6165F1D7E5DD3009E004F /* ClassMemberCollectionViewCell.xib */; };
 		83F34E2D1D7810E70038A373 /* MornCheckClassListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F34E151D7810E70038A373 /* MornCheckClassListTableViewCell.m */; };
 		83F34E2E1D7810E70038A373 /* MornCheckClassListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F34E161D7810E70038A373 /* MornCheckClassListTableViewCell.xib */; };
 		83F34E2F1D7810E70038A373 /* MornCheckClassListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F34E181D7810E70038A373 /* MornCheckClassListView.m */; };
@@ -71,6 +74,9 @@
 
 /* Begin PBXFileReference section */
 		772304C6E9BADE9876C95316 /* Pods-KidsCareUI_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidsCareUI_Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KidsCareUI_Demo/Pods-KidsCareUI_Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		830647981D7EC32D00BC27E2 /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
+		830647991D7EC32D00BC27E2 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
+		8306479A1D7EC32D00BC27E2 /* EventDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
 		830813D41D7D117600C025B8 /* SelectDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectDateView.h; sourceTree = "<group>"; };
 		830813D51D7D117600C025B8 /* SelectDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectDateView.m; sourceTree = "<group>"; };
 		830813D71D7D594900C025B8 /* FullTimeCreateEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullTimeCreateEventViewController.h; sourceTree = "<group>"; };
@@ -109,11 +115,12 @@
 		83721B951D751C37005ED5B0 /* KidsCareUI_DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KidsCareUI_DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83721B991D751C37005ED5B0 /* KidsCareUI_DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KidsCareUI_DemoUITests.m; sourceTree = "<group>"; };
 		83721B9B1D751C37005ED5B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83F34E0F1D7810E70038A373 /* ClassMemberTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassMemberTableViewCell.h; sourceTree = "<group>"; };
-		83F34E101D7810E70038A373 /* ClassMemberTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassMemberTableViewCell.m; sourceTree = "<group>"; };
-		83F34E111D7810E70038A373 /* ClassMemberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassMemberTableViewCell.xib; sourceTree = "<group>"; };
-		83F34E121D7810E70038A373 /* ClassMemberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassMemberView.h; sourceTree = "<group>"; };
-		83F34E131D7810E70038A373 /* ClassMemberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassMemberView.m; sourceTree = "<group>"; };
+		83D616581D7E54AA009E004F /* ClassMemeberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassMemeberViewController.h; sourceTree = "<group>"; };
+		83D616591D7E54AA009E004F /* ClassMemeberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassMemeberViewController.m; sourceTree = "<group>"; };
+		83D6165A1D7E54AA009E004F /* ClassMemeberViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassMemeberViewController.xib; sourceTree = "<group>"; };
+		83D6165D1D7E5DD3009E004F /* ClassMemberCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassMemberCollectionViewCell.h; sourceTree = "<group>"; };
+		83D6165E1D7E5DD3009E004F /* ClassMemberCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassMemberCollectionViewCell.m; sourceTree = "<group>"; };
+		83D6165F1D7E5DD3009E004F /* ClassMemberCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassMemberCollectionViewCell.xib; sourceTree = "<group>"; };
 		83F34E141D7810E70038A373 /* MornCheckClassListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MornCheckClassListTableViewCell.h; sourceTree = "<group>"; };
 		83F34E151D7810E70038A373 /* MornCheckClassListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MornCheckClassListTableViewCell.m; sourceTree = "<group>"; };
 		83F34E161D7810E70038A373 /* MornCheckClassListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MornCheckClassListTableViewCell.xib; sourceTree = "<group>"; };
@@ -253,11 +260,12 @@
 		83F34E0E1D7810E70038A373 /* MornCheck */ = {
 			isa = PBXGroup;
 			children = (
-				83F34E0F1D7810E70038A373 /* ClassMemberTableViewCell.h */,
-				83F34E101D7810E70038A373 /* ClassMemberTableViewCell.m */,
-				83F34E111D7810E70038A373 /* ClassMemberTableViewCell.xib */,
-				83F34E121D7810E70038A373 /* ClassMemberView.h */,
-				83F34E131D7810E70038A373 /* ClassMemberView.m */,
+				83D616581D7E54AA009E004F /* ClassMemeberViewController.h */,
+				83D616591D7E54AA009E004F /* ClassMemeberViewController.m */,
+				83D6165A1D7E54AA009E004F /* ClassMemeberViewController.xib */,
+				83D6165D1D7E5DD3009E004F /* ClassMemberCollectionViewCell.h */,
+				83D6165E1D7E5DD3009E004F /* ClassMemberCollectionViewCell.m */,
+				83D6165F1D7E5DD3009E004F /* ClassMemberCollectionViewCell.xib */,
 				83F34E141D7810E70038A373 /* MornCheckClassListTableViewCell.h */,
 				83F34E151D7810E70038A373 /* MornCheckClassListTableViewCell.m */,
 				83F34E161D7810E70038A373 /* MornCheckClassListTableViewCell.xib */,
@@ -311,6 +319,9 @@
 				830813E21D7D6DFA00C025B8 /* FullTimeCreateDetailViewController.xib */,
 				830813E51D7D701800C025B8 /* FullTimeObserveReasonViewController.h */,
 				830813E61D7D701800C025B8 /* FullTimeObserveReasonViewController.m */,
+				830647981D7EC32D00BC27E2 /* EventDetailViewController.h */,
+				830647991D7EC32D00BC27E2 /* EventDetailViewController.m */,
+				8306479A1D7EC32D00BC27E2 /* EventDetailViewController.xib */,
 			);
 			path = FullTimeObserve;
 			sourceTree = "<group>";
@@ -431,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8341730D1D797EC200AE93AE /* FullTimeHomeViewController.xib in Resources */,
+				83D6165C1D7E54AA009E004F /* ClassMemeberViewController.xib in Resources */,
 				83F34E331D7810E70038A373 /* MornCheckSearchTableViewCell.xib in Resources */,
 				83F34E2E1D7810E70038A373 /* MornCheckClassListTableViewCell.xib in Resources */,
 				83F34E401D781B600038A373 /* FullTimeObserveViewController.xib in Resources */,
@@ -440,7 +452,8 @@
 				83F34E451D7820500038A373 /* FullTimeObserveStudentTableViewCell.xib in Resources */,
 				83F34E3A1D7810E70038A373 /* QuickMornCheckView.xib in Resources */,
 				830813E41D7D6DFA00C025B8 /* FullTimeCreateDetailViewController.xib in Resources */,
-				83F34E2B1D7810E70038A373 /* ClassMemberTableViewCell.xib in Resources */,
+				8306479C1D7EC32D00BC27E2 /* EventDetailViewController.xib in Resources */,
+				83D616611D7E5DD3009E004F /* ClassMemberCollectionViewCell.xib in Resources */,
 				83F34E311D7810E70038A373 /* MornCheckObserveViewController.xib in Resources */,
 				83721B7C1D751C37005ED5B0 /* Main.storyboard in Resources */,
 				830813DF1D7D6BF000C025B8 /* CreateEventTableViewCell.xib in Resources */,
@@ -519,12 +532,12 @@
 			files = (
 				83F34E341D7810E70038A373 /* MornCheckSearchView.m in Sources */,
 				834173081D797D3F00AE93AE /* FullTimeObsRecordHandleViewController.m in Sources */,
+				83D616601D7E5DD3009E004F /* ClassMemberCollectionViewCell.m in Sources */,
 				830813D61D7D117600C025B8 /* SelectDateView.m in Sources */,
 				83721B7F1D751C37005ED5B0 /* KidsCareUI_Demo.xcdatamodeld in Sources */,
 				83F34E441D7820500038A373 /* FullTimeObserveStudentTableViewCell.m in Sources */,
 				83F34E351D7810E70038A373 /* MorningCheckHandleView.m in Sources */,
 				830813E81D7D701800C025B8 /* FullTimeObserveReasonViewController.m in Sources */,
-				83F34E2A1D7810E70038A373 /* ClassMemberTableViewCell.m in Sources */,
 				830813D91D7D594900C025B8 /* FullTimeCreateEventViewController.m in Sources */,
 				83F34E3F1D781B600038A373 /* FullTimeObserveViewController.m in Sources */,
 				830813DE1D7D6BF000C025B8 /* CreateEventTableViewCell.m in Sources */,
@@ -532,6 +545,8 @@
 				83F34E2F1D7810E70038A373 /* MornCheckClassListView.m in Sources */,
 				834173021D79148200AE93AE /* HelpTipView.m in Sources */,
 				834173051D791F3700AE93AE /* DateSelectorView.m in Sources */,
+				83D6165B1D7E54AA009E004F /* ClassMemeberViewController.m in Sources */,
+				8306479B1D7EC32D00BC27E2 /* EventDetailViewController.m in Sources */,
 				83F34E321D7810E70038A373 /* MornCheckSearchTableViewCell.m in Sources */,
 				83F34E391D7810E70038A373 /* QuickMornCheckView.m in Sources */,
 				83721B791D751C37005ED5B0 /* ViewController.m in Sources */,
@@ -540,7 +555,6 @@
 				83721B731D751C37005ED5B0 /* main.m in Sources */,
 				8341730C1D797EC200AE93AE /* FullTimeHomeViewController.m in Sources */,
 				83F34E2D1D7810E70038A373 /* MornCheckClassListTableViewCell.m in Sources */,
-				83F34E2C1D7810E70038A373 /* ClassMemberView.m in Sources */,
 				830813E31D7D6DFA00C025B8 /* FullTimeCreateDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

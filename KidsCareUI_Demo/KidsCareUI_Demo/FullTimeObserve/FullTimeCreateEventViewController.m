@@ -16,6 +16,8 @@
 
 @property(nonatomic, strong)UITableView *tableView;
 
+@property(nonatomic, strong)UILabel *noDataLabel;
+
 @end
 
 @implementation FullTimeCreateEventViewController
@@ -23,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
     [self createDetailView];
     [self addOberveKeyboardStatus];
 }
@@ -44,6 +47,26 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
+    
+    
+    if(/* DISABLES CODE */ (1)){
+        _tableView.hidden = NO;
+        self.noDataLabel.hidden = YES;
+    }else{
+        _tableView.hidden = YES;
+        self.noDataLabel.hidden = NO;
+    }
+}
+
+- (UILabel *)noDataLabel{
+    if(!_noDataLabel){
+        _noDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, ScreenWidth, 50)];
+        _noDataLabel.text = @"没有找到符合的学生，请重新搜索";
+        _noDataLabel.font = [UIFont systemFontOfSize:15];
+        _noDataLabel.textAlignment = NSTextAlignmentCenter;
+        [self.view addSubview:_noDataLabel];
+    }
+    return _noDataLabel;
 }
 
 - (void)addOberveKeyboardStatus{

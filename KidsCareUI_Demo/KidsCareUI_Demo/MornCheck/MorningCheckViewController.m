@@ -10,8 +10,8 @@
 #import "QuickMornCheckView.h"
 #import "MornCheckClassListView.h"
 #import "MornCheckSearchView.h"
-#import "ClassMemberView.h"
 #import "MornCheckObserveViewController.h"
+#import "ClassMemeberViewController.h"
 
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
@@ -28,7 +28,6 @@
 
 @property (nonatomic, strong) QuickMornCheckView *quickCheckView;
 @property (nonatomic, strong) MornCheckClassListView *classCheckView;
-@property (nonatomic, strong) ClassMemberView *classMemberView;
 @property (nonatomic, strong) MornCheckSearchView *searchView;
 @property (nonatomic, strong) QuickMornCheckView *determinCheckView;
 
@@ -98,22 +97,17 @@
         _classCheckView = [[MornCheckClassListView alloc] initWithFrame:CGRectMake(0, 64, screenWidth, screenHeight-64-50)];
         __weak typeof(self)weakSelf = self;
         _classCheckView.selectBlock = ^(int row){
-            weakSelf.classMemberView.hidden = NO;
-            weakSelf.classCheckView.hidden = YES;
-            weakSelf.isClassMemberViewShow = YES;
+//            weakSelf.classMemberView.hidden = NO;
+//            weakSelf.classCheckView.hidden = YES;
+//            weakSelf.isClassMemberViewShow = YES;
+            ClassMemeberViewController *vc = [[ClassMemeberViewController alloc] init];
+            [weakSelf.navigationController pushViewController:vc animated:YES];
         };
         [self.view addSubview:_classCheckView];
     }
     return _classCheckView;
 }
 
-- (ClassMemberView *)classMemberView{
-    if(!_classMemberView){
-        _classMemberView = [[ClassMemberView alloc] initWithFrame:CGRectMake(0, 64,screenWidth, screenHeight-64-50)];
-        [self.view addSubview:_classMemberView];
-    }
-    return _classMemberView;
-}
 
 - (MornCheckSearchView *)searchView{
     if(!_searchView){
@@ -147,9 +141,7 @@
     self.quickCheckView.hidden = NO;
     self.classCheckView.hidden = YES;
     self.searchView.hidden = YES;
-    if(_isClassMemberViewShow){
-        self.classMemberView.hidden = YES;
-    }
+
     if(_isCheckOperationViewShow){
         self.determinCheckView.hidden = YES;
     }
@@ -160,9 +152,6 @@
     self.quickCheckView.hidden = YES;
     self.classCheckView.hidden = NO;
     self.searchView.hidden = YES;
-    if(_isClassMemberViewShow){
-        self.classMemberView.hidden = NO;
-    }
     if(_isCheckOperationViewShow){
         self.determinCheckView.hidden = YES;
     }
@@ -173,9 +162,6 @@
     self.quickCheckView.hidden = YES;
     self.classCheckView.hidden = YES;
     self.searchView.hidden = NO;
-    if(_isClassMemberViewShow){
-        self.classMemberView.hidden = YES;
-    }
     if(_isCheckOperationViewShow){
         self.determinCheckView.hidden = NO;
     }

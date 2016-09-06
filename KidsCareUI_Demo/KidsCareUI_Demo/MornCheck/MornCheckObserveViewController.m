@@ -30,6 +30,7 @@
 
 - (void)addObserveView{
     
+    
     self.detailObserveView.layer.masksToBounds = YES;
     self.detailObserveView.layer.cornerRadius = 5;
     self.detailObserveView.layer.borderColor = [[UIColor grayColor] CGColor];

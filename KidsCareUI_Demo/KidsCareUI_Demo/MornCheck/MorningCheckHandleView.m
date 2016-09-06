@@ -90,7 +90,6 @@
     animation.toValue = [NSValue valueWithCGPoint:position];
     animation.duration = time;
     [view.layer pop_addAnimation:animation forKey:@"position"];
-    NSLog(@"changge center");
 }
 
 /**
