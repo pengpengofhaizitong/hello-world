@@ -8,11 +8,13 @@
 
 #import "FullTimeCreateEventViewController.h"
 #import "CreateEventTableViewCell.h"
+#import "MornCheckSearchView.h"
+#import "FullTimeCreateDetailViewController.h"
 
 #define ScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight  [UIScreen mainScreen].bounds.size.height
 
-@interface FullTimeCreateEventViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface FullTimeCreateEventViewController ()
 
 @property(nonatomic, strong)UITableView *tableView;
 
@@ -25,48 +27,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
     [self createDetailView];
     [self addOberveKeyboardStatus];
 }
 
 - (void)createDetailView{
-    UIView *searchTfBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, 40)];
-    searchTfBgView.backgroundColor = [UIColor orangeColor];
-    [self.view addSubview:searchTfBgView];
-    
-    UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth - 120, 40)];
-    tf.backgroundColor = [UIColor yellowColor];
-    [searchTfBgView addSubview:tf];
-    
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(ScreenWidth - 90, 0, 60, 40)];
-    [btn setTitle:@"查询" forState:UIControlStateNormal];
-    [searchTfBgView addSubview:btn];
-    
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 104, ScreenWidth, ScreenHeight - 104)];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    [self.view addSubview:_tableView];
-    
-    
-    if(/* DISABLES CODE */ (1)){
-        _tableView.hidden = NO;
-        self.noDataLabel.hidden = YES;
-    }else{
-        _tableView.hidden = YES;
-        self.noDataLabel.hidden = NO;
-    }
-}
-
-- (UILabel *)noDataLabel{
-    if(!_noDataLabel){
-        _noDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, ScreenWidth, 50)];
-        _noDataLabel.text = @"没有找到符合的学生，请重新搜索";
-        _noDataLabel.font = [UIFont systemFontOfSize:15];
-        _noDataLabel.textAlignment = NSTextAlignmentCenter;
-        [self.view addSubview:_noDataLabel];
-    }
-    return _noDataLabel;
+    MornCheckSearchView *view = [[MornCheckSearchView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, ScreenHeight-64)];
+    __weak typeof(self)weakSelf = self;
+    view.block = ^(int row){
+        FullTimeCreateDetailViewController *vc = [[FullTimeCreateDetailViewController alloc] init];
+        [weakSelf.navigationController pushViewController:vc animated:YES];
+    };
+    [self.view addSubview:view];
 }
 
 - (void)addOberveKeyboardStatus{
@@ -90,22 +64,6 @@
 
 - (void)keyboardWillHide:(NSNotification *)aNotification{
     [_tableView setFrame:CGRectMake(0, 104, ScreenWidth, ScreenHeight - 104)];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *createEventCellId = @"createEventCellId";
-    CreateEventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:createEventCellId];
-    if(!cell){
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"CreateEventTableViewCell" owner:self options:nil] lastObject];
-        cell.clickBlock = ^(int row){
-            NSLog(@"row = %d",row);
-        };
-    }
-    return cell;
 }
 
 - (void)didReceiveMemoryWarning {

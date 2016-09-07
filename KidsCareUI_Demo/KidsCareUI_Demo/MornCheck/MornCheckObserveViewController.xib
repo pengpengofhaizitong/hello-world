@@ -108,7 +108,7 @@
                         <constraint firstAttribute="height" constant="25" id="qv0-Us-gy0"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="异常指标检测：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fly-Cq-eU3">
@@ -121,124 +121,214 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="um7-WL-O0U">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="um7-WL-O0U">
                     <rect key="frame" x="25" y="80" width="120" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="120" id="701-fH-J6R"/>
                         <constraint firstAttribute="height" constant="25" id="WaU-fr-JKN"/>
                     </constraints>
-                    <state key="normal" title="发热（≥38℃）"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="发热（≥38℃）">
+                        <color key="titleColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="conventionalDetectionClick:" destination="-1" eventType="touchUpInside" id="Xex-8G-3Bt"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECM-XP-QdP">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECM-XP-QdP">
                     <rect key="frame" x="185" y="80" width="40" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="DII-e3-EZZ"/>
                         <constraint firstAttribute="height" constant="25" id="PaP-SO-iHr"/>
                     </constraints>
-                    <state key="normal" title="流涕"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="流涕">
+                        <color key="titleColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="conventionalDetectionClick:" destination="-1" eventType="touchUpInside" id="Mjk-Hf-z3Z"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiF-kN-MQn">
+                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiF-kN-MQn">
                     <rect key="frame" x="105" y="115" width="30" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="Ggf-3Q-dFm"/>
                     </constraints>
-                    <state key="normal" title="皮疹"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="皮疹">
+                        <color key="titleColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="conventionalDetectionClick:" destination="-1" eventType="touchUpInside" id="Zf1-uG-kGm"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjL-ZH-ZMh">
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjL-ZH-ZMh">
                     <rect key="frame" x="265" y="80" width="40" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="Hmd-iB-GT6"/>
                         <constraint firstAttribute="height" constant="25" id="Hvk-Qa-rCJ"/>
                     </constraints>
-                    <state key="normal" title="咳嗽"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="咳嗽">
+                        <color key="titleColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="conventionalDetectionClick:" destination="-1" eventType="touchUpInside" id="93w-KL-owf"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9z-PV-Adn">
+                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9z-PV-Adn">
                     <rect key="frame" x="25" y="115" width="40" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="S3b-DB-p2D"/>
                         <constraint firstAttribute="width" constant="40" id="tg3-Ot-etH"/>
                     </constraints>
-                    <state key="normal" title="腹泻"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="腹泻">
+                        <color key="titleColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="conventionalDetectionClick:" destination="-1" eventType="touchUpInside" id="LU8-BP-mdF"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNZ-kQ-02Q">
+                <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNZ-kQ-02Q">
                     <rect key="frame" x="25" y="185" width="50" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="DBJ-l7-mfI"/>
                         <constraint firstAttribute="height" constant="25" id="Lb7-45-3Gm"/>
                     </constraints>
-                    <state key="normal" title="手足口"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="手足口">
+                        <color key="titleColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="anomalyDetection:" destination="-1" eventType="touchUpInside" id="2pd-le-CoQ"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTk-Zx-E5c">
+                <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTk-Zx-E5c">
                     <rect key="frame" x="115" y="185" width="40" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="RYi-Ti-3xd"/>
                         <constraint firstAttribute="height" constant="25" id="nbJ-eW-Foj"/>
                     </constraints>
-                    <state key="normal" title="水痘"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="水痘">
+                        <color key="titleColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="anomalyDetection:" destination="-1" eventType="touchUpInside" id="g8L-Zw-4Jq"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8To-Sn-C9v">
+                <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8To-Sn-C9v">
                     <rect key="frame" x="115" y="220" width="40" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="b5M-4y-k68"/>
                         <constraint firstAttribute="height" constant="25" id="uZL-am-hgt"/>
                     </constraints>
-                    <state key="normal" title="麻疹"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="麻疹">
+                        <color key="titleColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="anomalyDetection:" destination="-1" eventType="touchUpInside" id="6SP-Mq-47S"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRH-xW-8Lu">
+                <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRH-xW-8Lu">
                     <rect key="frame" x="150" y="255" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="25" id="7zH-x0-E7U"/>
                         <constraint firstAttribute="height" constant="25" id="ACO-YG-7ub"/>
                     </constraints>
-                    <state key="normal" title="是"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="是">
+                        <color key="titleColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="parentSpeakClick:" destination="-1" eventType="touchUpInside" id="6WE-xE-ArJ"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2G-U9-Qzh">
+                <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2G-U9-Qzh">
                     <rect key="frame" x="205" y="255" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="p8a-Xk-5Bp"/>
                         <constraint firstAttribute="width" constant="25" id="ppL-AK-vJX"/>
                     </constraints>
-                    <state key="normal" title="否"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="否">
+                        <color key="titleColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="parentSpeakClick:" destination="-1" eventType="touchUpInside" id="teg-NY-ZU7"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksr-Sh-79G">
+                <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksr-Sh-79G">
                     <rect key="frame" x="275" y="185" width="50" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="UEa-ss-ab1"/>
                         <constraint firstAttribute="width" constant="50" id="oDN-uj-gQG"/>
                     </constraints>
-                    <state key="normal" title="猩红热"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="猩红热">
+                        <color key="titleColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="anomalyDetection:" destination="-1" eventType="touchUpInside" id="dkr-FR-cC6"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yZ-l9-LDB">
+                <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yZ-l9-LDB">
                     <rect key="frame" x="270" y="290" width="80" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="IaV-y6-cqD"/>
                         <constraint firstAttribute="height" constant="25" id="Iyc-Y5-Tpk"/>
                     </constraints>
-                    <state key="normal" title="入园观察"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="入园观察">
+                        <color key="titleColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="handleMethodClick:" destination="-1" eventType="touchUpInside" id="8TK-Cz-vxS"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTp-ZF-88X">
+                <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTp-ZF-88X">
                     <rect key="frame" x="140" y="290" width="100" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="OIW-td-xKi"/>
                         <constraint firstAttribute="height" constant="25" id="boD-5j-Ti4"/>
                     </constraints>
-                    <state key="normal" title="通知家长领回"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="通知家长领回">
+                        <color key="titleColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="handleMethodClick:" destination="-1" eventType="touchUpInside" id="TOL-Zk-RiV"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilq-za-B2G">
+                <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilq-za-B2G">
                     <rect key="frame" x="195" y="185" width="40" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="4dS-Sg-RfG"/>
                         <constraint firstAttribute="height" constant="25" id="gxA-hP-jTh"/>
                     </constraints>
-                    <state key="normal" title="流感"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="流感">
+                        <color key="titleColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="anomalyDetection:" destination="-1" eventType="touchUpInside" id="Bxa-iX-frb"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXD-to-PLL">
+                <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXD-to-PLL">
                     <rect key="frame" x="25" y="220" width="50" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="SaK-RN-Wl6"/>
                         <constraint firstAttribute="width" constant="50" id="a6g-jx-jgK"/>
                     </constraints>
-                    <state key="normal" title="红眼疹"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="红眼疹">
+                        <color key="titleColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="anomalyDetection:" destination="-1" eventType="touchUpInside" id="eNS-lT-Brd"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="家长带诉：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTM-qT-Job">
                     <rect key="frame" x="30" y="255" width="80" height="25"/>
@@ -316,13 +406,33 @@
                     <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsG-Cv-k1h">
+                <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsG-Cv-k1h">
                     <rect key="frame" x="195" y="220" width="100" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="af5-kR-Hkp"/>
                         <constraint firstAttribute="width" constant="100" id="h3p-HX-jFh"/>
                     </constraints>
-                    <state key="normal" title="流行性腮腺炎"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="流行性腮腺炎">
+                        <color key="titleColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="anomalyDetection:" destination="-1" eventType="touchUpInside" id="4qX-yC-xRt"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3M-gy-UWD">
+                    <rect key="frame" x="0.0" y="440" width="600" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="0.57647058819999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="7aw-y1-Xaq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="saveClick:" destination="-1" eventType="touchUpInside" id="RUZ-Ub-5KF"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -338,6 +448,7 @@
                 <constraint firstItem="FvN-CF-J4w" firstAttribute="leading" secondItem="unZ-q2-ghj" secondAttribute="leading" id="Dgg-Ai-QdG"/>
                 <constraint firstItem="hIc-ip-k9X" firstAttribute="leading" secondItem="bHu-Sg-GWa" secondAttribute="leading" id="GQn-8n-uUe"/>
                 <constraint firstItem="3yZ-l9-LDB" firstAttribute="top" secondItem="FvN-CF-J4w" secondAttribute="top" id="Gpe-r8-kht"/>
+                <constraint firstItem="n3M-gy-UWD" firstAttribute="leading" secondItem="F1t-I0-sCO" secondAttribute="leading" id="HbD-Gc-M4p"/>
                 <constraint firstItem="ilq-za-B2G" firstAttribute="leading" secondItem="oTk-Zx-E5c" secondAttribute="trailing" constant="40" id="Hm6-W2-zdz"/>
                 <constraint firstItem="um7-WL-O0U" firstAttribute="top" secondItem="unZ-q2-ghj" secondAttribute="bottom" constant="10" id="Ik3-50-qdr"/>
                 <constraint firstItem="bHu-Sg-GWa" firstAttribute="leading" secondItem="unZ-q2-ghj" secondAttribute="leading" id="IqL-W1-7fS"/>
@@ -355,6 +466,7 @@
                 <constraint firstItem="EjL-ZH-ZMh" firstAttribute="leading" secondItem="ECM-XP-QdP" secondAttribute="trailing" constant="40" id="QXG-dI-ri2"/>
                 <constraint firstItem="unZ-q2-ghj" firstAttribute="leading" secondItem="rRT-YO-99Q" secondAttribute="trailing" constant="10" id="RGZ-7l-hBW"/>
                 <constraint firstItem="BA6-gc-bsT" firstAttribute="leading" secondItem="bHu-Sg-GWa" secondAttribute="trailing" id="SR4-bt-AXg"/>
+                <constraint firstItem="n3M-gy-UWD" firstAttribute="top" secondItem="clk-ct-lp9" secondAttribute="bottom" constant="20" id="TAi-Ux-E7E"/>
                 <constraint firstItem="sRH-xW-8Lu" firstAttribute="leading" secondItem="sTM-qT-Job" secondAttribute="trailing" constant="40" id="Thv-GT-lxH"/>
                 <constraint firstItem="hIc-ip-k9X" firstAttribute="top" secondItem="bHu-Sg-GWa" secondAttribute="bottom" constant="10" id="W5r-8h-vDZ"/>
                 <constraint firstItem="sRH-xW-8Lu" firstAttribute="top" secondItem="sTM-qT-Job" secondAttribute="top" id="Yn0-xz-zqR"/>
@@ -364,6 +476,7 @@
                 <constraint firstItem="gXD-to-PLL" firstAttribute="leading" secondItem="um7-WL-O0U" secondAttribute="leading" id="cjp-e3-40M"/>
                 <constraint firstItem="Ihz-FB-b3s" firstAttribute="leading" secondItem="F1t-I0-sCO" secondAttribute="leading" constant="10" id="dOA-Tk-vo9"/>
                 <constraint firstItem="6i4-Qy-VrI" firstAttribute="leading" secondItem="hIc-ip-k9X" secondAttribute="trailing" constant="30" id="e68-vC-UH0"/>
+                <constraint firstAttribute="trailing" secondItem="n3M-gy-UWD" secondAttribute="trailing" id="e6a-n2-WkL"/>
                 <constraint firstItem="oTk-Zx-E5c" firstAttribute="leading" secondItem="iNZ-kQ-02Q" secondAttribute="trailing" constant="40" id="fNh-7g-E1Z"/>
                 <constraint firstItem="iNZ-kQ-02Q" firstAttribute="leading" secondItem="um7-WL-O0U" secondAttribute="leading" id="fXA-SD-e61"/>
                 <constraint firstItem="kiF-kN-MQn" firstAttribute="leading" secondItem="D9z-PV-Adn" secondAttribute="trailing" constant="40" id="fix-ed-eQb"/>

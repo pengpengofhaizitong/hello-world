@@ -66,7 +66,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    self.block((int)indexPath.row);
 }
 
 #pragma mark --- searchBarDelegate ---

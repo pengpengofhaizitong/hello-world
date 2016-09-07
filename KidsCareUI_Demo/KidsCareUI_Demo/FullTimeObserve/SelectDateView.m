@@ -33,7 +33,7 @@
     _scrView.contentSize = CGSizeMake(320, 40*7);
     [_scrView setContentOffset:CGPointMake(0, 40*7)];
     for(int i=0;i<7;i++){
-        NSTimeInterval secondsPerDay = -i * 12*60*60;
+        NSTimeInterval secondsPerDay = -i * 24*60*60;
         NSDate *curDate = [NSDate dateWithTimeIntervalSinceNow:secondsPerDay];
         NSString *dateStr = [self.dateFormatter stringFromDate:curDate];//几月几号
         NSString *weekStr = [self.weekFormatter stringFromDate:curDate];

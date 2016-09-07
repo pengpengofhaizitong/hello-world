@@ -10,13 +10,18 @@
 #import "MorningCheckHandleView.h"
 #import <POP/POP.h>
 
+#define screenWidth [UIScreen mainScreen].bounds.size.width
+#define screenHeight [UIScreen mainScreen].bounds.size.height
+
 #define ANIMATIONTIME 0.0001f
 #define REMOVETIME 0.2f
 #define FRAMETIME 0.5f
-#define VIEWWIDTH 300
-#define VIEWHEIGHT 360
+#define VIEWWIDTH (screenWidth - 60)
+#define VIEWHEIGHT (screenWidth - 30)
 
 @interface QuickMornCheckView()
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *handleLessHeight;
 
 //缓存视图
 @property (strong, nonatomic) NSMutableArray *viewArray;
@@ -64,7 +69,7 @@
     for (int i = 0; i<3; i++) {
         MorningCheckHandleView *view = [[[NSBundle mainBundle] loadNibNamed:@"MorningCheckHandleView" owner:self options:nil] lastObject];
         view.frame = CGRectMake(0, 0, VIEWWIDTH+i*15, VIEWHEIGHT);
-        view.center = CGPointMake(rect.size.width/2, self.handleView.center.y-i*10);
+        view.center = CGPointMake(rect.size.width/2, (rect.size.height+self.handleLessHeight.constant)/2-i*10);
         view.backgroundColor = [self randomColor];
         view.clickBlock = ^(int type){
             NSLog(@"type = %d",type);
