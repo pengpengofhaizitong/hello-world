@@ -17,6 +17,18 @@
 		830813E31D7D6DFA00C025B8 /* FullTimeCreateDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830813E11D7D6DFA00C025B8 /* FullTimeCreateDetailViewController.m */; };
 		830813E41D7D6DFA00C025B8 /* FullTimeCreateDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830813E21D7D6DFA00C025B8 /* FullTimeCreateDetailViewController.xib */; };
 		830813E81D7D701800C025B8 /* FullTimeObserveReasonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830813E61D7D701800C025B8 /* FullTimeObserveReasonViewController.m */; };
+		8330BF4F1D8108F1004D75CD /* FullTimeStudentRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8330BF4D1D8108F1004D75CD /* FullTimeStudentRecordViewController.m */; };
+		8330BF501D8108F1004D75CD /* FullTimeStudentRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8330BF4E1D8108F1004D75CD /* FullTimeStudentRecordViewController.xib */; };
+		8330BF591D811913004D75CD /* StudentRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8330BF571D811913004D75CD /* StudentRecordTableViewCell.m */; };
+		8330BF5A1D811913004D75CD /* StudentRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8330BF581D811913004D75CD /* StudentRecordTableViewCell.xib */; };
+		8330BF5D1D813AE3004D75CD /* ObserveContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8330BF5C1D813AE3004D75CD /* ObserveContentView.m */; };
+		8330BF5F1D813B69004D75CD /* ObserveContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8330BF5E1D813B69004D75CD /* ObserveContentView.xib */; };
+		8330BF621D8148CA004D75CD /* BaseInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8330BF611D8148CA004D75CD /* BaseInfoView.m */; };
+		8330BF641D8148F4004D75CD /* BaseInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8330BF631D8148F4004D75CD /* BaseInfoView.xib */; };
+		8330BF671D814C8C004D75CD /* EventRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8330BF661D814C8C004D75CD /* EventRecordView.m */; };
+		8330BF691D814C96004D75CD /* EventRecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8330BF681D814C96004D75CD /* EventRecordView.xib */; };
+		8330BF6C1D81504F004D75CD /* HandleRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8330BF6B1D81504F004D75CD /* HandleRecordView.m */; };
+		8330BF6E1D815060004D75CD /* HandleRecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8330BF6D1D815060004D75CD /* HandleRecordView.xib */; };
 		834173021D79148200AE93AE /* HelpTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 834173011D79148200AE93AE /* HelpTipView.m */; };
 		834173051D791F3700AE93AE /* DateSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 834173041D791F3700AE93AE /* DateSelectorView.m */; };
 		834173081D797D3F00AE93AE /* FullTimeObsRecordHandleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 834173071D797D3F00AE93AE /* FullTimeObsRecordHandleViewController.m */; };
@@ -89,6 +101,24 @@
 		830813E21D7D6DFA00C025B8 /* FullTimeCreateDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullTimeCreateDetailViewController.xib; sourceTree = "<group>"; };
 		830813E51D7D701800C025B8 /* FullTimeObserveReasonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullTimeObserveReasonViewController.h; sourceTree = "<group>"; };
 		830813E61D7D701800C025B8 /* FullTimeObserveReasonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullTimeObserveReasonViewController.m; sourceTree = "<group>"; };
+		8330BF4C1D8108F1004D75CD /* FullTimeStudentRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullTimeStudentRecordViewController.h; sourceTree = "<group>"; };
+		8330BF4D1D8108F1004D75CD /* FullTimeStudentRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullTimeStudentRecordViewController.m; sourceTree = "<group>"; };
+		8330BF4E1D8108F1004D75CD /* FullTimeStudentRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullTimeStudentRecordViewController.xib; sourceTree = "<group>"; };
+		8330BF561D811913004D75CD /* StudentRecordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentRecordTableViewCell.h; sourceTree = "<group>"; };
+		8330BF571D811913004D75CD /* StudentRecordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentRecordTableViewCell.m; sourceTree = "<group>"; };
+		8330BF581D811913004D75CD /* StudentRecordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentRecordTableViewCell.xib; sourceTree = "<group>"; };
+		8330BF5B1D813AE3004D75CD /* ObserveContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObserveContentView.h; sourceTree = "<group>"; };
+		8330BF5C1D813AE3004D75CD /* ObserveContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObserveContentView.m; sourceTree = "<group>"; };
+		8330BF5E1D813B69004D75CD /* ObserveContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ObserveContentView.xib; sourceTree = "<group>"; };
+		8330BF601D8148CA004D75CD /* BaseInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseInfoView.h; sourceTree = "<group>"; };
+		8330BF611D8148CA004D75CD /* BaseInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseInfoView.m; sourceTree = "<group>"; };
+		8330BF631D8148F4004D75CD /* BaseInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BaseInfoView.xib; path = ../../BaseInfoView.xib; sourceTree = "<group>"; };
+		8330BF651D814C8C004D75CD /* EventRecordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRecordView.h; sourceTree = "<group>"; };
+		8330BF661D814C8C004D75CD /* EventRecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRecordView.m; sourceTree = "<group>"; };
+		8330BF681D814C96004D75CD /* EventRecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventRecordView.xib; sourceTree = "<group>"; };
+		8330BF6A1D81504F004D75CD /* HandleRecordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleRecordView.h; sourceTree = "<group>"; };
+		8330BF6B1D81504F004D75CD /* HandleRecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleRecordView.m; sourceTree = "<group>"; };
+		8330BF6D1D815060004D75CD /* HandleRecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HandleRecordView.xib; sourceTree = "<group>"; };
 		834173001D79148200AE93AE /* HelpTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpTipView.h; sourceTree = "<group>"; };
 		834173011D79148200AE93AE /* HelpTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpTipView.m; sourceTree = "<group>"; };
 		834173031D791F3700AE93AE /* DateSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSelectorView.h; sourceTree = "<group>"; };
@@ -322,6 +352,24 @@
 				830647981D7EC32D00BC27E2 /* EventDetailViewController.h */,
 				830647991D7EC32D00BC27E2 /* EventDetailViewController.m */,
 				8306479A1D7EC32D00BC27E2 /* EventDetailViewController.xib */,
+				8330BF4C1D8108F1004D75CD /* FullTimeStudentRecordViewController.h */,
+				8330BF4D1D8108F1004D75CD /* FullTimeStudentRecordViewController.m */,
+				8330BF4E1D8108F1004D75CD /* FullTimeStudentRecordViewController.xib */,
+				8330BF561D811913004D75CD /* StudentRecordTableViewCell.h */,
+				8330BF571D811913004D75CD /* StudentRecordTableViewCell.m */,
+				8330BF581D811913004D75CD /* StudentRecordTableViewCell.xib */,
+				8330BF5B1D813AE3004D75CD /* ObserveContentView.h */,
+				8330BF5C1D813AE3004D75CD /* ObserveContentView.m */,
+				8330BF5E1D813B69004D75CD /* ObserveContentView.xib */,
+				8330BF601D8148CA004D75CD /* BaseInfoView.h */,
+				8330BF611D8148CA004D75CD /* BaseInfoView.m */,
+				8330BF631D8148F4004D75CD /* BaseInfoView.xib */,
+				8330BF651D814C8C004D75CD /* EventRecordView.h */,
+				8330BF661D814C8C004D75CD /* EventRecordView.m */,
+				8330BF681D814C96004D75CD /* EventRecordView.xib */,
+				8330BF6A1D81504F004D75CD /* HandleRecordView.h */,
+				8330BF6B1D81504F004D75CD /* HandleRecordView.m */,
+				8330BF6D1D815060004D75CD /* HandleRecordView.xib */,
 			);
 			path = FullTimeObserve;
 			sourceTree = "<group>";
@@ -444,20 +492,26 @@
 				8341730D1D797EC200AE93AE /* FullTimeHomeViewController.xib in Resources */,
 				83D6165C1D7E54AA009E004F /* ClassMemeberViewController.xib in Resources */,
 				83F34E331D7810E70038A373 /* MornCheckSearchTableViewCell.xib in Resources */,
+				8330BF501D8108F1004D75CD /* FullTimeStudentRecordViewController.xib in Resources */,
 				83F34E2E1D7810E70038A373 /* MornCheckClassListTableViewCell.xib in Resources */,
 				83F34E401D781B600038A373 /* FullTimeObserveViewController.xib in Resources */,
 				83F34E361D7810E70038A373 /* MorningCheckHandleView.xib in Resources */,
 				83721B841D751C37005ED5B0 /* LaunchScreen.storyboard in Resources */,
 				83721B811D751C37005ED5B0 /* Assets.xcassets in Resources */,
+				8330BF641D8148F4004D75CD /* BaseInfoView.xib in Resources */,
 				83F34E451D7820500038A373 /* FullTimeObserveStudentTableViewCell.xib in Resources */,
 				83F34E3A1D7810E70038A373 /* QuickMornCheckView.xib in Resources */,
+				8330BF5F1D813B69004D75CD /* ObserveContentView.xib in Resources */,
 				830813E41D7D6DFA00C025B8 /* FullTimeCreateDetailViewController.xib in Resources */,
 				8306479C1D7EC32D00BC27E2 /* EventDetailViewController.xib in Resources */,
 				83D616611D7E5DD3009E004F /* ClassMemberCollectionViewCell.xib in Resources */,
 				83F34E311D7810E70038A373 /* MornCheckObserveViewController.xib in Resources */,
 				83721B7C1D751C37005ED5B0 /* Main.storyboard in Resources */,
+				8330BF691D814C96004D75CD /* EventRecordView.xib in Resources */,
 				830813DF1D7D6BF000C025B8 /* CreateEventTableViewCell.xib in Resources */,
 				83F34E381D7810E70038A373 /* MorningCheckViewController.xib in Resources */,
+				8330BF6E1D815060004D75CD /* HandleRecordView.xib in Resources */,
+				8330BF5A1D811913004D75CD /* StudentRecordTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,9 +590,11 @@
 				830813D61D7D117600C025B8 /* SelectDateView.m in Sources */,
 				83721B7F1D751C37005ED5B0 /* KidsCareUI_Demo.xcdatamodeld in Sources */,
 				83F34E441D7820500038A373 /* FullTimeObserveStudentTableViewCell.m in Sources */,
+				8330BF671D814C8C004D75CD /* EventRecordView.m in Sources */,
 				83F34E351D7810E70038A373 /* MorningCheckHandleView.m in Sources */,
 				830813E81D7D701800C025B8 /* FullTimeObserveReasonViewController.m in Sources */,
 				830813D91D7D594900C025B8 /* FullTimeCreateEventViewController.m in Sources */,
+				8330BF621D8148CA004D75CD /* BaseInfoView.m in Sources */,
 				83F34E3F1D781B600038A373 /* FullTimeObserveViewController.m in Sources */,
 				830813DE1D7D6BF000C025B8 /* CreateEventTableViewCell.m in Sources */,
 				83F34E301D7810E70038A373 /* MornCheckObserveViewController.m in Sources */,
@@ -546,16 +602,20 @@
 				834173021D79148200AE93AE /* HelpTipView.m in Sources */,
 				834173051D791F3700AE93AE /* DateSelectorView.m in Sources */,
 				83D6165B1D7E54AA009E004F /* ClassMemeberViewController.m in Sources */,
+				8330BF591D811913004D75CD /* StudentRecordTableViewCell.m in Sources */,
+				8330BF6C1D81504F004D75CD /* HandleRecordView.m in Sources */,
 				8306479B1D7EC32D00BC27E2 /* EventDetailViewController.m in Sources */,
 				83F34E321D7810E70038A373 /* MornCheckSearchTableViewCell.m in Sources */,
 				83F34E391D7810E70038A373 /* QuickMornCheckView.m in Sources */,
 				83721B791D751C37005ED5B0 /* ViewController.m in Sources */,
 				83721B761D751C37005ED5B0 /* AppDelegate.m in Sources */,
 				83F34E371D7810E70038A373 /* MorningCheckViewController.m in Sources */,
+				8330BF5D1D813AE3004D75CD /* ObserveContentView.m in Sources */,
 				83721B731D751C37005ED5B0 /* main.m in Sources */,
 				8341730C1D797EC200AE93AE /* FullTimeHomeViewController.m in Sources */,
 				83F34E2D1D7810E70038A373 /* MornCheckClassListTableViewCell.m in Sources */,
 				830813E31D7D6DFA00C025B8 /* FullTimeCreateDetailViewController.m in Sources */,
+				8330BF4F1D8108F1004D75CD /* FullTimeStudentRecordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

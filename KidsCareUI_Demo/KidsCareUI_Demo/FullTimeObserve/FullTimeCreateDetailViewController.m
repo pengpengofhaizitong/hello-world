@@ -7,8 +7,12 @@
 //
 
 #import "FullTimeCreateDetailViewController.h"
+#import "ObserveContentView.h"
 
 @interface FullTimeCreateDetailViewController ()
+@property (strong, nonatomic) IBOutlet UIView *observeView;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollerView;
 
 @end
 
@@ -17,6 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    ObserveContentView *view = [[[NSBundle mainBundle] loadNibNamed:@"ObserveContentView" owner:self options:nil] lastObject];
+    [view setFrame:CGRectMake(0, 100, 320, 400) labelText:@{}];
+    [self.view addSubview:view];
+    
 }
 
 - (void)didReceiveMemoryWarning {

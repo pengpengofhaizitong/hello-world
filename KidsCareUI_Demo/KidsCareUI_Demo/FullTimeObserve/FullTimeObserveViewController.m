@@ -40,6 +40,8 @@
 @property (nonatomic, strong)HelpTipView *tipView;
 
 
+@property (strong, nonatomic) IBOutlet UIView *tableViewFootView;
+
 
 @property(nonatomic, strong)NSDateFormatter *dateFormatter;
 @property(nonatomic, strong)NSDateFormatter *weekFormatter;
@@ -146,6 +148,17 @@
         }
     }
 }
+
+#pragma mark --编辑--
+- (IBAction)footViewEditClick:(UIButton *)sender {
+    
+}
+
+#pragma mark --联系家长--
+- (IBAction)footViewContactPar:(UIButton *)sender {
+    
+}
+
 
 //- (IBAction)dateSwitchClick:(UIButton *)sender {
 //    sender.selected = !sender.selected;
